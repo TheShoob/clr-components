@@ -13,22 +13,31 @@ export class clrPnBtn {
 
   pre() {
 
+      let loc = window.location.hash.toString();
+      let locArr = [];
+
+      let arr = [];
       let l = document.links;
-      let loc = window.location.hash.split('#');
-      var arr = []
+
       for(var i=0; i<l.length; i++) {
-        //arr.push(l[i].href);
         l[i].getAttribute("href");
-        console.log(arr[i]);
+        locArr.push(loc.substring(loc.indexOf('#')+1));
+        arr.push(l[i].href.substring(l[i].href.indexOf('#')+1));
 
-        /*if (links.startsWith('#'))  {
-            console.log("HI")
+        if (locArr[i] == arr[i]) {
+          console.log('yes:' + arr[i] + " " + arr.indexOf(arr[i]))
+         } else {
+          console.log('no');
+        }
 
-        }*/
-        //console.log(arr.push(l[i].href));
+
       }
+      //console.log(l[0].getAttribute("href"));
+      //console.log(loc);
+      console.log(locArr);
+      console.log(arr);
 
-
+      
 
   }
 
