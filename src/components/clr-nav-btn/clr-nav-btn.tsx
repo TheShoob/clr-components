@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, h, State, Listen } from '@stencil/core';
 
 @Component({
   tag: 'clr-nav-btn',
@@ -7,14 +7,17 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class clrNavBtn {
 
-  // Indicate that name should be a public property on the component
-  @Prop() name: string;
+  @State() on: boolean;
+  @Listen('click', { capture: true })
+  handleClick() {
+    this.on = !this.on;
+    //console.log('button got clicked')
+  }
 
   render() {
     return (
-      <p>
-        My name is {this.name}
-      </p>
+      <button>
+      </button>
     );
   }
 }

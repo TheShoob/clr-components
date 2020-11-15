@@ -1,0 +1,28 @@
+p { 
+  line-height: 1.5;
+  padding: 8px 15px;
+}
+
+p.info {
+  background-color:#e6f7ff;
+  border: 1px solid #91d5ff;
+}
+p.success {
+  background-color:#f6ffed;
+  border: 1px solid #b7eb8f
+}
+p.error {
+  background-color:#fff1f0;
+  border: 1px solid #ffa39e
+}
+p.acknowledged {
+  display: none;
+}
+button {
+  margin-left: 10px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: .9em;
+  opacity: 0.5;
+}

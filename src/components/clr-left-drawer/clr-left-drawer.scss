@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+.drawer {
+  min-height: 100vh;
+  width: 30vw;
+  background-color: turquoise;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 99;
+}
+

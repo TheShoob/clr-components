@@ -33,7 +33,7 @@ export class clrPnBtn {
     for(var i=0; i<l.length; i++) {
 
       if (locArr[i] == arr[i] && arr.indexOf(arr[i]) > 0) {
-        var sub = Number(i = i - 1); // increase i by one
+        let sub = Number(i = i - 1); // increase i by one
         location.href='#' + arr[sub];
         break;
 
@@ -56,19 +56,24 @@ export class clrPnBtn {
       }
     }
 
+    const limit = arr.length - 1;
+
     for(var i=0; i<l.length; i++) {
 
-      let limit = arr.length - 1;
-      if (locArr[i] == arr[i] && arr.indexOf(arr[i]) < limit) {
-        var add = Number(i = i + 1); // increase i by one
+      if (arr.indexOf(arr[i]) >= limit){
+        return;
+      }
+      else if (locArr[i] == arr[i] && arr.indexOf(arr[i]) != limit) {
+        let add = Number(i = i + 1); // increase i by one
         location.href='#' + arr[add];
         break;
-
       }
-      console.log(limit);
 
     }
 
+  //function scrollTo(hash) {
+      //location.hash = "#" + hash;
+  //}
 }
 
 home() {
