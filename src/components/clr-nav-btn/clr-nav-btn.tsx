@@ -1,22 +1,27 @@
-import { Component, h, State, Listen } from '@stencil/core';
+import { Component, h, State} from '@stencil/core';
+//import {  } from '../clr-left-drawer/clr-left-drawer';
 
 @Component({
   tag: 'clr-nav-btn',
   styleUrl: 'clr-nav-btn.scss',
   shadow: true
 })
-export class clrNavBtn {
+export class ClrNavBtn {
+  @State() on: boolean = false;
 
-  @State() on: boolean;
-  @Listen('click', { capture: true })
-  handleClick() {
-    this.on = !this.on;
-    //console.log('button got clicked')
+  navBtnClick = () => {
+    if (this.on ? true : '') {
+      this.on = false;
+    } else {
+      this.on = true;
+    }
   }
+
+  getCSSClass = () => (this.on ? 'on' : 'off');
 
   render() {
     return (
-      <button>
+      <button class={this.getCSSClass()} onClick={this.navBtnClick}>
       </button>
     );
   }
