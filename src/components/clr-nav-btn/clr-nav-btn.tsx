@@ -1,4 +1,4 @@
-import { Component, h, State} from '@stencil/core';
+import { Component, h, State, Listen} from '@stencil/core';
 //import {  } from '../clr-left-drawer/clr-left-drawer';
 
 @Component({
@@ -8,6 +8,11 @@ import { Component, h, State} from '@stencil/core';
 })
 export class ClrNavBtn {
   @State() on: boolean = false;
+
+  /*@Listen('drawerState')
+  drawerStateHandler(event: CustomEvent<DrawerState>) {
+    console.log('Received the custom todoCompleted event: ', event.detail);
+  }*/
 
   navBtnClick = () => {
     if (this.on ? true : '') {

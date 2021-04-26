@@ -13,7 +13,6 @@ export namespace Components {
     interface ClrDropExpand {
     }
     interface ClrLeftDrawer {
-        "drawerCheck": () => Promise<void>;
         "drawerClose": () => Promise<void>;
         "drawerMove": () => Promise<void>;
         "drawerOpen": () => Promise<void>;
