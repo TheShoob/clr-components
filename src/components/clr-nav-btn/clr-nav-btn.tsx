@@ -9,10 +9,13 @@ import { Component, h, State, Listen} from '@stencil/core';
 export class ClrNavBtn {
   @State() on: boolean = false;
 
-  /*@Listen('drawerState')
-  drawerStateHandler(event: CustomEvent<DrawerState>) {
-    console.log('Received the custom todoCompleted event: ', event.detail);
-  }*/
+  @Listen('mouseup', { target: 'window' })
+  handleClick(ev) {
+    let localName = ev.target.localName;
+    if (localName === 'clr-left-drawer'){
+      console.log('hi')
+    }
+  }
 
   navBtnClick = () => {
     if (this.on ? true : '') {
