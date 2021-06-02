@@ -10,7 +10,14 @@ export namespace Components {
         "kind": "info" | "success" | "error";
         "text": string;
     }
+    interface ClrCarousel {
+    }
     interface ClrDropExpand {
+    }
+    interface ClrFooter {
+    }
+    interface ClrIconBtn {
+        "text": string;
     }
     interface ClrLeftDrawer {
         "drawerClose": () => Promise<void>;
@@ -37,11 +44,29 @@ declare global {
         prototype: HTMLClrAlertElement;
         new (): HTMLClrAlertElement;
     };
+    interface HTMLClrCarouselElement extends Components.ClrCarousel, HTMLStencilElement {
+    }
+    var HTMLClrCarouselElement: {
+        prototype: HTMLClrCarouselElement;
+        new (): HTMLClrCarouselElement;
+    };
     interface HTMLClrDropExpandElement extends Components.ClrDropExpand, HTMLStencilElement {
     }
     var HTMLClrDropExpandElement: {
         prototype: HTMLClrDropExpandElement;
         new (): HTMLClrDropExpandElement;
+    };
+    interface HTMLClrFooterElement extends Components.ClrFooter, HTMLStencilElement {
+    }
+    var HTMLClrFooterElement: {
+        prototype: HTMLClrFooterElement;
+        new (): HTMLClrFooterElement;
+    };
+    interface HTMLClrIconBtnElement extends Components.ClrIconBtn, HTMLStencilElement {
+    }
+    var HTMLClrIconBtnElement: {
+        prototype: HTMLClrIconBtnElement;
+        new (): HTMLClrIconBtnElement;
     };
     interface HTMLClrLeftDrawerElement extends Components.ClrLeftDrawer, HTMLStencilElement {
     }
@@ -81,7 +106,10 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "clr-alert": HTMLClrAlertElement;
+        "clr-carousel": HTMLClrCarouselElement;
         "clr-drop-expand": HTMLClrDropExpandElement;
+        "clr-footer": HTMLClrFooterElement;
+        "clr-icon-btn": HTMLClrIconBtnElement;
         "clr-left-drawer": HTMLClrLeftDrawerElement;
         "clr-nav-btn": HTMLClrNavBtnElement;
         "clr-pn-btn": HTMLClrPnBtnElement;
@@ -95,7 +123,14 @@ declare namespace LocalJSX {
         "kind"?: "info" | "success" | "error";
         "text"?: string;
     }
+    interface ClrCarousel {
+    }
     interface ClrDropExpand {
+    }
+    interface ClrFooter {
+    }
+    interface ClrIconBtn {
+        "text"?: string;
     }
     interface ClrLeftDrawer {
     }
@@ -113,7 +148,10 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "clr-alert": ClrAlert;
+        "clr-carousel": ClrCarousel;
         "clr-drop-expand": ClrDropExpand;
+        "clr-footer": ClrFooter;
+        "clr-icon-btn": ClrIconBtn;
         "clr-left-drawer": ClrLeftDrawer;
         "clr-nav-btn": ClrNavBtn;
         "clr-pn-btn": ClrPnBtn;
@@ -127,7 +165,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "clr-alert": LocalJSX.ClrAlert & JSXBase.HTMLAttributes<HTMLClrAlertElement>;
+            "clr-carousel": LocalJSX.ClrCarousel & JSXBase.HTMLAttributes<HTMLClrCarouselElement>;
             "clr-drop-expand": LocalJSX.ClrDropExpand & JSXBase.HTMLAttributes<HTMLClrDropExpandElement>;
+            "clr-footer": LocalJSX.ClrFooter & JSXBase.HTMLAttributes<HTMLClrFooterElement>;
+            "clr-icon-btn": LocalJSX.ClrIconBtn & JSXBase.HTMLAttributes<HTMLClrIconBtnElement>;
             "clr-left-drawer": LocalJSX.ClrLeftDrawer & JSXBase.HTMLAttributes<HTMLClrLeftDrawerElement>;
             "clr-nav-btn": LocalJSX.ClrNavBtn & JSXBase.HTMLAttributes<HTMLClrNavBtnElement>;
             "clr-pn-btn": LocalJSX.ClrPnBtn & JSXBase.HTMLAttributes<HTMLClrPnBtnElement>;

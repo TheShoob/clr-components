@@ -1,0 +1,40 @@
+:host {
+  button{
+    position: relative;
+    display: inline-flex;
+    min-height: 30px;
+    width: calc(80% - 42px);
+    max-width: 250px;
+    border: #5a7985 solid 1px;
+    background-color: #fcfbf9;
+    border-radius: 5px;
+    font-size: .8rem;
+    letter-spacing: .0rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: #5a7985;
+    padding: 3px 18px;
+    margin: 5px 0px;
+    transition-duration: 400ms;
+    cursor: pointer;
+    slot {
+      &:first-child {
+        position: absolute;
+        display: block;
+        left: 3px;
+        width: 15px;
+        height: 15px;
+        fill: #5a7985;
+      }
+    }
+  }
+}
+:host(:hover) {
+  button{
+    color: #fff;
+    background-color: #072f3f;
+  }
+}

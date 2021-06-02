@@ -1,6 +1,6 @@
 {
   "name": "clear-components",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -19,11 +19,12 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "npm publish": "npm publish"
   },
   "devDependencies": {
-    "@stencil/core": "2.3.0",
-    "@stencil/sass": "^1.1.1"
+    "@stencil/core": "2.5.2",
+    "@stencil/sass": "^1.4.1"
   },
   "license": "MIT",
   "dependencies": {
