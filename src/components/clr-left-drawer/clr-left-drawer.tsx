@@ -11,9 +11,9 @@ let mc2 = new Hammer(window); // * for window swipe
 let gnw = function() { // * get nav width
    return document.getElementsByTagName('clr-left-drawer')[0].shadowRoot.querySelectorAll('nav')[0].offsetWidth;
 }
-let navBtn = function() {
+/*let navBtn = function() {
   return document.getElementsByTagName('clr-nav-btn')[0].shadowRoot.querySelectorAll('button')[0];
-}
+}*/
 @Component({
   tag: 'clr-left-drawer',
   styleUrl: 'clr-left-drawer.scss',
