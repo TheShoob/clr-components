@@ -13,6 +13,8 @@ export namespace Components {
     interface ClrCarousel {
     }
     interface ClrDropExpand {
+        "href": string;
+        "text": string;
     }
     interface ClrFooter {
     }
@@ -126,6 +128,8 @@ declare namespace LocalJSX {
     interface ClrCarousel {
     }
     interface ClrDropExpand {
+        "href"?: string;
+        "text"?: string;
     }
     interface ClrFooter {
     }

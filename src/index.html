@@ -10,6 +10,10 @@
     section{
       min-height: 100vh;
     }
+    clr-left-drawer {
+      --primary: rgb(190, 186, 186);
+      --bg: rgb(22, 22, 24);
+    }
   </style>
 </head>
 <body>
@@ -22,9 +26,39 @@
     <a href="#five">five</a>
     <a href="#six">six</a>
   </div>
-  
+
   <clr-nav-btn></clr-nav-btn>
-  <clr-left-drawer></clr-left-drawer>
+  <clr-left-drawer>
+    <clr-drop-expand text="the first drop down" href="#main1">
+      <a slot="link" href="#1a">1a<br>hhhh</a>
+      <a slot="link" href="#2a">2a</a>
+      <a slot="link" href="#3a">3a</a>
+    </clr-drop-expand>
+    <clr-drop-expand text="the second drop down" href="#main2">
+
+    </clr-drop-expand>
+    <clr-drop-expand text="the third drop down" href="#main3">
+      <a slot="link" href="#">1c</a>
+      <a slot="link" href="#">2c</a>
+      <a slot="link" href="#">3c</a>
+    </clr-drop-expand>
+    <clr-drop-expand text="the third drop down" href="#main4">
+      <a slot="link" href="#">1c</a>
+      <a slot="link" href="#">3c</a>
+    </clr-drop-expand>
+    <clr-drop-expand text="the third drop down" href="#main5">
+      <a slot="link" href="#">1c</a>
+      <a slot="link" href="#">2c</a>
+      <a slot="link" href="#">3c</a>
+    </clr-drop-expand>
+    <clr-drop-expand text="the third drop down" href="#main6">
+      <a slot="link" href="#">1c</a>
+      <a slot="link" href="#">3c</a>
+    </clr-drop-expand>
+    <clr-drop-expand text="the third drop down" href="#main7">
+      <a slot="link" href="#">1c</a>
+    </clr-drop-expand>
+  </clr-left-drawer>
   
   <clr-pn-btn></clr-pn-btn>
 
