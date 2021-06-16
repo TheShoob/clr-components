@@ -13,6 +13,8 @@ export class ClrDropExpand implements ComponentInterface {
   @Prop() href: string = "#";
 
   @Element() host: HTMLElement;
+
+  @State() toggle: boolean = false;
   @State() childrenData: any = {};
 
   componentWillLoad() {
@@ -21,17 +23,27 @@ export class ClrDropExpand implements ComponentInterface {
   }
 
   //*ARROW AND EXPAND AREA OPEN/CLOSE
-  openSub = () => {
+  toggleSub = () => {
+    let arrow = this.host.shadowRoot.querySelectorAll('.arrow');
     let expand = this.host.shadowRoot.querySelectorAll('.expand');
     let expandInnerHeight = this.host.shadowRoot.querySelectorAll('.expandInner')[0].clientHeight + 'px';
+    this.toggle = !this.toggle;
 
     anime({
       targets: expand,
-      height: expandInnerHeight,
-      overflow: 'visible',
-      backgroundColor: '#333',
-      easing: 'easeInOutQuad'
+      height: this.toggle ? expandInnerHeight : '0px',
+      duration: 300,
+      easing: 'easeInOutQuad',
     });
+
+    anime({
+      targets: arrow,
+      rotate: {
+          value: this.toggle ? -90 : 0,
+          duration: 300,
+          easing: 'easeInOutQuad'
+      },
+  });
   }
   //*
 
@@ -41,7 +53,7 @@ export class ClrDropExpand implements ComponentInterface {
           <Host>
             <div class="main-link">
               <a href={this.href}>{this.text}</a>
-              <div class="arrow" onClick={this.openSub}></div>
+              <div class="arrow" onClick={this.toggleSub}></div>
             </div>
 
             <div class="expand">
@@ -54,7 +66,9 @@ export class ClrDropExpand implements ComponentInterface {
       } else {
         return (
           <Host>
-            <a href={this.href}>{this.text}</a>
+            <div class="main-link">
+              <a href={this.href}>{this.text}</a>
+            </div>
           </Host> 
         )
       }

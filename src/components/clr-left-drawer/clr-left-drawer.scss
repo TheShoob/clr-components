@@ -1,31 +1,11 @@
-
-@function v($var) {
-  @return var(--#{$var});
-}
-
-// respond is the name of your mixin
-@mixin respond($breakpoint) {
-  @if $breakpoint==tablet {
-    @media only screen and (max-width: 600px) {
-      @content;
-    }
-  }
-  @if $breakpoint==mobile {
-    @media only screen and (max-width: 480px) {
-      @content;
-    }
-  }
-}
+@import '../../utils/base.scss';
 
 :host {
   position: absolute;
   left: 0px;
   top: 0px;
   z-index: 99;
-
-  --primary: rgb(80, 80, 87);
-  --bg: rgb(243, 240, 234);
-
+  
   .drawer {
     display: flex;
     flex-direction: column;

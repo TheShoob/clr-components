@@ -1,0 +1,22 @@
+
+:host {
+    --primary: rgb(80, 80, 87);
+    --bg: rgb(243, 240, 234);
+}
+@function v($var) {
+    @return var(--#{$var});
+  }
+  
+  // respond is the name of your mixin
+  @mixin respond($breakpoint) {
+    @if $breakpoint==tablet {
+      @media only screen and (max-width: 600px) {
+        @content;
+      }
+    }
+    @if $breakpoint==mobile {
+      @media only screen and (max-width: 480px) {
+        @content;
+      }
+    }
+  }
