@@ -1,5 +1,7 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, State, Listen, Method, Element } from '@stencil/core';
 
+import Hammer from 'hammerjs';
+import anime from 'animejs';
 @Component({
   tag: 'clr-carousel',
   styleUrl: 'clr-carousel.scss',

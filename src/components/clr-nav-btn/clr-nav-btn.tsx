@@ -13,7 +13,7 @@ export class ClrNavBtn {
   handleClick(ev) {
     let localName = ev.target.localName;
     if (localName === 'clr-left-drawer'){
-      console.log('hi')
+      //console.log('hi')
     }
   }
 

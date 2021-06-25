@@ -6,8 +6,6 @@ import anime from 'animejs';
   shadow: true,
 })
 
-
-
 export class ClrDropExpand implements ComponentInterface {
   @Prop() text: string = "Text for the link";
   @Prop() href: string = "#";
@@ -24,18 +22,25 @@ export class ClrDropExpand implements ComponentInterface {
 
   //*ARROW AND EXPAND AREA OPEN/CLOSE
   toggleSub = () => {
+    console.log('CLICK');
     let arrow = this.host.shadowRoot.querySelectorAll('.arrow');
-    let expand = this.host.shadowRoot.querySelectorAll('.expand');
+    let expand = this.host.shadowRoot.querySelector<HTMLElement>('.expand');
     let expandInnerHeight = this.host.shadowRoot.querySelectorAll('.expandInner')[0].clientHeight + 'px';
     this.toggle = !this.toggle;
 
+    if (this.toggle == true){
+      setTimeout(function(){
+        expand.style.height = 'auto';
+      }, 300);
+    } else if (this.toggle == false){
+      expand.style.height = expandInnerHeight;
+    }
     anime({
       targets: expand,
       height: this.toggle ? expandInnerHeight : '0px',
       duration: 300,
       easing: 'easeInOutQuad',
     });
-
     anime({
       targets: arrow,
       rotate: {
@@ -43,7 +48,7 @@ export class ClrDropExpand implements ComponentInterface {
           duration: 300,
           easing: 'easeInOutQuad'
       },
-  });
+    });
   }
   //*
 
@@ -53,7 +58,9 @@ export class ClrDropExpand implements ComponentInterface {
           <Host>
             <div class="main-link">
               <a href={this.href}>{this.text}</a>
-              <div class="arrow" onClick={this.toggleSub}></div>
+              <div class="arrowWrap" onClick={this.toggleSub}>
+                <div class="arrow"></div>
+              </div>
             </div>
 
             <div class="expand">

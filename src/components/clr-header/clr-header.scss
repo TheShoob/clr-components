@@ -1,0 +1,33 @@
+@import '../../utils/base.scss';
+
+:host {
+  display: block;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+
+  background-color: v(bg);
+  color: v(primary);
+
+  *{
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include respond(tablet) {
+    width: 80vw;
+
+    // responsive code for tablet viewport i.e. 600px
+  }
+
+  @include respond(mobile) {
+    width: 100vw;
+
+    // responsive code for mobile viewport i.e. 480px
+  }
+}

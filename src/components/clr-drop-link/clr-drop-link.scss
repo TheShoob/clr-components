@@ -1,0 +1,27 @@
+@import '../../utils/base.scss';
+* {
+  background-color: v(bg);
+  color: v(primary);
+}
+
+:host {
+  display: block;
+  position: relative;
+  width: auto;
+  
+  &:host(:hover){
+    .drop {
+      height: auto;
+      overflow: visible;
+    }
+  }
+  .drop {
+    display: flex;
+    overflow: hidden;
+    height: 0px;
+    flex-direction: column;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+  }
+}
