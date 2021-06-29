@@ -10,38 +10,36 @@
     section{
       min-height: 100vh;
     }
-    * {
-      --primary: rgb(98, 125, 245);
-      --bg: rgb(236, 178, 101);
+    .padding-top {
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-
   <clr-header>
-    <img slot="logo" src="test" />
+    <img slot="logo" height='50px' src="../testLogo.png" />
     <nav slot="nav">
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
       <clr-drop-link text="Drop Link Text" href="#main2">
         <a slot="link" href="#one">One</a>
         <a slot="link" href="#two">Two</a>
-        <a slot="link" href="#three">Three</a>
-        <a slot="link" href="#four">four</a>
-        <a slot="link" href="https://www.google.com/">not like the others</a>
-        <a slot="link" href="#five">five</a>
-        
-        <clr-drop-link slot="link" text="Drop Link Text" href="#main2">
+        <a slot="link" href="#three">Three</a>        
+        <clr-drop-link part="sub" slot="link" text="Drop Link Text" href="#main2">
           <a slot="link" href="#one">One</a>
           <a slot="link" href="#two">Two</a>
           <a slot="link" href="#three">Three</a>
-          <a slot="link" href="#four">four</a>
-          <a slot="link" href="https://www.google.com/">not like the others</a>
-          <a slot="link" href="#five">five</a>
-          <a slot="link" href="#six">six</a>
+          <clr-drop-link part="sub" slot="link" text="Drop Link Text" href="#main2">
+            <a slot="link" href="#one">One</a>
+            <a slot="link" href="#two">Two</a>
+          </clr-drop-link>
         </clr-drop-link>
-        
         <a slot="link" href="#six">six</a>
       </clr-drop-link>
+      <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
+      <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
+      <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
+      <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
+
     </nav>
     <div slot="icon"></div>
     <div slot="btn">
@@ -51,7 +49,7 @@
 
   <clr-left-drawer>
 
-    <clr-drop-expand text="the first drop down" href="#main1">
+    <clr-drop-expand class="padding-top" text="the first drop down" href="#main1">
       <a slot="link" href="#1a">1a</a>
       <a slot="link" href="#2a">2a</a>
       <a slot="link" href="#3a">3a</a>
@@ -63,7 +61,8 @@
         <clr-drop-expand slot="link" text="second " href="#SubMain2">
           <a slot="link" href="#1a">1a</a>
           <a slot="link" href="#2a">2a</a>
-          <a slot="link" href="#3a">3a<br>aa</a>
+          <a slot="link" href="#3a">3a</a>
+          
         </clr-drop-expand>
 
       </clr-drop-expand>
@@ -79,10 +78,10 @@
       <a slot="link" href="#">1c</a>
       <a slot="link" href="#">2c</a>
     </clr-drop-expand>
-    <clr-drop-expand text="the another drop down" href="#main5">
+    <clr-drop-expand text="another drop down" href="#main5">
       <a slot="link" href="#">1d</a>
     </clr-drop-expand>
-    <clr-drop-expand text="the and another drop down" href="#main6">
+    <clr-drop-expand text="and another drop down" href="#main6">
       <a slot="link" href="#">1e</a>
       <a slot="link" href="#">2e</a>
     </clr-drop-expand>

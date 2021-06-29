@@ -18,10 +18,9 @@ export class ClrHeader {
             <img src={this.src} />
           </slot>
         </div>
-
         <nav><slot name="nav"></slot></nav>
-        <div><slot name="icon"></slot></div>
-        <div class="btn"><slot name="btn"></slot></div>
+        <slot name="icon"></slot>
+        <slot name="btn"></slot>
       </Host>
     );
   }

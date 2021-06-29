@@ -14,7 +14,18 @@ export class ClrDropLink {
 
   componentWillLoad() {
     let slotted = this.host.children;
-    this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length };
+    this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length };  
+  }
+
+  componentDidLoad() {
+    let sub = this.host.querySelector<HTMLElement>('clr-drop-link clr-drop-link');
+    if (sub != null) {
+      let subWidth = sub.offsetWidth;
+      let subSub = sub.shadowRoot.querySelector('div');
+      subSub.style.left = "100%"
+      subSub.style.top = "0%"
+      subSub.style.minWidth = subWidth + 'px'
+    }
   }
 
   render() {

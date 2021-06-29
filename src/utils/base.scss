@@ -1,8 +1,12 @@
 
---* {
-    --primary: rgb(0, 0, 0);
-    --bg: rgb(243, 240, 234);
+:host {
+    --primary: rgb(224, 224, 224);
+    --secondary: rgb(197, 197, 197);
+    --tertiary: rgb(185, 185, 185);
+    --fontColor: rgb(27, 27, 27);
+    --bg: rgb(218, 218, 218);
 }
+
 @function v($var) {
     @return var(--#{$var});
   }

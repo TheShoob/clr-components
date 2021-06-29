@@ -27,14 +27,14 @@ export class ClrDropExpand implements ComponentInterface {
     let expand = this.host.shadowRoot.querySelector<HTMLElement>('.expand');
     let expandInnerHeight = this.host.shadowRoot.querySelectorAll('.expandInner')[0].clientHeight + 'px';
     this.toggle = !this.toggle;
-
     if (this.toggle == true){
       setTimeout(function(){
         expand.style.height = 'auto';
-      }, 300);
+      }.bind(this), 350);
     } else if (this.toggle == false){
       expand.style.height = expandInnerHeight;
     }
+
     anime({
       targets: expand,
       height: this.toggle ? expandInnerHeight : '0px',
@@ -49,6 +49,7 @@ export class ClrDropExpand implements ComponentInterface {
           easing: 'easeInOutQuad'
       },
     });
+
   }
   //*
 

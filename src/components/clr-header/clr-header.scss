@@ -1,32 +1,45 @@
 @import '../../utils/base.scss';
 
 :host {
-  display: block;
+  display: inline-flex;
   flex-direction: row;
   width: 100%;
   height: auto;
   min-height: 50px;
 
   background-color: v(bg);
-  color: v(primary);
+  color: v(fontColor);
 
   *{
     width: auto;
   }
 
-  nav {
-    display: flex;
+  ::slotted(nav){
+    display: inline-flex;
     flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
 
+  /*::slotted(img){
+
+  }
+
+  ::slotted(svg){
+
+  }
+
+  ::slotted(.btn, clr-nav-btn){
+
+  }*/
+
   @include respond(tablet) {
-    width: 80vw;
 
     // responsive code for tablet viewport i.e. 600px
   }
 
   @include respond(mobile) {
-    width: 100vw;
 
     // responsive code for mobile viewport i.e. 480px
   }
