@@ -1,18 +1,24 @@
 @import '../../utils/base.scss';
 
 :host {
-  position: absolute;
+  @include box-size;
+  position: fixed;
+  float:right;
   left: 0px;
   top: 0px;
-  z-index: 99;
+  z-index: 98;
 
   .drawer {
-    display: flex;
+    @include scrollbar-styles;
+    @include box-size;
+
+    overflow-y: scroll;
+    display: block;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    min-height: 100vh;
-    width: calc(30vw - 20px);
+    padding: 0px 10px;
+    height: 100vh;
+    width: 30vw;
     background-color: v(bg);
     color: v(primary);
 

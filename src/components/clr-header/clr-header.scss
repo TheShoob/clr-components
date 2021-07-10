@@ -6,6 +6,8 @@
   width: 100%;
   height: auto;
   min-height: 50px;
+  @include box-size;
+
 
   background-color: v(bg);
   color: v(fontColor);
@@ -18,21 +20,26 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    height: 100%;
     width: 100%;
   }
 
-  /*::slotted(img){
-
+  ::slotted(img){
+    @include box-size;
+    margin: 5px;
+    width: auto;
+    display: inline-flex;
   }
 
   ::slotted(svg){
+    width: 30px;
+    height: 30px;
+   }
 
+  ::slotted(clr-nav-btn){
+    display: flex; 
+    align-self: center;
+    width: 45px;
   }
-
-  ::slotted(.btn, clr-nav-btn){
-
-  }*/
 
   @include respond(tablet) {
 

@@ -1,19 +1,31 @@
+@import '../../utils/base.scss';
+
 p { 
   line-height: 1.5;
-  padding: 8px 15px;
+  padding: 4px 15px;
+  display: block;
+  margin-block-start: .5em;
+  margin-block-end: .5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+  font-family: v(secondaryFontFam);
 }
 
 p.info {
   background-color:#e6f7ff;
   border: 1px solid #91d5ff;
+  color: #2176aa;
 }
 p.success {
   background-color:#f6ffed;
-  border: 1px solid #b7eb8f
+  border: 1px solid #b7eb8f;
+  color: #468b12;
 }
 p.error {
   background-color:#fff1f0;
-  border: 1px solid #ffa39e
+  border: 1px solid #ffa39e;
+  color: #af2a23;
 }
 p.acknowledged {
   display: none;

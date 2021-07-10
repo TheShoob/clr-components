@@ -8,6 +8,9 @@
   width: 100%;
   max-width: 600px;
   min-height: 20px;
+  font-family: v(primaryFontFam);
+  font-size: v(fontSize);
+  color: v(fontColor);
 
   @include respond(tablet) {
     //pointer-events: none;
@@ -21,6 +24,7 @@
 
   a {
     align-self: center;
+    color: inherit;
   }
 
   .main-link {
@@ -30,6 +34,8 @@
     width: calc(100% - 0px);
     padding-left: 0px;
     min-height: 40px;
+    font-family: inherit;
+    font-size: inherit;
     
     .arrowWrap {
       width: 40px;
@@ -41,7 +47,7 @@
       .arrow {
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        border-right: 10px solid #fff;
+        border-right: 10px solid v(highlight);
       }
     }
   }
@@ -62,6 +68,9 @@
         display: inline-flex;
         min-height: 40px;
         line-height: 2.5;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
       }
       
     }

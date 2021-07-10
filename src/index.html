@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <title>Clear Components</title>
   <script type="module" src="/build/clear-components.esm.js"></script>
   <script nomodule src="/build/clear-components.js"></script>
   <style>
     section{
       min-height: 100vh;
     }
-    .padding-top {
-      margin-top: 30px;
-    }
   </style>
 </head>
 <body>
   <clr-header>
-    <img slot="logo" height='50px' src="../testLogo.png" />
+    <img slot="logo" height='45px' src="http://clearedgestudio.com/svg/mark.svg" />
+
     <nav slot="nav">
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
       <clr-drop-link text="Drop Link Text" href="#main2">
@@ -39,36 +37,27 @@
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
-
     </nav>
-    <div slot="icon"></div>
-    <div slot="btn">
-      <clr-nav-btn></clr-nav-btn>
-    </div>
+
+    <div slot="icon"><clr-util-icn kind="success"></clr-util-icn></div>
+    <clr-nav-btn slot="btn"></clr-nav-btn>
   </clr-header>
 
   <clr-left-drawer>
-
     <clr-drop-expand class="padding-top" text="the first drop down" href="#main1">
       <a slot="link" href="#1a">1a</a>
       <a slot="link" href="#2a">2a</a>
       <a slot="link" href="#3a">3a</a>
-
       <clr-drop-expand slot="link" text="first " href="#SubMain1">
         <a slot="link" href="#1a">1a</a>
         <a slot="link" href="#2a">2a</a>
-
         <clr-drop-expand slot="link" text="second " href="#SubMain2">
           <a slot="link" href="#1a">1a</a>
           <a slot="link" href="#2a">2a</a>
           <a slot="link" href="#3a">3a</a>
-          
         </clr-drop-expand>
-
       </clr-drop-expand>
-
     </clr-drop-expand>
-
     <clr-drop-expand text="the second drop down" href="#main2">
     </clr-drop-expand>
     <clr-drop-expand text="the third drop down" href="#main3">

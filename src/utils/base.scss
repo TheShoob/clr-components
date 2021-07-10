@@ -1,26 +1,62 @@
 
 :host {
-    --primary: rgb(224, 224, 224);
-    --secondary: rgb(197, 197, 197);
-    --tertiary: rgb(185, 185, 185);
-    --fontColor: rgb(27, 27, 27);
-    --bg: rgb(218, 218, 218);
+  //* Color //
+  --primary: rgb(82, 109, 150);
+  --secondary: rgb(88, 117, 161);
+  --tertiary: rgb(101, 132, 179);
+  --highlight:rgb(252, 255, 205);
+  --fontColor: rgb(201, 219, 223);
+  --bg: rgb(72, 98, 136);
+
+  //* Font //
+  --fontSize: 16px;
+  --fs-l: 1.6em;
+  --fs-m: 1.2em;
+  --fs-s: .8em;
+  --primaryFontFam: Arial, Helvetica, sans-serif;
+  --secondaryFontFam:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  //* Size //
+  --scrollbar-width: 5px;
 }
 
 @function v($var) {
-    @return var(--#{$var});
+  @return var(--#{$var});
+}
+
+/* scrollbar width */
+@mixin scrollbar-styles {
+  &::-webkit-scrollbar {
+    width: v(scrollbar-width);
   }
-  
-  // respond is the name of your mixin
-  @mixin respond($breakpoint) {
-    @if $breakpoint==tablet {
-      @media only screen and (max-width: 600px) {
-        @content;
-      }
-    }
-    @if $breakpoint==mobile {
-      @media only screen and (max-width: 480px) {
-        @content;
-      }
+  /* scrollbar Track */
+  &::-webkit-scrollbar-track {
+    background: v(primary);
+  }
+  /* scrollbar Handle */
+  &::-webkit-scrollbar-thumb {
+    background: v(highlight); 
+  }
+}
+
+@mixin box-size {
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
+}
+
+// respond is the name of your mixin
+@mixin respond($breakpoint) {
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 600px) {
+      @content;
     }
   }
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+}

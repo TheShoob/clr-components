@@ -17,7 +17,7 @@ export class ClrAlert  {
     return (
       <p class={this.getCSSClass()}>
         {this.text}
-        <button onClick={this.handleAcknowledge}>acknowledge</button>
+        <button onClick={this.handleAcknowledge}>x</button>
       </p>
     )
   }

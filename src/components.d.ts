@@ -43,6 +43,9 @@ export namespace Components {
     }
     interface ClrTopNav {
     }
+    interface ClrUtilIcn {
+        "kind": "info" | "success" | "error";
+    }
     interface ClrWheelUi {
     }
 }
@@ -119,6 +122,12 @@ declare global {
         prototype: HTMLClrTopNavElement;
         new (): HTMLClrTopNavElement;
     };
+    interface HTMLClrUtilIcnElement extends Components.ClrUtilIcn, HTMLStencilElement {
+    }
+    var HTMLClrUtilIcnElement: {
+        prototype: HTMLClrUtilIcnElement;
+        new (): HTMLClrUtilIcnElement;
+    };
     interface HTMLClrWheelUiElement extends Components.ClrWheelUi, HTMLStencilElement {
     }
     var HTMLClrWheelUiElement: {
@@ -138,6 +147,7 @@ declare global {
         "clr-pn-btn": HTMLClrPnBtnElement;
         "clr-popup-btn": HTMLClrPopupBtnElement;
         "clr-top-nav": HTMLClrTopNavElement;
+        "clr-util-icn": HTMLClrUtilIcnElement;
         "clr-wheel-ui": HTMLClrWheelUiElement;
     }
 }
@@ -176,6 +186,9 @@ declare namespace LocalJSX {
     }
     interface ClrTopNav {
     }
+    interface ClrUtilIcn {
+        "kind"?: "info" | "success" | "error";
+    }
     interface ClrWheelUi {
     }
     interface IntrinsicElements {
@@ -191,6 +204,7 @@ declare namespace LocalJSX {
         "clr-pn-btn": ClrPnBtn;
         "clr-popup-btn": ClrPopupBtn;
         "clr-top-nav": ClrTopNav;
+        "clr-util-icn": ClrUtilIcn;
         "clr-wheel-ui": ClrWheelUi;
     }
 }
@@ -210,6 +224,7 @@ declare module "@stencil/core" {
             "clr-pn-btn": LocalJSX.ClrPnBtn & JSXBase.HTMLAttributes<HTMLClrPnBtnElement>;
             "clr-popup-btn": LocalJSX.ClrPopupBtn & JSXBase.HTMLAttributes<HTMLClrPopupBtnElement>;
             "clr-top-nav": LocalJSX.ClrTopNav & JSXBase.HTMLAttributes<HTMLClrTopNavElement>;
+            "clr-util-icn": LocalJSX.ClrUtilIcn & JSXBase.HTMLAttributes<HTMLClrUtilIcnElement>;
             "clr-wheel-ui": LocalJSX.ClrWheelUi & JSXBase.HTMLAttributes<HTMLClrWheelUiElement>;
         }
     }

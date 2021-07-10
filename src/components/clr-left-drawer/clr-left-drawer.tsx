@@ -42,8 +42,9 @@ export class ClrLeftDrawer  {
   componentDidLoad() { // * runs the above function on the element and sets the position
     this.dragSet();
     this.windowSwipe();
-    drawer.setAttribute("style", "position: absolute; top: 0px; left: 0px; height:" + wh() + "px; z-index: 98; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateX(-" + gnw() + "px);");
-    drawerInner().setAttribute("style", "height:" + wh() + "px;");
+    drawer.setAttribute("style", "height:100vh; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateX(-" + gnw() + "px);");
+    //drawerInner().setAttribute("style", "height:" + wh() + "px;");
+    //console.log(window.innerHeight)
   }
 
   @State() open: boolean = false;
