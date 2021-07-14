@@ -11,12 +11,13 @@ let mc2 = new Hammer(window); // * for window swipe
 let gnw = function() { // * get nav width
    return document.getElementsByTagName('clr-left-drawer')[0].shadowRoot.querySelectorAll('nav')[0].offsetWidth;
 }
-let drawerInner = function() { // * get nav width
-  return document.getElementsByTagName('clr-left-drawer')[0].shadowRoot.querySelectorAll('nav')[0];
-}
-let wh = function() { // * get nav width
-  return document.getElementsByTagName('html')[0].offsetHeight;
-}
+/*let drawerInner = function() {*/ // * get nav width
+  //return document.getElementsByTagName('clr-left-drawer')[0].shadowRoot.querySelectorAll('nav')[0];
+/*}*/
+
+/*let wh = function() {*/ // * get nav width
+  //return document.getElementsByTagName('html')[0].offsetHeight;
+/*}*/
 @Component({
   tag: 'clr-left-drawer',
   styleUrl: 'clr-left-drawer.scss',

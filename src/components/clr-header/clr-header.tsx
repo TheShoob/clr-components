@@ -1,10 +1,10 @@
 import { Component, Host, h, Prop, Element, State } from '@stencil/core';
 
 
-let gnw = function() { // * get nav width
+/*let gnw = function() {*/ // * get nav width
   //return document.getElementsByTagName('clr-left-drawer')[0].shadowRoot.querySelectorAll('nav')[0].offsetWidth;
   //return this.host.querySelectorAll('nav')[0].offsetWidth;
-}
+/*}*/
 
 //console.log(gnw());
 @Component({
