@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { ClrUtilIcn } from '../clr-util-icn';
+import { ClrIcon } from '../clr-icon';
 
-describe('clr-util-icn', () => {
+describe('clr-icon', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [ClrUtilIcn],
-      html: `<clr-util-icn></clr-util-icn>`,
+      components: [ClrIcon],
+      html: `<clr-icon></clr-icon>`,
     });
     expect(page.root).toEqualHtml(`
-      <clr-util-icn>
+      <clr-icon>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </clr-util-icn>
+      </clr-icon>
     `);
   });
 });

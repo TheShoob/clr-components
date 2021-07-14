@@ -2,8 +2,8 @@ import { Component, Host, h, Prop } from '@stencil/core';
 import test from './assets/test.svg';
 
 @Component({
-  tag: 'clr-util-icn',
-  styleUrl: 'clr-util-icn.scss',
+  tag: 'clr-icon',
+  styleUrl: 'clr-icon.scss',
   shadow: true,
 })
 export class ClrUtilIcn {

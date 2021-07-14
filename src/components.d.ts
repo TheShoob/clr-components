@@ -25,6 +25,9 @@ export namespace Components {
     interface ClrHeader {
         "src": string;
     }
+    interface ClrIcon {
+        "size": "tiny" | "small" | "medium" | "large" | "full";
+    }
     interface ClrIconBtn {
         "text": string;
     }
@@ -42,9 +45,6 @@ export namespace Components {
         "text": string;
     }
     interface ClrTopNav {
-    }
-    interface ClrUtilIcn {
-        "size": "tiny" | "small" | "medium" | "large" | "full";
     }
     interface ClrWheelUi {
     }
@@ -86,6 +86,12 @@ declare global {
         prototype: HTMLClrHeaderElement;
         new (): HTMLClrHeaderElement;
     };
+    interface HTMLClrIconElement extends Components.ClrIcon, HTMLStencilElement {
+    }
+    var HTMLClrIconElement: {
+        prototype: HTMLClrIconElement;
+        new (): HTMLClrIconElement;
+    };
     interface HTMLClrIconBtnElement extends Components.ClrIconBtn, HTMLStencilElement {
     }
     var HTMLClrIconBtnElement: {
@@ -122,12 +128,6 @@ declare global {
         prototype: HTMLClrTopNavElement;
         new (): HTMLClrTopNavElement;
     };
-    interface HTMLClrUtilIcnElement extends Components.ClrUtilIcn, HTMLStencilElement {
-    }
-    var HTMLClrUtilIcnElement: {
-        prototype: HTMLClrUtilIcnElement;
-        new (): HTMLClrUtilIcnElement;
-    };
     interface HTMLClrWheelUiElement extends Components.ClrWheelUi, HTMLStencilElement {
     }
     var HTMLClrWheelUiElement: {
@@ -141,13 +141,13 @@ declare global {
         "clr-drop-link": HTMLClrDropLinkElement;
         "clr-footer": HTMLClrFooterElement;
         "clr-header": HTMLClrHeaderElement;
+        "clr-icon": HTMLClrIconElement;
         "clr-icon-btn": HTMLClrIconBtnElement;
         "clr-left-drawer": HTMLClrLeftDrawerElement;
         "clr-nav-btn": HTMLClrNavBtnElement;
         "clr-pn-btn": HTMLClrPnBtnElement;
         "clr-popup-btn": HTMLClrPopupBtnElement;
         "clr-top-nav": HTMLClrTopNavElement;
-        "clr-util-icn": HTMLClrUtilIcnElement;
         "clr-wheel-ui": HTMLClrWheelUiElement;
     }
 }
@@ -171,6 +171,9 @@ declare namespace LocalJSX {
     interface ClrHeader {
         "src"?: string;
     }
+    interface ClrIcon {
+        "size"?: "tiny" | "small" | "medium" | "large" | "full";
+    }
     interface ClrIconBtn {
         "text"?: string;
     }
@@ -186,9 +189,6 @@ declare namespace LocalJSX {
     }
     interface ClrTopNav {
     }
-    interface ClrUtilIcn {
-        "size"?: "tiny" | "small" | "medium" | "large" | "full";
-    }
     interface ClrWheelUi {
     }
     interface IntrinsicElements {
@@ -198,13 +198,13 @@ declare namespace LocalJSX {
         "clr-drop-link": ClrDropLink;
         "clr-footer": ClrFooter;
         "clr-header": ClrHeader;
+        "clr-icon": ClrIcon;
         "clr-icon-btn": ClrIconBtn;
         "clr-left-drawer": ClrLeftDrawer;
         "clr-nav-btn": ClrNavBtn;
         "clr-pn-btn": ClrPnBtn;
         "clr-popup-btn": ClrPopupBtn;
         "clr-top-nav": ClrTopNav;
-        "clr-util-icn": ClrUtilIcn;
         "clr-wheel-ui": ClrWheelUi;
     }
 }
@@ -218,13 +218,13 @@ declare module "@stencil/core" {
             "clr-drop-link": LocalJSX.ClrDropLink & JSXBase.HTMLAttributes<HTMLClrDropLinkElement>;
             "clr-footer": LocalJSX.ClrFooter & JSXBase.HTMLAttributes<HTMLClrFooterElement>;
             "clr-header": LocalJSX.ClrHeader & JSXBase.HTMLAttributes<HTMLClrHeaderElement>;
+            "clr-icon": LocalJSX.ClrIcon & JSXBase.HTMLAttributes<HTMLClrIconElement>;
             "clr-icon-btn": LocalJSX.ClrIconBtn & JSXBase.HTMLAttributes<HTMLClrIconBtnElement>;
             "clr-left-drawer": LocalJSX.ClrLeftDrawer & JSXBase.HTMLAttributes<HTMLClrLeftDrawerElement>;
             "clr-nav-btn": LocalJSX.ClrNavBtn & JSXBase.HTMLAttributes<HTMLClrNavBtnElement>;
             "clr-pn-btn": LocalJSX.ClrPnBtn & JSXBase.HTMLAttributes<HTMLClrPnBtnElement>;
             "clr-popup-btn": LocalJSX.ClrPopupBtn & JSXBase.HTMLAttributes<HTMLClrPopupBtnElement>;
             "clr-top-nav": LocalJSX.ClrTopNav & JSXBase.HTMLAttributes<HTMLClrTopNavElement>;
-            "clr-util-icn": LocalJSX.ClrUtilIcn & JSXBase.HTMLAttributes<HTMLClrUtilIcnElement>;
             "clr-wheel-ui": LocalJSX.ClrWheelUi & JSXBase.HTMLAttributes<HTMLClrWheelUiElement>;
         }
     }
