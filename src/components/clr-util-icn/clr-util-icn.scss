@@ -1,7 +1,7 @@
 @import '../../utils/base.scss';
 
 :host {
-  display: block;
+  display: flex;
   div {
     &.tiny {
       width: v(tiny);
