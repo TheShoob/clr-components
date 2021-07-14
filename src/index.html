@@ -13,7 +13,7 @@
   </style>
 </head>
 <body>
-  <clr-header>
+  <clr-header height="60px">
     <img slot="logo" height='45px' src="http://clearedgestudio.com/svg/mark.svg" />
 
     <nav slot="nav">
@@ -39,7 +39,7 @@
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
     </nav>
 
-    <div slot="icon"><clr-util-icn kind="success"></clr-util-icn></div>
+    <!--<div slot="icon"><clr-util-icn kind="success"></clr-util-icn></div>-->
     <clr-nav-btn slot="btn"></clr-nav-btn>
   </clr-header>
 
@@ -90,8 +90,12 @@
   <clr-popup-btn kind="info"></clr-popup-btn>
 
   <section>
-    <clr-icon-btn text="here is some usful info"><div slot="icon">x</div></clr-icon-btn>
     <a name="one"></a>
+
+    <clr-icon-btn text="here is some usful info"><div slot="icon">x</div></clr-icon-btn>
+
+    <clr-util-icn size="large"></clr-util-icn>
+
   </section>
   <section>
     <a name="two"></a>

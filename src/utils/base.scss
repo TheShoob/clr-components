@@ -18,6 +18,12 @@
 
   //* Size //
   --scrollbar-width: 5px;
+  --tiny: 10px;
+  --small: 20px;
+  --medium: 30px;
+  --large: 50px;
+  --full: 100%;
+
 }
 
 @function v($var) {

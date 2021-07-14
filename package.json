@@ -24,7 +24,8 @@
   },
   "devDependencies": {
     "@stencil/core": "2.5.2",
-    "@stencil/sass": "^1.4.1"
+    "@stencil/sass": "^1.4.1",
+    "stencil-inline-svg": "^1.1.0"
   },
   "license": "MIT",
   "dependencies": {

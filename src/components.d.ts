@@ -44,7 +44,7 @@ export namespace Components {
     interface ClrTopNav {
     }
     interface ClrUtilIcn {
-        "kind": "info" | "success" | "error";
+        "size": "tiny" | "small" | "medium" | "large" | "full";
     }
     interface ClrWheelUi {
     }
@@ -187,7 +187,7 @@ declare namespace LocalJSX {
     interface ClrTopNav {
     }
     interface ClrUtilIcn {
-        "kind"?: "info" | "success" | "error";
+        "size"?: "tiny" | "small" | "medium" | "large" | "full";
     }
     interface ClrWheelUi {
     }

@@ -1,4 +1,5 @@
 import { Component, Host, h, Prop } from '@stencil/core';
+import test from './assets/test.svg';
 
 @Component({
   tag: 'clr-util-icn',
@@ -6,13 +7,13 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class ClrUtilIcn {
-  @Prop() kind: "info" | "success" | "error" = "info";
-  getCSSClass = () => this.kind;
+  @Prop() size: "tiny" | "small" | "medium" | "large" | "full" = "tiny";
+  getCSSClass = () => this.size;
 
   render() {
     return (
       <Host>
-        <button class={this.getCSSClass()}></button>
+        <div class={this.getCSSClass()} innerHTML={test}></div>
       </Host>
     );
   }
