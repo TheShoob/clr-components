@@ -10,6 +10,8 @@ export namespace Components {
         "kind": "info" | "success" | "error";
         "text": string;
     }
+    interface ClrCard {
+    }
     interface ClrCarousel {
     }
     interface ClrDropExpand {
@@ -38,6 +40,8 @@ export namespace Components {
     }
     interface ClrNavBtn {
     }
+    interface ClrPill {
+    }
     interface ClrPnBtn {
     }
     interface ClrPopupBtn {
@@ -55,6 +59,12 @@ declare global {
     var HTMLClrAlertElement: {
         prototype: HTMLClrAlertElement;
         new (): HTMLClrAlertElement;
+    };
+    interface HTMLClrCardElement extends Components.ClrCard, HTMLStencilElement {
+    }
+    var HTMLClrCardElement: {
+        prototype: HTMLClrCardElement;
+        new (): HTMLClrCardElement;
     };
     interface HTMLClrCarouselElement extends Components.ClrCarousel, HTMLStencilElement {
     }
@@ -110,6 +120,12 @@ declare global {
         prototype: HTMLClrNavBtnElement;
         new (): HTMLClrNavBtnElement;
     };
+    interface HTMLClrPillElement extends Components.ClrPill, HTMLStencilElement {
+    }
+    var HTMLClrPillElement: {
+        prototype: HTMLClrPillElement;
+        new (): HTMLClrPillElement;
+    };
     interface HTMLClrPnBtnElement extends Components.ClrPnBtn, HTMLStencilElement {
     }
     var HTMLClrPnBtnElement: {
@@ -136,6 +152,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "clr-alert": HTMLClrAlertElement;
+        "clr-card": HTMLClrCardElement;
         "clr-carousel": HTMLClrCarouselElement;
         "clr-drop-expand": HTMLClrDropExpandElement;
         "clr-drop-link": HTMLClrDropLinkElement;
@@ -145,6 +162,7 @@ declare global {
         "clr-icon-btn": HTMLClrIconBtnElement;
         "clr-left-drawer": HTMLClrLeftDrawerElement;
         "clr-nav-btn": HTMLClrNavBtnElement;
+        "clr-pill": HTMLClrPillElement;
         "clr-pn-btn": HTMLClrPnBtnElement;
         "clr-popup-btn": HTMLClrPopupBtnElement;
         "clr-top-nav": HTMLClrTopNavElement;
@@ -155,6 +173,8 @@ declare namespace LocalJSX {
     interface ClrAlert {
         "kind"?: "info" | "success" | "error";
         "text"?: string;
+    }
+    interface ClrCard {
     }
     interface ClrCarousel {
     }
@@ -181,6 +201,8 @@ declare namespace LocalJSX {
     }
     interface ClrNavBtn {
     }
+    interface ClrPill {
+    }
     interface ClrPnBtn {
     }
     interface ClrPopupBtn {
@@ -193,6 +215,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "clr-alert": ClrAlert;
+        "clr-card": ClrCard;
         "clr-carousel": ClrCarousel;
         "clr-drop-expand": ClrDropExpand;
         "clr-drop-link": ClrDropLink;
@@ -202,6 +225,7 @@ declare namespace LocalJSX {
         "clr-icon-btn": ClrIconBtn;
         "clr-left-drawer": ClrLeftDrawer;
         "clr-nav-btn": ClrNavBtn;
+        "clr-pill": ClrPill;
         "clr-pn-btn": ClrPnBtn;
         "clr-popup-btn": ClrPopupBtn;
         "clr-top-nav": ClrTopNav;
@@ -213,6 +237,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "clr-alert": LocalJSX.ClrAlert & JSXBase.HTMLAttributes<HTMLClrAlertElement>;
+            "clr-card": LocalJSX.ClrCard & JSXBase.HTMLAttributes<HTMLClrCardElement>;
             "clr-carousel": LocalJSX.ClrCarousel & JSXBase.HTMLAttributes<HTMLClrCarouselElement>;
             "clr-drop-expand": LocalJSX.ClrDropExpand & JSXBase.HTMLAttributes<HTMLClrDropExpandElement>;
             "clr-drop-link": LocalJSX.ClrDropLink & JSXBase.HTMLAttributes<HTMLClrDropLinkElement>;
@@ -222,6 +247,7 @@ declare module "@stencil/core" {
             "clr-icon-btn": LocalJSX.ClrIconBtn & JSXBase.HTMLAttributes<HTMLClrIconBtnElement>;
             "clr-left-drawer": LocalJSX.ClrLeftDrawer & JSXBase.HTMLAttributes<HTMLClrLeftDrawerElement>;
             "clr-nav-btn": LocalJSX.ClrNavBtn & JSXBase.HTMLAttributes<HTMLClrNavBtnElement>;
+            "clr-pill": LocalJSX.ClrPill & JSXBase.HTMLAttributes<HTMLClrPillElement>;
             "clr-pn-btn": LocalJSX.ClrPnBtn & JSXBase.HTMLAttributes<HTMLClrPnBtnElement>;
             "clr-popup-btn": LocalJSX.ClrPopupBtn & JSXBase.HTMLAttributes<HTMLClrPopupBtnElement>;
             "clr-top-nav": LocalJSX.ClrTopNav & JSXBase.HTMLAttributes<HTMLClrTopNavElement>;

@@ -8,8 +8,8 @@ let mc = new Hammer(drawer, { // * main drag event
   inputClass: Hammer.TouchInput
 });
 let mc2 = new Hammer(window); // * for window swipe
-let gnw = function() { // * get nav width
-   return document.getElementsByTagName('clr-left-drawer')[0].shadowRoot.querySelectorAll('nav')[0].offsetWidth;
+let gdw = function() { // * get nav width
+   return drawer.shadowRoot.querySelectorAll('nav')[0].offsetWidth;
 }
 /*let drawerInner = function() {*/ // * get nav width
   //return document.getElementsByTagName('clr-left-drawer')[0].shadowRoot.querySelectorAll('nav')[0];
@@ -43,7 +43,7 @@ export class ClrLeftDrawer  {
   componentDidLoad() { // * runs the above function on the element and sets the position
     this.dragSet();
     this.windowSwipe();
-    drawer.setAttribute("style", "height:100vh; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateX(-" + gnw() + "px);");
+    drawer.setAttribute("style", "height:100vh; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateX(-" + gdw() + "px);");
     //drawerInner().setAttribute("style", "height:" + wh() + "px;");
     //console.log(window.innerHeight)
   }
@@ -67,7 +67,7 @@ export class ClrLeftDrawer  {
   drawerClose() {// * close drawer
     anime({
         targets: 'clr-left-drawer',
-        translateX: '-' + gnw(),
+        translateX: '-' + gdw(),
         easing: 'easeOutQuad',
         duration: 400,
     });
@@ -100,7 +100,7 @@ export class ClrLeftDrawer  {
     }
     else if ((width < oldWidth) || (width > oldWidth)) {
         setTimeout(function () {
-          gnw();
+          gdw();
           drawer.drawerClose();
         }, 200);
     }
@@ -120,7 +120,7 @@ export class ClrLeftDrawer  {
     mc.on('panright pan panleft', function(ev) {
 
       drawer.style.transform = "translateX(" + ev.deltaX + "px)";
-      var navMatch = ("-" + gnw()/2); // * half nav width
+      var navMatch = ("-" + gdw()/2); // * half nav width
 
       
       if (drawer.style.transform > "translateX(" + 0 + "px)") {

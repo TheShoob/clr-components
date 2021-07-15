@@ -8,7 +8,7 @@ import anime from 'animejs';
 
 export class ClrDropExpand implements ComponentInterface {
   @Prop() text: string = "Text for the link";
-  @Prop() href: string = "#";
+  @Prop() href: string = "";
 
   @Element() host: HTMLElement;
 
@@ -58,7 +58,7 @@ export class ClrDropExpand implements ComponentInterface {
         return (
           <Host>
             <div class="main-link">
-              <a href={this.href}>{this.text}</a>
+              <a href={this.href} >{this.text}</a>
               <div class="arrowWrap" onClick={this.toggleSub}>
                 <div class="arrow"></div>
               </div>
