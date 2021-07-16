@@ -9,8 +9,9 @@
 
 | Property | Attribute | Description | Type     | Default               |
 | -------- | --------- | ----------- | -------- | --------------------- |
-| `href`   | `href`    |             | `string` | `"#"`                 |
+| `href`   | `href`    |             | `string` | `""`                  |
 | `text`   | `text`    |             | `string` | `"Text for the link"` |
+| `url`    | `url`     |             | `string` | `""`                  |
 
 
 ----------------------------------------------

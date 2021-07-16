@@ -9,6 +9,7 @@ import anime from 'animejs';
 export class ClrDropExpand implements ComponentInterface {
   @Prop() text: string = "Text for the link";
   @Prop() href: string = "";
+  @Prop() url: string = "";
 
   @Element() host: HTMLElement;
 
@@ -22,7 +23,6 @@ export class ClrDropExpand implements ComponentInterface {
 
   //*ARROW AND EXPAND AREA OPEN/CLOSE
   toggleSub = () => {
-    console.log('CLICK');
     let arrow = this.host.shadowRoot.querySelectorAll('.arrow');
     let expand = this.host.shadowRoot.querySelector<HTMLElement>('.expand');
     let expandInnerHeight = this.host.shadowRoot.querySelectorAll('.expandInner')[0].clientHeight + 'px';
@@ -54,7 +54,7 @@ export class ClrDropExpand implements ComponentInterface {
   //*
 
   render() {
-      if (this.childrenData.hasChildren == true) {
+      if (this.childrenData.hasChildren == true && this.href !== "") {
         return (
           <Host>
             <div class="main-link">
@@ -71,7 +71,7 @@ export class ClrDropExpand implements ComponentInterface {
             </div>
           </Host> 
         )
-      } else {
+      } else if (this.childrenData.hasChildren == false && this.href !== ""){
         return (
           <Host>
             <div class="main-link">
@@ -79,7 +79,39 @@ export class ClrDropExpand implements ComponentInterface {
             </div>
           </Host> 
         )
+      } else if (this.childrenData.hasChildren == true && this.url !== "") {
+        return (
+          <Host>
+            <div class="main-link">
+              <div><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
+              <div class="arrowWrap" onClick={this.toggleSub}>
+                <div class="arrow"></div>
+              </div>
+            </div>
+
+            <div class="expand">
+              <div class="expandInner">
+                <slot name="link"/>
+              </div>
+            </div>
+          </Host> 
+        )
+      } else if (this.childrenData.hasChildren == false && this.url !== ""){
+        return (
+          <Host>
+            <div class="main-link">
+              <div><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
+            </div>
+          </Host> 
+        )
       }
+
+
+
+
+
+
+
   }
 
 }

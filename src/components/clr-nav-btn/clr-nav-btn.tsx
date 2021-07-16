@@ -29,7 +29,7 @@ export class ClrNavBtn {
 
   render() {
     return (
-      <button class={this.getCSSClass()} onClick={this.navBtnClick}>
+      <button class={this.getCSSClass()} onClick={this.navBtnClick} aria-label="open left navagation">
       </button>
     );
   }

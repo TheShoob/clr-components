@@ -17,10 +17,12 @@ export namespace Components {
     interface ClrDropExpand {
         "href": string;
         "text": string;
+        "url": string;
     }
     interface ClrDropLink {
         "href": string;
         "text": string;
+        "url": string;
     }
     interface ClrFooter {
     }
@@ -31,6 +33,7 @@ export namespace Components {
         "size": "tiny" | "small" | "medium" | "large" | "full";
     }
     interface ClrIconBtn {
+        "ariaLabel": string;
         "text": string;
     }
     interface ClrLeftDrawer {
@@ -181,10 +184,12 @@ declare namespace LocalJSX {
     interface ClrDropExpand {
         "href"?: string;
         "text"?: string;
+        "url"?: string;
     }
     interface ClrDropLink {
         "href"?: string;
         "text"?: string;
+        "url"?: string;
     }
     interface ClrFooter {
     }
@@ -195,6 +200,7 @@ declare namespace LocalJSX {
         "size"?: "tiny" | "small" | "medium" | "large" | "full";
     }
     interface ClrIconBtn {
+        "ariaLabel"?: string;
         "text"?: string;
     }
     interface ClrLeftDrawer {

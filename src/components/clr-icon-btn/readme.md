@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default                                  |
-| -------- | --------- | ----------- | -------- | ---------------------------------------- |
-| `text`   | `text`    |             | `string` | `"default text if no text in component"` |
+| Property    | Attribute    | Description | Type     | Default                                  |
+| ----------- | ------------ | ----------- | -------- | ---------------------------------------- |
+| `ariaLabel` | `aria-label` |             | `string` | `"a button"`                             |
+| `text`      | `text`       |             | `string` | `"default text if no text in component"` |
 
 
 ----------------------------------------------

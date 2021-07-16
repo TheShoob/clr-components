@@ -8,7 +8,8 @@ import { Component, Host, h, Prop, State, Element } from '@stencil/core';
 
 export class ClrDropLink {
   @Prop() text: string = "Text for the link";
-  @Prop() href: string = "#";
+  @Prop() href: string = "";
+  @Prop() url: string = "";
   @Element() host: HTMLElement;
   @State() childrenData: any = {};
 
@@ -29,7 +30,7 @@ export class ClrDropLink {
   }
 
   render() {
-    if (this.childrenData.hasChildren == true) {
+    if (this.childrenData.hasChildren == true && this.href !== "") {
       return (
         <Host>
           <a href={this.href}>{this.text}</a>
@@ -38,10 +39,26 @@ export class ClrDropLink {
           </div>
         </Host>
       )
-    } else {
+    } else if (this.childrenData.hasChildren == false && this.href !== "") {
       return (
         <Host>
           <a href={this.href}>{this.text}</a>
+        </Host> 
+      )
+    }
+    if (this.childrenData.hasChildren == true && this.url !== "") {
+      return (
+        <Host>
+          <div><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
+          <div class="drop">
+            <slot name="link"/>
+          </div>
+        </Host>
+      )
+    } else if (this.childrenData.hasChildren == false && this.url !== "") {
+      return (
+        <Host>
+          <div><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
         </Host> 
       )
     }
