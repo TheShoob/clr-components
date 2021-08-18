@@ -83,7 +83,7 @@ export class ClrDropExpand implements ComponentInterface {
         return (
           <Host>
             <div class="main-link">
-              <div><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
+              <div class="btnWrap"><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
               <div class="arrowWrap" onClick={this.toggleSub}>
                 <div class="arrow"></div>
               </div>
@@ -100,7 +100,7 @@ export class ClrDropExpand implements ComponentInterface {
         return (
           <Host>
             <div class="main-link">
-              <div><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
+              <div class="btnWrap"><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
             </div>
           </Host> 
         )

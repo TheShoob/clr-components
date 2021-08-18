@@ -50,6 +50,11 @@
         border-right: 10px solid v(highlight);
       }
     }
+
+    .btnWrap {
+      display: flex;
+      align-items: center;
+    }
   }
  
   .expand {
