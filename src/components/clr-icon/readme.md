@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                                 | Default  |
-| -------- | --------- | ----------- | ---------------------------------------------------- | -------- |
-| `size`   | `size`    |             | `"full" \| "large" \| "medium" \| "small" \| "tiny"` | `"tiny"` |
+| Property | Attribute | Description | Type                                                 | Default     |
+| -------- | --------- | ----------- | ---------------------------------------------------- | ----------- |
+| `kind`   | `kind`    |             | `any`                                                | `undefined` |
+| `size`   | `size`    |             | `"full" \| "large" \| "medium" \| "small" \| "tiny"` | `"tiny"`    |
 
 
 ----------------------------------------------

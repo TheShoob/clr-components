@@ -30,6 +30,7 @@ export namespace Components {
         "src": string;
     }
     interface ClrIcon {
+        "kind": any;
         "size": "tiny" | "small" | "medium" | "large" | "full";
     }
     interface ClrIconBtn {
@@ -41,6 +42,8 @@ export namespace Components {
         "drawerMove": () => Promise<void>;
         "drawerOpen": () => Promise<void>;
     }
+    interface ClrNav {
+    }
     interface ClrNavBtn {
     }
     interface ClrPill {
@@ -50,8 +53,6 @@ export namespace Components {
     interface ClrPopupBtn {
         "kind": "info" | "success" | "error";
         "text": string;
-    }
-    interface ClrTopNav {
     }
     interface ClrWheelUi {
     }
@@ -117,6 +118,12 @@ declare global {
         prototype: HTMLClrLeftDrawerElement;
         new (): HTMLClrLeftDrawerElement;
     };
+    interface HTMLClrNavElement extends Components.ClrNav, HTMLStencilElement {
+    }
+    var HTMLClrNavElement: {
+        prototype: HTMLClrNavElement;
+        new (): HTMLClrNavElement;
+    };
     interface HTMLClrNavBtnElement extends Components.ClrNavBtn, HTMLStencilElement {
     }
     var HTMLClrNavBtnElement: {
@@ -141,12 +148,6 @@ declare global {
         prototype: HTMLClrPopupBtnElement;
         new (): HTMLClrPopupBtnElement;
     };
-    interface HTMLClrTopNavElement extends Components.ClrTopNav, HTMLStencilElement {
-    }
-    var HTMLClrTopNavElement: {
-        prototype: HTMLClrTopNavElement;
-        new (): HTMLClrTopNavElement;
-    };
     interface HTMLClrWheelUiElement extends Components.ClrWheelUi, HTMLStencilElement {
     }
     var HTMLClrWheelUiElement: {
@@ -164,11 +165,11 @@ declare global {
         "clr-icon": HTMLClrIconElement;
         "clr-icon-btn": HTMLClrIconBtnElement;
         "clr-left-drawer": HTMLClrLeftDrawerElement;
+        "clr-nav": HTMLClrNavElement;
         "clr-nav-btn": HTMLClrNavBtnElement;
         "clr-pill": HTMLClrPillElement;
         "clr-pn-btn": HTMLClrPnBtnElement;
         "clr-popup-btn": HTMLClrPopupBtnElement;
-        "clr-top-nav": HTMLClrTopNavElement;
         "clr-wheel-ui": HTMLClrWheelUiElement;
     }
 }
@@ -197,6 +198,7 @@ declare namespace LocalJSX {
         "src"?: string;
     }
     interface ClrIcon {
+        "kind"?: any;
         "size"?: "tiny" | "small" | "medium" | "large" | "full";
     }
     interface ClrIconBtn {
@@ -204,6 +206,8 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface ClrLeftDrawer {
+    }
+    interface ClrNav {
     }
     interface ClrNavBtn {
     }
@@ -214,8 +218,6 @@ declare namespace LocalJSX {
     interface ClrPopupBtn {
         "kind"?: "info" | "success" | "error";
         "text"?: string;
-    }
-    interface ClrTopNav {
     }
     interface ClrWheelUi {
     }
@@ -230,11 +232,11 @@ declare namespace LocalJSX {
         "clr-icon": ClrIcon;
         "clr-icon-btn": ClrIconBtn;
         "clr-left-drawer": ClrLeftDrawer;
+        "clr-nav": ClrNav;
         "clr-nav-btn": ClrNavBtn;
         "clr-pill": ClrPill;
         "clr-pn-btn": ClrPnBtn;
         "clr-popup-btn": ClrPopupBtn;
-        "clr-top-nav": ClrTopNav;
         "clr-wheel-ui": ClrWheelUi;
     }
 }
@@ -252,11 +254,11 @@ declare module "@stencil/core" {
             "clr-icon": LocalJSX.ClrIcon & JSXBase.HTMLAttributes<HTMLClrIconElement>;
             "clr-icon-btn": LocalJSX.ClrIconBtn & JSXBase.HTMLAttributes<HTMLClrIconBtnElement>;
             "clr-left-drawer": LocalJSX.ClrLeftDrawer & JSXBase.HTMLAttributes<HTMLClrLeftDrawerElement>;
+            "clr-nav": LocalJSX.ClrNav & JSXBase.HTMLAttributes<HTMLClrNavElement>;
             "clr-nav-btn": LocalJSX.ClrNavBtn & JSXBase.HTMLAttributes<HTMLClrNavBtnElement>;
             "clr-pill": LocalJSX.ClrPill & JSXBase.HTMLAttributes<HTMLClrPillElement>;
             "clr-pn-btn": LocalJSX.ClrPnBtn & JSXBase.HTMLAttributes<HTMLClrPnBtnElement>;
             "clr-popup-btn": LocalJSX.ClrPopupBtn & JSXBase.HTMLAttributes<HTMLClrPopupBtnElement>;
-            "clr-top-nav": LocalJSX.ClrTopNav & JSXBase.HTMLAttributes<HTMLClrTopNavElement>;
             "clr-wheel-ui": LocalJSX.ClrWheelUi & JSXBase.HTMLAttributes<HTMLClrWheelUiElement>;
         }
     }
