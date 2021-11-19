@@ -12,16 +12,16 @@
     transition: all 0.1s ease;
 
     &.quater {
-      width: 25%;
+      max-width: 25vw;
     }
     &.third {
-      width: 33%;
+      max-width: 33vw;
     }
     &.half {
-      width: 50%;
+      max-width: 50vw;
     }
     &.full {
-      width: 100%;
+      max-width: 100vw;
     }
     &:hover{
       transform: scale(1.005);

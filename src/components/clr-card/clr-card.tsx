@@ -19,6 +19,11 @@ export class ClrCard {
 
   getSize = () => this.size;
 
+  componentWillLoad() {
+    let slotted = this.host.querySelectorAll('[slot="card-expand-body"]');
+    this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length };
+  }
+
 
     //*ARROW AND EXPAND AREA OPEN/CLOSE
     toggleSub = () => {
@@ -54,30 +59,49 @@ export class ClrCard {
   
 
   render() {
-    return (
-      <Host>
-        <div class={this.getSize() + " card"}>
-          <div class="img">
-            <slot name="img"/>
-          </div>
-          <hr></hr>
-          <div class="card-body">
-            <div class="card-title">{this.title}</div>
-            <div class="sub-title">{this.subtitle}</div>
-            <slot name="card-body"/>
+    if (this.childrenData.hasChildren == true) {
+      return (
+        <Host>
+          <div class={this.getSize() + " card"}>
+            <div class="img">
+              <slot name="img"/>
+            </div>
+            <br/>
+            <div class="card-body">
+              <div class="card-title">{this.title}</div>
+              <div class="sub-title">{this.subtitle}</div>
+              <slot name="card-body"/>
 
-            <div class="expand">
-              <div class="expandInner">
-                <slot name="card-expand-body"/>
+              <div class="expand">
+                <div class="expandInner">
+                  <slot name="card-expand-body"/>
+                </div>
+              </div>
+              <div class="arrowWrap" onClick={this.toggleSub}>
+                <div class="arrow"></div>
               </div>
             </div>
-            <div class="arrowWrap" onClick={this.toggleSub}>
-              <div class="arrow"></div>
+          </div>
+        </Host>
+      );
+
+    } else {
+      return (
+        <Host>
+          <div class={this.getSize() + " card"}>
+            <div class="img">
+              <slot name="img"/>
+            </div>
+            <br/>
+            <div class="card-body">
+              <div class="card-title">{this.title}</div>
+              <div class="sub-title">{this.subtitle}</div>
+              <slot name="card-body"/>
             </div>
           </div>
-        </div>
-      </Host>
-    );
+        </Host>
+      );
+    }
   }
 
 }
