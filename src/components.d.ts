@@ -11,6 +11,12 @@ export namespace Components {
         "text": string;
     }
     interface ClrCard {
+        "href": string;
+        "size": "quater" | "third" | "half" | "full" | "";
+        "src": string;
+        "subtitle": string;
+        "title": string;
+        "url": string;
     }
     interface ClrCarousel {
     }
@@ -179,6 +185,12 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface ClrCard {
+        "href"?: string;
+        "size"?: "quater" | "third" | "half" | "full" | "";
+        "src"?: string;
+        "subtitle"?: string;
+        "title"?: string;
+        "url"?: string;
     }
     interface ClrCarousel {
     }
