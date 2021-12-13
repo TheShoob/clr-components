@@ -1,52 +1,138 @@
 @import '../../utils/base.scss';
 
 :host {
-  display: inline-flex;
   position: relative;
-  width: auto;
-  height: 100%;
-  background-color: v(bg);
-  color: v(fontColor);
-  font-family: v(primaryFontFam);
-  font-size: v(fontSize);
   padding: 0px 10px;
+  flex: 1;
+  border: solid v(tertiary);
+  border-width: 0px 1px 0px 0px;
+
+  &:host(:last-of-type) {
+    border-width: 0px 0px 0px 0px;
+  }
 
   &:host(:hover){
     background-color: v(secondary);
-    color: v(fontColor);
     .drop {
       height: auto;
       overflow: visible;
     }
   }
-  a, div {
-    align-self: center;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
+
+  .dl {
+    display: inline-flex;
+    width: auto;
+    height: 100%;
+    color: v(fontColor);
+    font-family: v(primaryFontFam);
+    font-size: v(fontSize);
+
+    &:hover{
+      color: v(fontColor);
+    }
+    a, div {
+      align-self: center;
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+    }
+    .drop {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      height: 0px;
+      flex-direction: column;
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      z-index: 99;
+      background-color: v(secondary);
+    }
+    ::slotted(*) {
+      background-color: v(secondary);
+      padding: 5px 10px;
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+    }
+    ::slotted(*:hover) {
+      background-color: v(tertiary);
+    }
+
   }
-  .drop {
+
+  .el {
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 0px;
     flex-direction: column;
-    position: absolute;
-    left: 0%;
-    top: 100%;
-    z-index: 99;
-    background-color: v(secondary);
-  }
-  ::slotted(*) {
-    background-color: v(secondary);
-    padding: 5px 10px;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-  }
-  ::slotted(*:hover) {
-    background-color: v(tertiary);
+    align-self: flex-end;
+    width: 100%;
+    max-width: 200px;
+    min-height: 20px;
+    font-family: v(primaryFontFam);
+    font-size: v(fontSize);
+    color: v(fontColor);
+
+
+    .expand-link {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: calc(100% - 0px);
+      padding-left: 0px;
+      min-height: 55px;
+      font-family: inherit;
+      font-size: inherit;
+
+      a {
+        align-self: center;
+        color: inherit;
+      }
+      
+      .arrowWrap {
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .arrow {
+          border-top: 7px solid transparent;
+          border-bottom: 7px solid transparent;
+          border-right: 7px solid v(fontColor);
+        }
+      }
+
+      .btnWrap {
+        display: flex;
+        align-items: center;
+      }
+    }
+  
+    .expand {
+      display: flex;
+      flex-direction: column;
+      height: 0px;//*overwritten by js*/
+      overflow-y: hidden;
+      padding-left: 10px;
+
+      .expandInner {
+        display: flex;
+        flex-direction: column;
+
+        ::slotted(*){
+          display: inline-flex;
+          min-height: 40px;
+          line-height: 2.5;
+          padding: 5px 0px;
+          color: inherit;
+          font-size: inherit;
+          font-family: inherit;
+        }
+        
+      }
+    }
   }
 }
+
+ 
 
 

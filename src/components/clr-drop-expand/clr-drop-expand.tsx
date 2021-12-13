@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h, Prop, Element, State } from '@stencil/core';
+import { Component, Host, h, Prop, Element, State } from '@stencil/core';
 import anime from 'animejs';
 @Component({
   tag: 'clr-drop-expand',
@@ -6,7 +6,7 @@ import anime from 'animejs';
   shadow: true,
 })
 
-export class ClrDropExpand implements ComponentInterface {
+export class ClrDropExpand {
   @Prop() text: string = "Text for the link";
   @Prop() href: string = "";
   @Prop() url: string = "";
@@ -54,7 +54,7 @@ export class ClrDropExpand implements ComponentInterface {
   //*
 
   render() {
-      if (this.childrenData.hasChildren == true && this.href !== "") {
+      if (this.childrenData.hasChildren == true && this.href !== ""){
         return (
           <Host>
             <div class="main-link">
@@ -79,7 +79,8 @@ export class ClrDropExpand implements ComponentInterface {
             </div>
           </Host> 
         )
-      } else if (this.childrenData.hasChildren == true && this.url !== "") {
+      }
+      if (this.childrenData.hasChildren == true && this.url !== ""){
         return (
           <Host>
             <div class="main-link">
@@ -105,12 +106,6 @@ export class ClrDropExpand implements ComponentInterface {
           </Host> 
         )
       }
-
-
-
-
-
-
 
   }
 

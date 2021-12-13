@@ -97,6 +97,7 @@ export class ClrCard {
               <div class="card-title">{this.title}</div>
               <div class="sub-title">{this.subtitle}</div>
               <slot name="card-body"/>
+              <div class="pad25"></div>
             </div>
           </div>
         </Host>

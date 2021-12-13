@@ -21,10 +21,9 @@ export class ClrHeader {
   componentWillLoad() { 
     let slotted = this.host.children;
     this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length };
-  
   }
   componentDidLoad(){
-    console.log(this.host.querySelectorAll('nav')[0].offsetWidth)
+    //console.log(this.host.querySelectorAll('nav')[0].offsetWidth)
   }
 
   render() {

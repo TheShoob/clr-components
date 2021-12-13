@@ -21,7 +21,8 @@
     .row {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     clr-card {
       margin-left: 5px;
@@ -30,10 +31,12 @@
   </style>
 </head>
 <body>
+  <a style="position:absolute; top:0px;" name="one"></a>
+
   <clr-header height="60px">
     <img slot="logo" height='45px' src="http://clearedgestudio.com/svg/mark.svg" />
 
-    <nav slot="nav">
+    <clr-nav slot="nav">
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
       <clr-drop-link text="Drop Link Text" href="#main2">
         <a slot="link" href="#one">One</a>
@@ -54,21 +57,23 @@
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
       <clr-drop-link text="Drop Link Text" href="#main1"></clr-drop-link>
-    </nav>
+    </clr-nav>
 
     <!--<div slot="icon"><clr-util-icn kind="success"></clr-util-icn></div>-->
     <clr-nav-btn slot="btn"></clr-nav-btn>
   </clr-header>
 
   <clr-left-drawer>
-    <clr-drop-expand class="padding-top" text="the first drop down" url="/">
+    <img height='45px' src="http://clearedgestudio.com/svg/mark.svg" />
+
+    <clr-drop-expand class="padding-top" text="the first drop down" href="/">
       <a slot="link" href="#1a">1a</a>
       <a slot="link" href="#2a">2a</a>
       <a slot="link" href="#3a">3a</a>
-      <clr-drop-expand slot="link" text="first " href="#SubMain1">
+      <clr-drop-expand slot="link" text="first" href="#SubMain1">
         <a slot="link" href="#1a">1a</a>
         <a slot="link" href="#2a">2a</a>
-        <clr-drop-expand slot="link" text="second " href="#SubMain2">
+        <clr-drop-expand slot="link" text="second" href="#SubMain2">
           <a slot="link" href="#1a">1a</a>
           <a slot="link" href="#2a">2a</a>
           <a slot="link" href="#3a">3a</a>
@@ -107,51 +112,73 @@
   <clr-popup-btn kind="info"></clr-popup-btn>
 
   <section>
-    <a name="one"></a>
+    <a name="two"></a>
     <clr-icon-btn text="here is some usful info"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></clr-icon-btn>
     <clr-icon size="large" kind="doc"></clr-icon>
 
     <div class='row'>
       <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
-        <img slot="img" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
       <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
-        <img slot="img" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
       <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
-        <img slot="img" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
       <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
-        <img slot="img" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
       </clr-card>
     </div>
+    <br><br>
+    <div class='row'>
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+        <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
+        <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
+      </clr-card>
 
-    <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
-      <img slot="img" src="http://clearedgestudio.com/svg/mark.svg"/>
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+        <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
+        <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
+      </clr-card>
+
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+        <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
+      </clr-card>
+    </div>
+    <br><br>
+    <div class='row'>
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
+        <img slot="img" height="180px" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
+        <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
+      </clr-card>
+
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
+        <img slot="img" height="180px" src="http://clearedgestudio.com/svg/mark.svg"/>
+        <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
+        <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
+      </clr-card>
+    </div>
+    <br><br>
+    <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="full">
+      <img slot="img" height="230px" src="http://clearedgestudio.com/svg/mark.svg"/>
       <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
+      <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
     </clr-card>
-
-    <clr-card size="third">
-      
-    </clr-card>
-
-    <clr-card size="half">
-      
-    </clr-card>
-
-  </section>
-  <section>
-    <a name="two"></a>
   </section>
   <section>
     <a name="three"></a>
