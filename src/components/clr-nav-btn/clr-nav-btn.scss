@@ -1,63 +1,65 @@
 @import '../../utils/base.scss';
-
-button {
-    /*position: absolute;
-    right: 15px;
-    top: 15px;*/
-    z-index: 99;
-    background-color: v(highlight);
-    width: 35px;
-    height: 35px;
-}
-
-#navbtn {
-    width: 35px;
-    height: 35px;
+:host {
+    position: absolute;
     right: 10px;
-    top: 20px;
-    display: flex;
-    z-index: 4;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px v(primary);
-    border-radius: 5px;
+    top: 10px;
+    z-index: 99;
 
-    .bar {
-        display: block;
-        width: 22px;
-        margin-bottom: 3px;
-        margin-top: 0px;
-        height: 2px;
-        background-color: v(primary);
-        -webkit-transition: all .3s linear;
-        -moz-transition: all .3s linear;
-        -o-transition: all .3s linear;
-        transition: all .3s linear;
+    button {
+        background-color: v(highlight);
+        width: 35px;
+        height: 35px;
     }
-    .bar:last-child {
-        margin-bottom: 0px; 
+
+    #navbtn {
+        width: 35px;
+        height: 35px;
+        right: 10px;
+        top: 20px;
+        display: flex;
+        z-index: 4;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px v(primary);
+        border-radius: 5px;
+
+        .bar {
+            display: block;
+            width: 22px;
+            margin-bottom: 3px;
+            margin-top: 0px;
+            height: 2px;
+            background-color: v(primary);
+            -webkit-transition: all .3s linear;
+            -moz-transition: all .3s linear;
+            -o-transition: all .3s linear;
+            transition: all .3s linear;
+        }
+        .bar:last-child {
+            margin-bottom: 0px; 
+        }
+        &.on span:first-child {
+            -webkit-transform: rotate(-42deg);
+            -moz-transform: rotate(-42deg);
+            -ms-transform: rotate(-42deg);
+            -o-transform: rotate(-42deg);
+            transform: rotate(-42deg);
+            margin-top: 0px;
+            background-color: rgb(179, 29, 29);
+        }
+        &.on span:nth-child(2) {
+            background-color: transparent;
+        }
+        &.on span:last-child {
+            -webkit-transform: rotate(42deg);
+            -moz-transform: rotate(42deg);
+            -ms-transform: rotate(42deg);
+            -o-transform: rotate(42deg);
+            transform: rotate(42deg);
+            margin-top: -10px;
+            background-color: rgb(179, 29, 29);
+        }
     }
-    &.on span:first-child {
-        -webkit-transform: rotate(-42deg);
-        -moz-transform: rotate(-42deg);
-        -ms-transform: rotate(-42deg);
-        -o-transform: rotate(-42deg);
-        transform: rotate(-42deg);
-        margin-top: 0px;
-        background-color: rgb(179, 29, 29);
-    }
-    &.on span:nth-child(2) {
-        background-color: transparent;
-    }
-    &.on span:last-child {
-        -webkit-transform: rotate(42deg);
-        -moz-transform: rotate(42deg);
-        -ms-transform: rotate(42deg);
-        -o-transform: rotate(42deg);
-        transform: rotate(42deg);
-        margin-top: -10px;
-        background-color: rgb(179, 29, 29);
-    }
+
 }
-

@@ -152,7 +152,13 @@ export class ClrLeftDrawer  {
     return (
       <Host>
           <nav class={'drawer ' + this.getCSSClass()} onTouchMove={this.drag}>
-              <slot></slot>
+            <slot name="logo"></slot>
+
+            <slot name="nav"></slot>
+
+            <slot name="icon"></slot>
+
+            <slot name="btn"></slot>
           </nav>
       </Host>
     );

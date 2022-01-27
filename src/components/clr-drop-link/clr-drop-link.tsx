@@ -164,7 +164,7 @@ export class ClrDropLink {
       return (
       <Host>
         <div class="el">
-          <div class="main-link">
+          <div class="expand-link">
             <div class="btnWrap"><stencil-route-link url={this.url} >{this.text}</stencil-route-link></div>
           </div>
         </div>

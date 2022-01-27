@@ -1,18 +1,21 @@
 @import '../../utils/base.scss';
 
 :host {
+  display: inline-flex;
+  height: 100%;
   position: relative;
   padding: 0px 10px;
   flex: 1;
   border: solid v(tertiary);
   border-width: 0px 1px 0px 0px;
+  background-color: v(bg);
 
   &:host(:last-of-type) {
     border-width: 0px 0px 0px 0px;
   }
 
   &:host(:hover){
-    background-color: v(secondary);
+    background-color: v(bg);
     .drop {
       height: auto;
       overflow: visible;
@@ -46,17 +49,17 @@
       left: 0px;
       top: 100%;
       z-index: 99;
-      background-color: v(secondary);
+      background-color: v(bg);
     }
     ::slotted(*) {
-      background-color: v(secondary);
+      background-color: v(bg);
       padding: 5px 10px;
       color: inherit;
       font-family: inherit;
       font-size: inherit;
     }
     ::slotted(*:hover) {
-      background-color: v(tertiary);
+      background-color: v(bg);
     }
 
   }
@@ -79,7 +82,7 @@
       justify-content: space-between;
       width: calc(100% - 0px);
       padding-left: 0px;
-      min-height: 55px;
+      //min-height: 55px;
       font-family: inherit;
       font-size: inherit;
 
@@ -131,6 +134,23 @@
       }
     }
   }
+  @include respond(tablet) {
+    &:host{
+      flex: 0;
+    }
+    &:host(:hover){
+      background-color: v(bg);
+    }
+  }
+  @include respond(mobile) {
+    &:host{
+      flex: 0;
+    }
+    &:host(:hover){
+      background-color: v(bg);
+    }
+  }
+
 }
 
  

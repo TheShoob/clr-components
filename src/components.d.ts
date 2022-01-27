@@ -49,6 +49,10 @@ export namespace Components {
         "drawerOpen": () => Promise<void>;
     }
     interface ClrNav {
+        "drawerCheck": () => Promise<void>;
+        "drawerClose": () => Promise<void>;
+        "drawerMove": () => Promise<void>;
+        "drawerOpen": () => Promise<void>;
     }
     interface ClrNavBtn {
     }
