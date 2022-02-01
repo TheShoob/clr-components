@@ -1,12 +1,5 @@
 import { Component, Host, h, Prop, Element, State } from '@stencil/core';
 
-
-/*let gnw = function() {*/ // * get nav width
-  //return document.getElementsByTagName('clr-left-drawer')[0].shadowRoot.querySelectorAll('nav')[0].offsetWidth;
-  //return this.host.querySelectorAll('nav')[0].offsetWidth;
-/*}*/
-
-//console.log(gnw());
 @Component({
   tag: 'clr-header',
   styleUrl: 'clr-header.scss',
@@ -21,9 +14,6 @@ export class ClrHeader {
   componentWillLoad() { 
     let slotted = this.host.children;
     this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length };
-  }
-  componentDidLoad(){
-    //console.log(this.host.querySelectorAll('nav')[0].offsetWidth)
   }
 
   render() {

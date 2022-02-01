@@ -23,7 +23,7 @@
     "npm publish": "npm publish"
   },
   "devDependencies": {
-    "@stencil/core": "^2.12.0",
+    "@stencil/core": "^2.13.0",
     "@stencil/sass": "^1.4.1"
   },
   "license": "MIT",

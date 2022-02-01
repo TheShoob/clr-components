@@ -8,7 +8,6 @@
   min-height: 50px;
   @include box-size;
 
-
   background-color: v(bg);
   color: v(fontColor);
 
@@ -37,7 +36,7 @@
    }
 
   ::slotted(clr-nav-btn){
-    display: flex; 
+    display: none; 
     position: relative;
     top: 10px;
     margin-left: auto;
@@ -45,12 +44,16 @@
   }
 
   @include respond(tablet) {
-
+    ::slotted(clr-nav-btn){
+      display: flex; 
+    }
     // responsive code for tablet viewport i.e. 600px
   }
 
   @include respond(mobile) {
-
+    ::slotted(clr-nav-btn){
+      display: flex; 
+    }
     // responsive code for mobile viewport i.e. 480px
   }
 }
