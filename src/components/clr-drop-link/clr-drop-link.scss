@@ -28,12 +28,6 @@
     font-family: v(primaryFontFam);
     font-size: v(fontSize);
 
-    a{
-      //background-color: blue;
-      //padding: 0px 15px 0px 15px;
-      //@include box-size;
-    }
-
     &:hover{
       color: v(fontColor);
     }
@@ -68,9 +62,7 @@
   }
 
   .el {
-
     @include box-size;
-
     display: flex;
     flex-direction: column;
     align-self: flex-end;
@@ -138,6 +130,7 @@
   }
   @include respond(tablet) {
     &:host{
+      padding: 0px 0px 0px 0px;
       flex: 0;
       .el{
         max-width: 100%;
@@ -149,6 +142,7 @@
   }
   @include respond(mobile) {
     &:host{
+      padding: 0px 0px 0px 0px;
       flex: 0;
       .el{
         max-width: 100%;
