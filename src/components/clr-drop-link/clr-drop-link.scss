@@ -7,7 +7,7 @@
   position: relative;
 
   background-color: v(bg);
-  padding: 0px 15px 0px 15px;
+  /*padding: 0px 15px 0px 15px;*/
   @include box-size;
 
 
@@ -85,6 +85,7 @@
       a {
         align-self: center;
         color: inherit;
+        white-space: nowrap;
       }
       
       .arrowWrap {

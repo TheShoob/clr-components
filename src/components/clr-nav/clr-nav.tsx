@@ -40,6 +40,9 @@ export class ClrNav {
     this.windowSwipe();
     this.drawerCheck();
     console.log(oldWidth);
+
+    //drawer.querySelector<HTMLElement>('clr-drop-link').setAttribute("style", "padding: 0px 15px 0px 15px;")
+
   }
 
   @State() open: boolean = false;

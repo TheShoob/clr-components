@@ -28,7 +28,14 @@ export class ClrDropLink {
   }
 
   componentDidLoad() {
+    this.host.setAttribute("style", "padding: 0px 15px 0px 15px;")
     let sub = this.host.querySelector<HTMLElement>('clr-drop-link clr-drop-link');
+    if (("ontouchstart" in document.documentElement == false && gww() > layoutBreakPoint) && sub != null) {
+      sub.setAttribute("style", "padding: 0px 0px 0px 15px;")
+    } else if (sub != null) {
+      sub.setAttribute("style", "padding: 0px 0px 0px 0px;")
+    }
+
     if (sub != null) {
       let subWidth = sub.offsetWidth;
       let subSub = sub.shadowRoot.querySelector<HTMLElement>('.drop');
