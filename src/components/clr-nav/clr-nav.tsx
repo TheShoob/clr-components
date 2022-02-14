@@ -111,7 +111,7 @@ export class ClrNav {
     else if (((gww() < oldWidth) || (gww() > oldWidth)) && (gww() < layoutBreakPoint)) {
         setTimeout(function () {
           gdw();
-          drawer.drawerClose();
+          //drawer.drawerClose();
         }, 0);
     }
     this.mobile = !this.mobile;

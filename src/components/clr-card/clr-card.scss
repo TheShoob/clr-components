@@ -121,4 +121,39 @@
     }
 
   }
+
+  @include respond(tablet) {
+    .card {
+      &.quater {
+        width: calc(100vw - 45px);
+        min-width: 200px;
+      }
+      &.third {
+        width: calc(100vw - 45px);
+        min-width: 200px;
+      }
+      &.half {
+        width: calc(100vw - 45px);
+        min-width: 200px;
+      }
+    }
+  }
+  @include respond(mobile) {
+    .card {
+      &.quater {
+        width: calc(100vw - 45px);
+        min-width: 200px;
+      }
+      &.third {
+        width: calc(100vw - 45px);
+        min-width: 200px;
+      }
+      &.half {
+        width: calc(100vw - 45px);
+        min-width: 200px;
+      }
+    }
+  }
+
+
 }
