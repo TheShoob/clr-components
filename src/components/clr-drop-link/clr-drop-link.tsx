@@ -36,13 +36,13 @@ export class ClrDropLink {
       sub.setAttribute("style", "padding: 0px 0px 0px 0px;")
     }
 
-    if (sub != null) {
+    /*if (sub != null) {
       let subWidth = sub.offsetWidth;
       let subSub = sub.shadowRoot.querySelector<HTMLElement>('.drop');
       subSub.style.left = "100%"
       subSub.style.top = "0%"
       subSub.style.minWidth = subWidth + 'px'
-    }
+    }*/
   }
 
   @Listen('resize', { target: 'window'})

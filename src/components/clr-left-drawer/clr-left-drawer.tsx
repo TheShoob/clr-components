@@ -7,7 +7,8 @@ let drawer = document.getElementsByTagName('clr-left-drawer')[0];
 let mc = new Hammer(drawer, { // * main drag event
   inputClass: Hammer.TouchInput
 });
-let mc2 = new Hammer(window); // * for window swipe
+
+let mc2 = new Hammer((window as any).MyNamespace); // * for window swipe
 let gdw = function() { // * get nav width
    return drawer.shadowRoot.querySelectorAll('nav')[0].offsetWidth;
 }
@@ -27,7 +28,6 @@ let gdw = function() { // * get nav width
 export class ClrLeftDrawer  {
 
   @Element() el: HTMLElement;
-
 
   dragSet() { // * setting the hammer listener
     mc.add(new Hammer.Pan({
@@ -51,8 +51,8 @@ export class ClrLeftDrawer  {
   @State() open: boolean = false;
   getCSSClass = () => (this.open ? 'open' : 'closed');
   
-  @Method()
-  drawerOpen() { // * open drawer
+  @Method() async  drawerOpen() {
+    // * open drawer
     anime({
         targets: 'clr-left-drawer',
         translateX: '0px',
@@ -63,8 +63,7 @@ export class ClrLeftDrawer  {
     //navBtn().click();
   }
 
-  @Method()
-  drawerClose() {// * close drawer
+  @Method() async drawerClose() {// * close drawer
     anime({
         targets: 'clr-left-drawer',
         translateX: '-' + gdw(),
@@ -75,8 +74,7 @@ export class ClrLeftDrawer  {
     //navBtn().click();
   }
 
-  @Method()
-  drawerMove() { // * toggles based on state
+  @Method() async drawerMove() { // * toggles based on state
     if (drawer.shadowRoot.querySelectorAll('nav')[0].classList.contains("open")) {
       this.drawerClose();
     } else if (drawer.shadowRoot.querySelectorAll('nav')[0].classList.contains("closed")) {
@@ -120,7 +118,7 @@ export class ClrLeftDrawer  {
     mc.on('panright pan panleft', function(ev) {
 
       drawer.style.transform = "translateX(" + ev.deltaX + "px)";
-      var navMatch = ("-" + gdw()/2); // * half nav width
+      let navMatch:any = ("-" + gdw()/2); // * half nav width
 
       
       if (drawer.style.transform > "translateX(" + 0 + "px)") {

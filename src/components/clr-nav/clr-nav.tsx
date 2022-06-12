@@ -106,7 +106,7 @@ export class ClrNav {
   @Listen('resize', { target: 'window'})
   windowWidth() {     // * the listener for window resize
     if (((gww() == oldWidth)) || (gww() >= layoutBreakPoint)) {
-      this.drawerOpen();
+      //this.drawerOpen();
     }
     else if (((gww() < oldWidth) || (gww() > oldWidth)) && (gww() < layoutBreakPoint)) {
         setTimeout(function () {

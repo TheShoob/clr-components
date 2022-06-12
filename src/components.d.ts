@@ -12,13 +12,16 @@ export namespace Components {
     }
     interface ClrCard {
         "href": string;
+        "maintitle": string;
         "size": "quater" | "third" | "half" | "full" | "";
         "src": string;
         "subtitle": string;
-        "title": string;
         "url": string;
     }
     interface ClrCarousel {
+        "size": string;
+        "slideNext": () => Promise<void>;
+        "slidePrev": () => Promise<void>;
     }
     interface ClrDropExpand {
         "href": string;
@@ -63,6 +66,12 @@ export namespace Components {
     interface ClrPopupBtn {
         "kind": "info" | "success" | "error";
         "text": string;
+    }
+    interface ClrSlide {
+        "bgURL": string;
+        "content": string;
+        "imgURL": string;
+        "title": string;
     }
     interface ClrWheelUi {
     }
@@ -158,6 +167,12 @@ declare global {
         prototype: HTMLClrPopupBtnElement;
         new (): HTMLClrPopupBtnElement;
     };
+    interface HTMLClrSlideElement extends Components.ClrSlide, HTMLStencilElement {
+    }
+    var HTMLClrSlideElement: {
+        prototype: HTMLClrSlideElement;
+        new (): HTMLClrSlideElement;
+    };
     interface HTMLClrWheelUiElement extends Components.ClrWheelUi, HTMLStencilElement {
     }
     var HTMLClrWheelUiElement: {
@@ -180,6 +195,7 @@ declare global {
         "clr-pill": HTMLClrPillElement;
         "clr-pn-btn": HTMLClrPnBtnElement;
         "clr-popup-btn": HTMLClrPopupBtnElement;
+        "clr-slide": HTMLClrSlideElement;
         "clr-wheel-ui": HTMLClrWheelUiElement;
     }
 }
@@ -190,13 +206,14 @@ declare namespace LocalJSX {
     }
     interface ClrCard {
         "href"?: string;
+        "maintitle"?: string;
         "size"?: "quater" | "third" | "half" | "full" | "";
         "src"?: string;
         "subtitle"?: string;
-        "title"?: string;
         "url"?: string;
     }
     interface ClrCarousel {
+        "size"?: string;
     }
     interface ClrDropExpand {
         "href"?: string;
@@ -235,6 +252,12 @@ declare namespace LocalJSX {
         "kind"?: "info" | "success" | "error";
         "text"?: string;
     }
+    interface ClrSlide {
+        "bgURL"?: string;
+        "content"?: string;
+        "imgURL"?: string;
+        "title"?: string;
+    }
     interface ClrWheelUi {
     }
     interface IntrinsicElements {
@@ -253,6 +276,7 @@ declare namespace LocalJSX {
         "clr-pill": ClrPill;
         "clr-pn-btn": ClrPnBtn;
         "clr-popup-btn": ClrPopupBtn;
+        "clr-slide": ClrSlide;
         "clr-wheel-ui": ClrWheelUi;
     }
 }
@@ -275,6 +299,7 @@ declare module "@stencil/core" {
             "clr-pill": LocalJSX.ClrPill & JSXBase.HTMLAttributes<HTMLClrPillElement>;
             "clr-pn-btn": LocalJSX.ClrPnBtn & JSXBase.HTMLAttributes<HTMLClrPnBtnElement>;
             "clr-popup-btn": LocalJSX.ClrPopupBtn & JSXBase.HTMLAttributes<HTMLClrPopupBtnElement>;
+            "clr-slide": LocalJSX.ClrSlide & JSXBase.HTMLAttributes<HTMLClrSlideElement>;
             "clr-wheel-ui": LocalJSX.ClrWheelUi & JSXBase.HTMLAttributes<HTMLClrWheelUiElement>;
         }
     }

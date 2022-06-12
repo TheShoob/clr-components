@@ -7,7 +7,7 @@ import anime from 'animejs';
   shadow: true,
 })
 export class ClrCard {
-  @Prop() title: string = "";
+  @Prop() maintitle: string = "";
   @Prop() subtitle: string = "";
   @Prop() href: string = "";
   @Prop() url: string = "";
@@ -68,7 +68,7 @@ export class ClrCard {
             </div>
             <br/>
             <div class="card-body">
-              <div class="card-title">{this.title}</div>
+              <div class="card-title">{this.maintitle}</div>
               <div class="sub-title">{this.subtitle}</div>
               <slot name="card-body"/>
 
@@ -94,7 +94,7 @@ export class ClrCard {
             </div>
             <br/>
             <div class="card-body">
-              <div class="card-title">{this.title}</div>
+              <div class="card-title">{this.maintitle}</div>
               <div class="sub-title">{this.subtitle}</div>
               <slot name="card-body"/>
               <div class="pad25"></div>

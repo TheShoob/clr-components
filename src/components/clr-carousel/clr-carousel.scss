@@ -1,3 +1,21 @@
+@import '../../utils/base.scss';
+
 :host {
-  display: block;
+  width: inherit;
+  overflow-x: hidden;
+  .carousel {
+    overflow: hidden;
+  }
+  .slide-wrap {
+    display: flex;
+    height: inherit;
+  }
+
+
+  .small{
+    height: 300px;
+  }
+  .quater{
+    height: 400px;
+  }
 }
