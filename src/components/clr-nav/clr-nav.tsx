@@ -39,7 +39,7 @@ export class ClrNav {
     this.dragSet();
     this.windowSwipe();
     this.drawerCheck();
-    console.log(oldWidth);
+    //console.log(oldWidth);
 
     //drawer.querySelector<HTMLElement>('clr-drop-link').setAttribute("style", "padding: 0px 15px 0px 15px;")
 
@@ -50,8 +50,7 @@ export class ClrNav {
 
   getCSSClass = () => (this.open ? 'open' : 'closed');
 
-  @Method()
-  drawerCheck() { // * checks if the drawer should be nav bar or drawer
+  @Method() async drawerCheck() { // * checks if the drawer should be nav bar or drawer
     if ((gww() <= layoutBreakPoint)) {
       drawerSetMobile();
     } else if ((gww() > layoutBreakPoint)) {
@@ -64,8 +63,7 @@ export class ClrNav {
     }
   }
   
-  @Method()
-  drawerOpen() { // * open drawer
+  @Method() async drawerOpen() { // * open drawer
     anime({
         targets: 'clr-nav',
         translateX: '0px',
@@ -75,8 +73,7 @@ export class ClrNav {
     this.open = true;
   }
 
-  @Method()
-  drawerClose() {// * close drawer
+  @Method() async drawerClose() {// * close drawer
     anime({
         targets: 'clr-nav',
         translateX: '-' + gdw(),
@@ -86,8 +83,7 @@ export class ClrNav {
     this.open = false;
   }
 
-  @Method()
-  drawerMove() { // * toggles based on state
+  @Method() async drawerMove() { // * toggles based on state
     if ((drawer.shadowRoot.querySelectorAll('nav')[0].classList.contains("open")) && (gww() < layoutBreakPoint)) {
       this.drawerClose();
     } else if (drawer.shadowRoot.querySelectorAll('nav')[0].classList.contains("closed")) {

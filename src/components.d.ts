@@ -19,6 +19,7 @@ export namespace Components {
         "url": string;
     }
     interface ClrCarousel {
+        "dotCheck": () => Promise<void>;
         "size": string;
         "slideNext": () => Promise<void>;
         "slidePrev": () => Promise<void>;
