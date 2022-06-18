@@ -28,6 +28,7 @@ for (var i = 0; i < slideLength(); i++) { //* create the dots and add "on" class
       easing: 'easeInQuad',
       duration: 400,
     });
+    carousel.dotCheck();
   }
   if (Number(slideNum())  == (1)) {
     dot.push(<div id={slideNum()} class="dot on" key={i} onMouseDown={dotID}></div>)
