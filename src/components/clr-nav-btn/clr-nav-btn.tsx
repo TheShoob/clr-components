@@ -1,5 +1,4 @@
 import { Component, h, State, Listen} from '@stencil/core';
-//import {  } from '../clr-left-drawer/clr-left-drawer';
 
 @Component({
   tag: 'clr-nav-btn',
@@ -8,28 +7,20 @@ import { Component, h, State, Listen} from '@stencil/core';
 })
 export class ClrNavBtn {
   @State() on: boolean = false;
-
-  @Listen('mouseup', { target: 'window' })
-  handleClick(ev) {
-    let localName = ev.target.localName;
-    if (localName === 'clr-left-drawer'){
-      //console.log('hi')
-    }
-  }
-
-  navBtnClick = () => {
-    if (this.on ? true : '') {
+  @Listen('openCheck' , { target: 'body' })
+  openCheck(event:CustomEvent<boolean>) {
+    //console.log(event.detail);
+    if (event.detail == false) {
       this.on = false;
     } else {
       this.on = true;
     }
   }
-
   getCSSClass = () => (this.on ? 'on' : 'off');
 
   render() {
     return (
-      <button id="navbtn" class={this.getCSSClass()} onClick={this.navBtnClick} aria-label="open left navagation">
+      <button id="navbtn" class={this.getCSSClass()} aria-label="open left navagation">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>

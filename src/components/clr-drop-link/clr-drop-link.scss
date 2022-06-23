@@ -128,7 +128,7 @@
       }
     }
   }
-  @include respond(tablet) {
+  /*@include respond(tablet) {
     &:host{
       padding: 0px 0px 0px 0px;
       flex: 0;
@@ -151,7 +151,7 @@
     &:host(:hover){
       background-color: v(bg);
     }
-  }
+  }*/
 
 }
 

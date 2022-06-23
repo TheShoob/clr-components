@@ -28,29 +28,42 @@ export class ClrDropLink {
   }
 
   componentDidLoad() {
+    this.desktopStyles();
+  }
+
+  @Listen('resize', { target: 'window'})
+  windowWidth() {
+    this.desktopStyles();
+  } // * the listener for window resize
+
+  @Listen('mobileState' , { target: 'body' }) // * the listener for mobile state
+  mobileState(event:CustomEvent<boolean>) { // * Assigns mobile state
+    if ((event.detail == true) || ("ontouchstart" in document.documentElement == true)){
+      this.mobile = true;
+    } else {
+      this.mobile = false;
+    }
+  }
+
+  desktopStyles() { // * applies styles for desktop
     this.host.setAttribute("style", "padding: 0px 15px 0px 15px;")
     let sub = this.host.querySelector<HTMLElement>('clr-drop-link clr-drop-link');
-    if (("ontouchstart" in document.documentElement == false && gww() > layoutBreakPoint) && sub != null) {
+    if ((this.mobile == false) && sub != null) {
       sub.setAttribute("style", "padding: 0px 0px 0px 15px;")
     } else if (sub != null) {
       sub.setAttribute("style", "padding: 0px 0px 0px 0px;")
     }
 
-    /*if (sub != null) {
+    if ((sub != null) && (this.mobile == false)) {
       let subWidth = sub.offsetWidth;
       let subSub = sub.shadowRoot.querySelector<HTMLElement>('.drop');
       subSub.style.left = "100%"
       subSub.style.top = "0%"
       subSub.style.minWidth = subWidth + 'px'
-    }*/
+    }
   }
 
-  @Listen('resize', { target: 'window'})
-  windowWidth() {
-    this.mobile = !this.mobile;
-   } // * the listener for window resize
-
-  //*ARROW AND EXPAND AREA OPEN/CLOSE
+  // * ARROW AND EXPAND AREA OPEN/CLOSE
   toggleSub = () => {
     let arrow = this.host.shadowRoot.querySelectorAll('.arrow');
     let expand = this.host.shadowRoot.querySelector<HTMLElement>('.expand');
@@ -77,12 +90,11 @@ export class ClrDropLink {
           easing: 'easeInOutQuad'
       },
     });
-
   }
-
   //*
+
   render() { 
-    if (this.childrenData.hasChildren == true && this.href !== "" && gww() > layoutBreakPoint && "ontouchstart" in document.documentElement == false) {
+    if (this.childrenData.hasChildren == true && this.href !== "" && gww() > layoutBreakPoint && this.mobile == false) {
     return (
       <Host>
         <div class="dl">
@@ -93,7 +105,7 @@ export class ClrDropLink {
         </div>
       </Host>
     )
-    } else if (this.childrenData.hasChildren == false && this.href !== "" && gww() > layoutBreakPoint && "ontouchstart" in document.documentElement == false) {
+    } else if (this.childrenData.hasChildren == false && this.href !== "" && gww() > layoutBreakPoint && this.mobile == false) {
       return (
         <Host>
           <div class="dl">
@@ -101,7 +113,7 @@ export class ClrDropLink {
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == true && this.url !== "" && gww() > layoutBreakPoint && "ontouchstart" in document.documentElement == false) {
+    } else if (this.childrenData.hasChildren == true && this.url !== "" && gww() > layoutBreakPoint && this.mobile == false) {
       return (
         <Host>
           <div class="dl">
@@ -112,7 +124,7 @@ export class ClrDropLink {
           </div>
         </Host>
       )
-    } else if (this.childrenData.hasChildren == false && this.url !== "" && gww() > layoutBreakPoint && "ontouchstart" in document.documentElement == false) {
+    } else if (this.childrenData.hasChildren == false && this.url !== "" && gww() > layoutBreakPoint && this.mobile == false) {
       return (
         <Host>
           <div class="dl">
@@ -120,7 +132,7 @@ export class ClrDropLink {
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == true && this.href !== "" && "ontouchstart" in document.documentElement == true || this.childrenData.hasChildren == true && this.href !== "" &&  gww() < layoutBreakPoint) {
+    } else if (this.childrenData.hasChildren == true && this.href !== "" && this.mobile == true || this.childrenData.hasChildren == true && this.href !== "" &&  gww() < layoutBreakPoint) {
       return (
         <Host>
           <div class="el">
@@ -139,7 +151,7 @@ export class ClrDropLink {
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == false && this.href !== "" && "ontouchstart" in document.documentElement == true || this.childrenData.hasChildren == false && this.href !== "" && gww() < layoutBreakPoint) {
+    } else if (this.childrenData.hasChildren == false && this.href !== "" && this.mobile == true || this.childrenData.hasChildren == false && this.href !== "" && gww() < layoutBreakPoint) {
       return (
         <Host>
           <div class="el">
@@ -149,7 +161,7 @@ export class ClrDropLink {
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == true && this.url !== "" && "ontouchstart" in document.documentElement == true || this.childrenData.hasChildren == true && this.url !== "" && gww() < layoutBreakPoint) {
+    } else if (this.childrenData.hasChildren == true && this.url !== "" && this.mobile == true || this.childrenData.hasChildren == true && this.url !== "" && gww() < layoutBreakPoint) {
       return (
         <Host>
           <div class="el">
@@ -168,7 +180,7 @@ export class ClrDropLink {
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == false && this.url !== "" && "ontouchstart" in document.documentElement == true || this.childrenData.hasChildren == false && this.url !== "" &&  gww() < layoutBreakPoint) {
+    } else if (this.childrenData.hasChildren == false && this.url !== "" && this.mobile == true || this.childrenData.hasChildren == false && this.url !== "" &&  gww() < layoutBreakPoint) {
       return (
         <Host>
           <div class="el">

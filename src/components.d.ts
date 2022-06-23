@@ -77,6 +77,10 @@ export namespace Components {
     interface ClrWheelUi {
     }
 }
+export interface ClrNavCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLClrNavElement;
+}
 declare global {
     interface HTMLClrAlertElement extends Components.ClrAlert, HTMLStencilElement {
     }
@@ -242,6 +246,8 @@ declare namespace LocalJSX {
     interface ClrLeftDrawer {
     }
     interface ClrNav {
+        "onMobileState"?: (event: ClrNavCustomEvent<boolean>) => void;
+        "onOpenCheck"?: (event: ClrNavCustomEvent<boolean>) => void;
     }
     interface ClrNavBtn {
     }

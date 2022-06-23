@@ -16,12 +16,35 @@
     width: 100%;
     //justify-content: space-evenly;
     @include box-size;
-
   }
+}
 
-    @include respond(tablet) {      // responsive code for tablet viewport i.e. 600px
+:host(.mobile) {
+  @include scrollbar-styles;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 98;
+  overflow-y: scroll;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 10px;
+  height: 100vh;
+  width: calc(80vw - 20px);
+  background-color: v(bg);
+  color: v(primary);
+
+  ::slotted(nav) {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+    /*@include respond(tablet) {      // responsive code for tablet viewport i.e. 600px
       &:host {
-        @include scrollbar-styles;
+       @include scrollbar-styles;
         position: fixed;
         left: 0px;
         top: 0px;
@@ -36,16 +59,16 @@
         background-color: v(bg);
         color: v(primary);
 
-        ::slotted(nav) {
+        :slotted(nav) {
           position: relative;
           flex-direction: column;
           width: 100%;
         }
   
       }
-    }
+    }*/
   
-    @include respond(mobile) {    // responsive code for mobile viewport i.e. 480px
+    /*@include respond(mobile) {    // responsive code for mobile viewport i.e. 480px
       &:host {
         @include scrollbar-styles;
         position: fixed;
@@ -69,5 +92,5 @@
         }
       
       }
-    }
-  }
+    }*/
+

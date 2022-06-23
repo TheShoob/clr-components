@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Element, State, Method, Listen } from '@stencil/core';
+import { Component, Host, h, Prop, Element, State, Method } from '@stencil/core';
 import Hammer from 'hammerjs';
 import anime from 'animejs';
 
@@ -26,7 +26,7 @@ for (var i = 0; i < slideLength(); i++) { //* create the dots and add "on" class
       targets:  wrap(),
       translateX: ("-" + (e.target.id - 1) * gcw()),
       easing: 'easeInQuad',
-      duration: 400,
+      duration: slideTime,
     });
     carousel.dotCheck();
   }
@@ -35,10 +35,9 @@ for (var i = 0; i < slideLength(); i++) { //* create the dots and add "on" class
   } else{
     dot.push(<div id={slideNum()} class="dot" key={i} onMouseDown={dotID}></div>)
   }
-
 }
 
-let mc  = new Hammer(carousel, { // * main drag event
+let mc  = new Hammer(carousel, { // * main-element drag event
   inputClass: Hammer.TouchInput
 });
 
@@ -56,7 +55,6 @@ export class ClrCarousel {
   componentWillLoad() { 
     let slotted = this.host.children;
     this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length }
-    
   }
 
   componentDidLoad() {
@@ -69,7 +67,6 @@ export class ClrCarousel {
       threshold: 1,
     }));
   }
-
   drag() { // * dragging the slideWrap
     mc.on('panright pan panleft', function(ev) {
       //wrap().style.transform = "translateX(" + ev.deltaX + "px)";
@@ -82,20 +79,17 @@ export class ClrCarousel {
     });
   }
 
-  prev() {
+  prev() { //* previous slide logic
     if (slidePosition() < 0 ) {
       carousel.slidePrev() 
-      console.log((slidePosition() - gcw()) / negGcw());
     };
   }
-  next() {
+  next() { //* next slide logic
     if (slidePosition() > (negSlideCalc())) {
       carousel.slideNext() 
-      console.log((slidePosition() - gcw()) / negGcw());
     };
   }
-
-  @Method() async slidePrev() { // * previous slide
+  @Method() async slidePrev() { // * previous slide action
     anime({
         targets:  wrap(),
         translateX: (slidePosition() + gcw()),
@@ -103,10 +97,8 @@ export class ClrCarousel {
         duration: slideTime,
     });
     carousel.dotCheck();
-
   }
-
-  @Method() async slideNext() {// * next slide
+  @Method() async slideNext() {// * next slide action
     anime({
         targets:  wrap(),
         translateX: (slidePosition() - gcw()),
@@ -114,14 +106,11 @@ export class ClrCarousel {
         duration: slideTime,
     });
     carousel.dotCheck();
-
   }
-
   @Method() async dotCheck() { // * checking the dot position
     setTimeout(() => {
       for (var i = 0; i < slideLength(); i++) {
           let dot = carousel.shadowRoot.querySelectorAll(".dots")[0].children;
-          console.log(dot[i].attributes.getNamedItem("id").value);
           if (Number(dot[i].attributes.getNamedItem("id").value) == (slidePosition() - gcw()) / negGcw()) {
             dot[i].classList.add('on');
           } else {

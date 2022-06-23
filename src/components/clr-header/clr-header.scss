@@ -36,14 +36,14 @@
    }
 
   ::slotted(clr-nav-btn){
-    display: none; 
+    display: flex; 
     position: relative;
     top: 10px;
     margin-left: auto;
     width: 45px;
   }
 
-  @include respond(tablet) {
+  /*@include respond(tablet) {
     ::slotted(clr-nav-btn){
       display: flex; 
     }
@@ -55,5 +55,5 @@
       display: flex; 
     }
     // responsive code for mobile viewport i.e. 480px
-  }
+  }*/
 }
