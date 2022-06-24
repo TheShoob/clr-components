@@ -5,6 +5,14 @@
 <!-- Auto Generated Below -->
 
 
+## Events
+
+| Event         | Description | Type                   |
+| ------------- | ----------- | ---------------------- |
+| `mobileState` |             | `CustomEvent<boolean>` |
+| `openCheck`   |             | `CustomEvent<boolean>` |
+
+
 ## Methods
 
 ### `drawerCheck() => Promise<void>`
