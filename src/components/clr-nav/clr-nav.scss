@@ -1,22 +1,41 @@
 @import '../../utils/base.scss';
 
+::slotted(*) ::slotted(*)  {
+  background-color: red;
+}
+
+
 :host {
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 100%;
   z-index: 99;
+  justify-items: center;
   @include box-size;
 
-  ::slotted(nav) {
+  ::slotted(a) {
+    color: v(navColor);
+  }
+
+  ::slotted(*) {
+    display: inline-flex;
+    line-height: 2.5rem;
+    height: 100%;
+    position: relative;
+    white-space: nowrap;
+    background-color: var(--bg);
+    padding: 0 15px;
+  }
+  nav {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    /*flex-wrap: nowrap;
     width: 100%;
     //justify-content: space-evenly;
-    @include box-size;
+    @include box-size;*/
   }
+
 }
 
 :host(.mobile) {
@@ -33,13 +52,17 @@
   height: 100vh;
   width: calc(80vw - 20px);
   background-color: v(bg);
-  color: v(primary);
 
-  ::slotted(nav) {
-    position: relative;
-    flex-direction: column;
-    width: 100%;
+  ::slotted(*) {
+    padding: 0 0px;
   }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+
 }
 
     /*@include respond(tablet) {      // responsive code for tablet viewport i.e. 600px

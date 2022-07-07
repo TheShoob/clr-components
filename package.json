@@ -1,6 +1,6 @@
 {
   "name": "clear-components",
-  "version": "0.3.94",
+  "version": "0.4.82",
   "description": "Stencil Component Library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -23,7 +23,7 @@
     "npm publish": "npm publish"
   },
   "devDependencies": {
-    "@stencil/core": "^2.16.1",
+    "@stencil/core": "^2.17.0",
     "@stencil/sass": "^1.4.1"
   },
   "license": "MIT",

@@ -31,6 +31,7 @@ export namespace Components {
     }
     interface ClrDropLink {
         "href": string;
+        "target": string;
         "text": string;
         "url": string;
     }
@@ -67,6 +68,8 @@ export namespace Components {
     interface ClrPopupBtn {
         "kind": "info" | "success" | "error";
         "text": string;
+    }
+    interface ClrSideMenu {
     }
     interface ClrSlide {
         "bgURL": string;
@@ -172,6 +175,12 @@ declare global {
         prototype: HTMLClrPopupBtnElement;
         new (): HTMLClrPopupBtnElement;
     };
+    interface HTMLClrSideMenuElement extends Components.ClrSideMenu, HTMLStencilElement {
+    }
+    var HTMLClrSideMenuElement: {
+        prototype: HTMLClrSideMenuElement;
+        new (): HTMLClrSideMenuElement;
+    };
     interface HTMLClrSlideElement extends Components.ClrSlide, HTMLStencilElement {
     }
     var HTMLClrSlideElement: {
@@ -200,6 +209,7 @@ declare global {
         "clr-pill": HTMLClrPillElement;
         "clr-pn-btn": HTMLClrPnBtnElement;
         "clr-popup-btn": HTMLClrPopupBtnElement;
+        "clr-side-menu": HTMLClrSideMenuElement;
         "clr-slide": HTMLClrSlideElement;
         "clr-wheel-ui": HTMLClrWheelUiElement;
     }
@@ -227,6 +237,7 @@ declare namespace LocalJSX {
     }
     interface ClrDropLink {
         "href"?: string;
+        "target"?: string;
         "text"?: string;
         "url"?: string;
     }
@@ -259,6 +270,8 @@ declare namespace LocalJSX {
         "kind"?: "info" | "success" | "error";
         "text"?: string;
     }
+    interface ClrSideMenu {
+    }
     interface ClrSlide {
         "bgURL"?: string;
         "content"?: string;
@@ -283,6 +296,7 @@ declare namespace LocalJSX {
         "clr-pill": ClrPill;
         "clr-pn-btn": ClrPnBtn;
         "clr-popup-btn": ClrPopupBtn;
+        "clr-side-menu": ClrSideMenu;
         "clr-slide": ClrSlide;
         "clr-wheel-ui": ClrWheelUi;
     }
@@ -306,6 +320,7 @@ declare module "@stencil/core" {
             "clr-pill": LocalJSX.ClrPill & JSXBase.HTMLAttributes<HTMLClrPillElement>;
             "clr-pn-btn": LocalJSX.ClrPnBtn & JSXBase.HTMLAttributes<HTMLClrPnBtnElement>;
             "clr-popup-btn": LocalJSX.ClrPopupBtn & JSXBase.HTMLAttributes<HTMLClrPopupBtnElement>;
+            "clr-side-menu": LocalJSX.ClrSideMenu & JSXBase.HTMLAttributes<HTMLClrSideMenuElement>;
             "clr-slide": LocalJSX.ClrSlide & JSXBase.HTMLAttributes<HTMLClrSlideElement>;
             "clr-wheel-ui": LocalJSX.ClrWheelUi & JSXBase.HTMLAttributes<HTMLClrWheelUiElement>;
         }

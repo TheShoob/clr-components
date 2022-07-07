@@ -11,8 +11,8 @@ let navBreakPoint = 0;
 const oldWidth = window.innerWidth; // * get nav width
 let gdw = () => { return drawer.offsetWidth;} // * get drawer width 
 let gww = () => { return window.innerWidth;} // * get window width
-let heightNav100 = () => { drawer.getElementsByTagName('nav')[0].setAttribute("style", "height:100%; position: relative;")} // * set nav height
-let heightNavAuto = () => { drawer.getElementsByTagName('nav')[0].setAttribute("style", "height:auto; position: absolute; top:8px;")} // * set nav height
+let heightNav100 = () => { drawer.setAttribute("style", "position: relative;")} // * set nav height
+let heightNavAuto = () => { drawer.setAttribute("style", "height:auto; position: absolute; top:8px;")} // * set nav height
 let drawerSetMobile = () => { 
   drawer.classList.add('mobile');
   drawer.setAttribute("style", "height:100vh; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateX(-" + gdw() + "px);");
@@ -32,7 +32,6 @@ export class ClrNav {
   @State() mobile: boolean = false;
 
   getCSSClass = () => (this.open ? 'open' : 'closed');
-  
 
   @Event({bubbles:true, composed:true}) openCheck: EventEmitter<boolean>;
   openCompletedHandler(open) {
@@ -57,9 +56,9 @@ export class ClrNav {
   }
 
   componentDidLoad() { // * runs the above function on the element and sets the position
-    var children = drawer.getElementsByTagName('nav')[0].children;
+    var children = drawer.children;
     for (var i = 0; i < children.length; i++) {
-        navBreakPoint += children[i].clientWidth;
+      navBreakPoint += children[i].clientWidth;
     }
     this.dragSet();
     this.drawerCheck();
@@ -86,7 +85,7 @@ export class ClrNav {
   
   @Method() async drawerOpen() { // * open drawer
     anime({
-        targets: 'clr-nav',
+        targets: drawer,
         translateX: '0px',
         easing: 'easeInQuad',
         duration: 400,
@@ -97,7 +96,7 @@ export class ClrNav {
 
   @Method() async drawerClose() {// * close drawer
     anime({
-        targets: 'clr-nav',
+        targets: drawer,
         translateX: '-' + gdw(),
         easing: 'easeOutQuad',
         duration: 400,
@@ -173,7 +172,7 @@ export class ClrNav {
       return (
         <Host>
           <nav class={'drawer ' + this.getCSSClass()} onTouchMove={this.drag}>
-            <slot name="links"></slot>
+            <slot name="link"></slot>
           </nav>
         </Host>
       );
@@ -181,7 +180,7 @@ export class ClrNav {
       return (
         <Host>
           <nav class="">
-            <slot name="links"></slot>
+            <slot name="link"></slot>
           </nav>
         </Host>
       );

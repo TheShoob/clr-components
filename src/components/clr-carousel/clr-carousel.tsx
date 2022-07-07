@@ -4,7 +4,7 @@ import anime from 'animejs';
 
 let carousel = document.querySelectorAll('clr-carousel')[0]; //* the carousel
 let gcw = () => { return carousel.offsetWidth;} // * get carousel width 
-let negGcw = () => { return Number("-" + gcw()) } //* negitive carousel width
+let negGcw = () => { return Number("-" + gcw()) } // * negitive carousel width
 let wrap = () => { return carousel.shadowRoot.childNodes[1].childNodes[0] as HTMLElement;} //* the carousel wrap
 let slideLength = () => { return carousel.children.length } //* the number of slides
 let slideCalc = () => { //* get the width of each slide
@@ -55,7 +55,6 @@ export class ClrCarousel {
   componentWillLoad() { 
     let slotted = this.host.children;
     this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length }
-    console.log(this.childrenData.numberOfChildren);
   }
 
   componentDidLoad() {

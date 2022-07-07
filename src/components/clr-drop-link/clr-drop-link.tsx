@@ -1,10 +1,6 @@
 import { Component, Host, h, Prop, State, Element, Listen } from '@stencil/core';
 import anime from 'animejs';
 
-const layoutBreakPoint = 600; // * for breakpoint of layout
-let gww = () => { return window.innerWidth;} // * get window width
-
-
 @Component({
   tag: 'clr-drop-link',
   styleUrl: 'clr-drop-link.scss',
@@ -15,6 +11,8 @@ export class ClrDropLink {
   @Prop() text: string = "Text for the link";
   @Prop() href: string = "";
   @Prop() url: string = "";
+  @Prop() target: string = "";
+
 
   @Element() host: HTMLElement;
 
@@ -27,7 +25,7 @@ export class ClrDropLink {
     this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length };  
   }
 
-  componentDidLoad() {
+  componentDidRender() {
     this.desktopStyles();
   }
 
@@ -46,21 +44,34 @@ export class ClrDropLink {
   }
 
   desktopStyles() { // * applies styles for desktop
-    this.host.setAttribute("style", "padding: 0px 15px 0px 15px;")
-    let sub = this.host.querySelector<HTMLElement>('clr-drop-link clr-drop-link');
-    if ((this.mobile == false) && sub != null) {
-      sub.setAttribute("style", "padding: 0px 0px 0px 15px;")
-    } else if (sub != null) {
-      sub.setAttribute("style", "padding: 0px 0px 0px 0px;")
+
+    let sub = this.host.querySelector<HTMLElement>('clr-drop-link clr-drop-link')
+    
+    if (this.mobile == false) {//*  Desktop with submenu
+
+      this.host.setAttribute("style", "padding: 0px 15px 0px 15px;")
+      
+     if (sub != null) {
+
+        let subWidth = sub.offsetWidth
+        let subSub = sub.shadowRoot.querySelector<HTMLElement>('.drop')
+        subSub.style.left = "100%"
+        subSub.style.top = "0%"
+        subSub.style.minWidth = subWidth + 'px'
+        sub.setAttribute("style", "padding: 0px 0px 0px 15px;") 
+
+      } else {
+
+        this.host.setAttribute("style", "padding: 0px 15px 0px 15px;")
+
+      }
+
+    } else if (this.mobile == true) {//*  Mobile with submenu
+      
+      this.host.setAttribute("style", "padding: 0px 0px 0px 0px;")      
+
     }
 
-    if ((sub != null) && (this.mobile == false)) {
-      let subWidth = sub.offsetWidth;
-      let subSub = sub.shadowRoot.querySelector<HTMLElement>('.drop');
-      subSub.style.left = "100%"
-      subSub.style.top = "0%"
-      subSub.style.minWidth = subWidth + 'px'
-    }
   }
 
   // * ARROW AND EXPAND AREA OPEN/CLOSE
@@ -94,26 +105,26 @@ export class ClrDropLink {
   //*
 
   render() { 
-    if (this.childrenData.hasChildren == true && this.href !== "" && gww() > layoutBreakPoint && this.mobile == false) {
+    if (this.childrenData.hasChildren == true && this.href !== "" && this.mobile == false) { //* Desktop with href submenu
     return (
       <Host>
         <div class="dl">
-          <a href={this.href}>{this.text}</a>
+          <a href={this.href} target={this.target}>{this.text}</a>
           <div class="drop">
             <slot name="link"/>
           </div>
         </div>
       </Host>
     )
-    } else if (this.childrenData.hasChildren == false && this.href !== "" && gww() > layoutBreakPoint && this.mobile == false) {
+    } else if (this.childrenData.hasChildren == false && this.href !== "" && this.mobile == false) { //* Desktop with href no submenu
       return (
         <Host>
           <div class="dl">
-            <a href={this.href}>{this.text}</a>
+            <a href={this.href} target={this.target}>{this.text}</a>
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == true && this.url !== "" && gww() > layoutBreakPoint && this.mobile == false) {
+    } else if (this.childrenData.hasChildren == true && this.url !== "" && this.mobile == false) { //* Desktop with url submenu
       return (
         <Host>
           <div class="dl">
@@ -124,7 +135,7 @@ export class ClrDropLink {
           </div>
         </Host>
       )
-    } else if (this.childrenData.hasChildren == false && this.url !== "" && gww() > layoutBreakPoint && this.mobile == false) {
+    } else if (this.childrenData.hasChildren == false && this.url !== "" && this.mobile == false) { //* Desktop with url no submenu
       return (
         <Host>
           <div class="dl">
@@ -132,12 +143,12 @@ export class ClrDropLink {
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == true && this.href !== "" && this.mobile == true || this.childrenData.hasChildren == true && this.href !== "" &&  gww() < layoutBreakPoint) {
+    } else if (this.childrenData.hasChildren == true && this.href !== "" && this.mobile == true) { //* Mobile with href submenu
       return (
         <Host>
           <div class="el">
             <div class="expand-link">
-              <a href={this.href} >{this.text}</a>
+              <a href={this.href} target={this.target}>{this.text}</a>
               <div class="arrowWrap" onClick={this.toggleSub}>
                 <div class="arrow"></div>
               </div>
@@ -151,17 +162,17 @@ export class ClrDropLink {
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == false && this.href !== "" && this.mobile == true || this.childrenData.hasChildren == false && this.href !== "" && gww() < layoutBreakPoint) {
+    } else if (this.childrenData.hasChildren == false && this.href !== "" && this.mobile == true) { //* Mobile with href no submenu
       return (
         <Host>
           <div class="el">
             <div class="expand-link">
-              <a href={this.href}>{this.text}</a>
+              <a href={this.href} target={this.target}>{this.text}</a>
             </div>
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == true && this.url !== "" && this.mobile == true || this.childrenData.hasChildren == true && this.url !== "" && gww() < layoutBreakPoint) {
+    } else if (this.childrenData.hasChildren == true && this.url !== "" && this.mobile == true) { //* Mobile with url submenu
       return (
         <Host>
           <div class="el">
@@ -180,7 +191,7 @@ export class ClrDropLink {
           </div>
         </Host> 
       )
-    } else if (this.childrenData.hasChildren == false && this.url !== "" && this.mobile == true || this.childrenData.hasChildren == false && this.url !== "" &&  gww() < layoutBreakPoint) {
+    } else if (this.childrenData.hasChildren == false && this.url !== "" && this.mobile == true) { //* Mobile with url no submenu
       return (
         <Host>
           <div class="el">

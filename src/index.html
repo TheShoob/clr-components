@@ -15,6 +15,7 @@
       --secondary: rgb(117, 117, 117);
       --tertiary: rgb(173, 173, 173);
       --highlight:rgb(240, 240, 240);
+      --navColor: rgb(55, 33, 33);
       --fontColor: rgb(78, 78, 78);
       --bg: rgb(196, 196, 196);
     }
@@ -38,13 +39,13 @@
     <img slot="logo" height='45px' src="http://clearedgestudio.com/svg/mark.svg" />
 
     <clr-nav slot="nav">
-      <nav slot="links">
-        <clr-drop-link slot="link" text="Drop Link Text test" href="#main1"></clr-drop-link>
+      <!--<nav slot="links">-->
+        <clr-drop-link slot="link" text="Drop Link Text test" href="#main1" target="_blank"></clr-drop-link>
         <clr-drop-link slot="link" text="Drop Link Text" href="#main2">
           <a slot="link" href="#one">One</a>
           <a slot="link" href="#two">Two</a>
           <a slot="link" href="#three">Three</a>        
-          <clr-drop-link slot="link" text="Drop Link Text" href="#main2">
+          <clr-drop-link slot="link" text="Drop Link Text" href="#main2" target="_blank">
             <a slot="link" href="#one">One</a>
             <a slot="link" href="#two">Two</a>
             <a slot="link" href="#three">Three</a>
@@ -56,14 +57,11 @@
           <a slot="link" href="#six">six</a>
         </clr-drop-link>
         <clr-drop-link slot="link" text="Drop Link Text test" href="#main1"></clr-drop-link>
-        <clr-drop-link slot="link" text="Drop Link Text" href="#main1"></clr-drop-link>
-        <clr-drop-link slot="link" text="Drop Link Text" href="#main1"></clr-drop-link>
-        <clr-drop-link slot="link" text="Drop Link Text" href="#main1"></clr-drop-link>
-      </nav>
-    </clr-nav>
-
-    <!--<div slot="icon"><clr-util-icn kind="success"></clr-util-icn></div>-->
-    <clr-nav-btn slot="btn"></clr-nav-btn>
+        <a slot="link" href="#six">six</a>
+      <!--</nav>-->
+    </clr-nav> 
+    <a href="" slot="icon"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></a>
+    <clr-nav-btn slot="btn"></clr-nav-btn><!-- * Nessesary for the nav to be accessable-->
   </clr-header>
 
   <clr-carousel size="quater">
@@ -75,41 +73,13 @@
   <!--<clr-left-drawer>
     <img slot="logo" height='45px' src="http://clearedgestudio.com/svg/mark.svg" />
     <nav slot="nav">
-      <clr-drop-expand class="padding-top" text="the first drop down" href="/">
-        <a slot="link" href="#1a">1a</a>
-        <a slot="link" href="#2a">2a</a>
-        <a slot="link" href="#3a">3a</a>
-        <clr-drop-expand slot="link" text="first" href="#SubMain1">
-          <a slot="link" href="#1a">1a</a>
-          <a slot="link" href="#2a">2a</a>
-          <clr-drop-expand slot="link" text="second" href="#SubMain2">
-            <a slot="link" href="#1a">1a</a>
-            <a slot="link" href="#2a">2a</a>
-            <a slot="link" href="#3a">3a</a>
-          </clr-drop-expand>
-        </clr-drop-expand>
-      </clr-drop-expand>
-      <clr-drop-expand text="the second drop down" href="#main2">
-      </clr-drop-expand>
-      <clr-drop-expand text="the third drop down" href="#main3">
-        <a slot="link" href="#">1b</a>
-      </clr-drop-expand>
-      <clr-drop-expand text="the forth drop down" href="#main4">
-        <a slot="link" href="#">1c</a>
-        <a slot="link" href="#">2c</a>
-      </clr-drop-expand>
-      <clr-drop-expand text="another drop down" href="#main5">
-        <a slot="link" href="#">1d</a>
-      </clr-drop-expand>
-      <clr-drop-expand text="and another drop down" href="#main6">
-        <a slot="link" href="#">1e</a>
-        <a slot="link" href="#">2e</a>
-      </clr-drop-expand>
-      <clr-drop-expand text="the last drop down" href="#main7">
-        <a slot="link" href="#">1f</a>
-      </clr-drop-expand>
+
     </nav>
   </clr-left-drawer>-->
+
+  <clr-side-menu side="right" hidden="no">
+
+  </clr-side-menu>
   
   <clr-pn-btn></clr-pn-btn>
 

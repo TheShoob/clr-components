@@ -10,7 +10,7 @@
   min-height: 20px;
   font-family: v(primaryFontFam);
   font-size: v(fontSize);
-  color: v(fontColor);
+  color: v(navColor);
 
   @include respond(tablet) {
     //pointer-events: none;
