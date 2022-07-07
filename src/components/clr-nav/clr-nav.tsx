@@ -8,6 +8,7 @@ let mc = new Hammer(drawer, { // * nav drag event
 });
 //let mc2 = new Hammer(window);// * for window swipe
 let navBreakPoint = 0;
+let breakPointPadding = 60;
 const oldWidth = window.innerWidth; // * get nav width
 let gdw = () => { return drawer.offsetWidth;} // * get drawer width 
 let gww = () => { return window.innerWidth;} // * get window width
@@ -42,6 +43,11 @@ export class ClrNav {
     this.mobileState.emit(mobile);
   }
 
+  @Listen('elmWidth' , { target: 'body' })
+  elmWidth(event:CustomEvent) {
+    navBreakPoint = event.detail + breakPointPadding;
+  }
+
   @Element() el: HTMLElement;
 
   dragSet() { // * setting the hammer listener
@@ -56,14 +62,16 @@ export class ClrNav {
   }
 
   componentDidLoad() { // * runs the above function on the element and sets the position
-    var children = drawer.children;
+    /*var children = drawer.children;
     for (var i = 0; i < children.length; i++) {
       navBreakPoint += children[i].clientWidth;
-    }
+    }*/
     this.dragSet();
     this.drawerCheck();
     this.open = false;
     drawer.shadowRoot.querySelectorAll('nav')[0].classList.add("closed");
+
+    //console.log(navBreakPoint);
   }
 
   @Method() async drawerCheck() { // * checks if the drawer should be nav bar or drawer

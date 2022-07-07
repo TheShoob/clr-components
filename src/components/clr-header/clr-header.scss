@@ -23,17 +23,12 @@
     width: 100%;
   }
 
-  ::slotted(img){
+  ::slotted(img), ::slotted(svg),::slotted(a){
     @include box-size;
     margin: 5px;
     width: auto;
     display: inline-flex;
   }
-
-  ::slotted(svg){
-    width: 30px;
-    height: 30px;
-   }
 
   ::slotted(clr-nav-btn){
     display: flex; 

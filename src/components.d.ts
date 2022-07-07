@@ -80,6 +80,10 @@ export namespace Components {
     interface ClrWheelUi {
     }
 }
+export interface ClrHeaderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLClrHeaderElement;
+}
 export interface ClrNavCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLClrNavElement;
@@ -244,6 +248,7 @@ declare namespace LocalJSX {
     interface ClrFooter {
     }
     interface ClrHeader {
+        "onElmWidth"?: (event: ClrHeaderCustomEvent<any>) => void;
         "src"?: string;
     }
     interface ClrIcon {
