@@ -1,13 +1,38 @@
 
 :host {
   //* Color //
+  --bg: inherit;
   --primary: inherit;
   --secondary: inherit;
   --tertiary: inherit;
   --highlight:inherit;
   --fontColor: inherit;
+
   --navColor: inherit;
-  --bg: inherit;
+  --navColor-highlight: inherit;
+  --navColor-bg: inherit;
+
+  --btnColor: inherit;
+  --btnColor-inverse: inherit;
+  --btnColor-bg: inherit;
+  --btnColor-highlight: inherit;
+
+  --iconColor: inherit;
+  --iconColor-highlight: inherit; 
+  --iconColor-inverse: inherit; 
+
+  --errorColor: inherit;
+  --errorColor-bg: inherit;
+
+  --successColor: inherit;
+  --successColor-bg: inherit;
+
+  --warningColor: inherit;
+  --warningColor-bg: inherit;
+
+  --infoColor: inherit;
+  --infoColor-bg: inherit;
+
   
   //* Font //
   --fontSize: 16px;

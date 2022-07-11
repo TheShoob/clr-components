@@ -15,12 +15,12 @@
     .controls {
       width: 100%;
       height: 40px;
-      background: red;
       display: flex;
       justify-content: space-between;
       position: sticky;
       left: 0;
       bottom: 0;
+      background-color: v(bg);
 
       .arrowWrap {
         width: 40px;
@@ -31,7 +31,7 @@
         .arrow {
           border-top: 7px solid transparent;
           border-bottom: 7px solid transparent;
-          border-right: 7px solid v(fontColor);
+          border-right: 7px solid v(btnColor);
         }
         .right {
           transform: rotate(-180deg);
@@ -46,14 +46,15 @@
       .dots {
         width: 100%;
         height: 30px;
-        background-color: #fcfbf9;
+        background-color: v(bg);
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        align-self: center;
 
         .dot{
-            border: 2px solid #838383;
+            border: 2px solid v(btnColor);
             border-radius: 100%;
             position: relative;
             width: 20px;
@@ -72,13 +73,13 @@
             border-radius: 100%;
         }
         .dot.on:hover::before {
-            background: #838383;
+          background: v(btnColor);
         }
         .dot.on::before {
-            background: #838383;
+          background: v(btnColor);
         }
         .dot:hover::before {
-            background: #f2f1f0;
+          background: v(btnColor-highlight);
         }
       }
 

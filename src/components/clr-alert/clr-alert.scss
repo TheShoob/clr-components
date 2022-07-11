@@ -13,19 +13,19 @@ p {
 }
 
 p.info {
-  background-color:#e6f7ff;
-  border: 1px solid #91d5ff;
-  color: #2176aa;
+  background-color: v(infoColor-bg);
+  border: 1px solid v(infoColor);
+  color: v(infoColor);
 }
 p.success {
-  background-color:#f6ffed;
-  border: 1px solid #b7eb8f;
-  color: #468b12;
+  background-color: v(successColor-bg);
+  border: 1px solid v(successColor);
+  color:  v(successColor);
 }
 p.error {
-  background-color:#fff1f0;
-  border: 1px solid #ffa39e;
-  color: #af2a23;
+  background-color: v(errorColor-bg);
+  border: 1px solid v(errorColor);
+  color: v(errorColor);
 }
 p.acknowledged {
   display: none;

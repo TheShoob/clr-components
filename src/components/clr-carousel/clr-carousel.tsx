@@ -87,7 +87,9 @@ export class ClrCarousel {
   next() { //* next slide logic
     if (slidePosition() > (negSlideCalc())) {
       carousel.slideNext() 
-    };
+    } else if (slidePosition() <= (negSlideCalc())) {
+      carousel.slideStart() 
+    }
   }
   @Method() async slidePrev() { // * previous slide action
     anime({
@@ -102,6 +104,15 @@ export class ClrCarousel {
     anime({
         targets:  wrap(),
         translateX: (slidePosition() - gcw()),
+        easing: 'easeOutQuad',
+        duration: slideTime,
+    });
+    carousel.dotCheck();
+  }
+  @Method() async slideStart() {// * next slide action
+    anime({
+        targets:  wrap(),
+        translateX: '0px',
         easing: 'easeOutQuad',
         duration: slideTime,
     });

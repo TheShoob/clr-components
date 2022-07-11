@@ -6,14 +6,13 @@ let drawer = document.getElementsByTagName('clr-nav')[0];
 let mc = new Hammer(drawer, { // * nav drag event
   inputClass: Hammer.TouchInput
 });
-//let mc2 = new Hammer(window);// * for window swipe
 let navBreakPoint = 0;
 let breakPointPadding = 60;
-const oldWidth = window.innerWidth; // * get nav width
+//const oldWidth = window.innerWidth; // * get nav width
 let gdw = () => { return drawer.offsetWidth;} // * get drawer width 
 let gww = () => { return window.innerWidth;} // * get window width
-let heightNav100 = () => { drawer.setAttribute("style", "position: relative;")} // * set nav height
-let heightNavAuto = () => { drawer.setAttribute("style", "height:auto; position: absolute; top:8px;")} // * set nav height
+//let heightNav100 = () => { drawer.setAttribute("style", "position: relative;")} // * set nav height
+//let heightNavAuto = () => { drawer.setAttribute("style", "height:auto; position: relative:")} // * set nav height
 let drawerSetMobile = () => { 
   drawer.classList.add('mobile');
   drawer.setAttribute("style", "height:100vh; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateX(-" + gdw() + "px);");
@@ -55,17 +54,9 @@ export class ClrNav {
       direction: Hammer.DIRECTION_HORIZONTAL,
       threshold: 1,
     }));
-    /*mc2.add(new Hammer.Pan({
-      direction: Hammer.DIRECTION_HORIZONTAL,
-      threshold: 1,
-    }));*/
   }
 
   componentDidLoad() { // * runs the above function on the element and sets the position
-    /*var children = drawer.children;
-    for (var i = 0; i < children.length; i++) {
-      navBreakPoint += children[i].clientWidth;
-    }*/
     this.dragSet();
     this.drawerCheck();
     this.open = false;
@@ -75,19 +66,19 @@ export class ClrNav {
   }
 
   @Method() async drawerCheck() { // * checks if the drawer should be nav bar or drawer
-    if ((gww() <= navBreakPoint)) {
+    if ((gww() <= navBreakPoint) /*|| ("ontouchstart" in document.documentElement == true)*/) {
       drawerSetMobile();
       this.mobile = true;
       this.mobileStateHandler(this.mobile);
-    } else if ((gww() > navBreakPoint)) {
+    } else if ((gww() > navBreakPoint) /*|| ("ontouchstart" in document.documentElement == false)*/) {
       drawerSetDesktop();
       this.mobile = false;
       this.mobileStateHandler(this.mobile);
-      if (("ontouchstart" in document.documentElement == false)){
+      /*if (("ontouchstart" in document.documentElement == false)){
         heightNav100(); // * sets inner slotted nav height 100%
       } else {
         heightNavAuto(); // * sets inner slotted nav height auto
-      }
+      }*/
     }
   }
   
@@ -135,23 +126,15 @@ export class ClrNav {
     this.drawerCheck();
 
 
-    if (((gww() == oldWidth)) || (gww() >= navBreakPoint)) {
+    /*if (((gww() == oldWidth)) || (gww() >= navBreakPoint)) {
+
     }
     else if (((gww() < oldWidth) || (gww() > oldWidth)) && (gww() < navBreakPoint)) {
         setTimeout(function () {
           gdw();
         }, 0);
-    }
+    }*/
   }
-
- /*@Listen('touchend', { target: 'window'})
-  windowSwipe() { // * the listener for swiping the window
-    mc2.on('panright pan panleft', function(ev) {
-      if (ev.isFinal && ev.type === 'panright') {
-          drawer.drawerOpen();
-      } 
-    });
-  }*/
   
   drag() { // * dragging the drawer
     mc.on('panright pan panleft', function(ev) {

@@ -16,6 +16,8 @@
 
   ::slotted(a) {
     color: v(navColor);
+    font-family: v(primaryFontFam);
+    font-size: v(fontSize);
   }
 
   ::slotted(*) {

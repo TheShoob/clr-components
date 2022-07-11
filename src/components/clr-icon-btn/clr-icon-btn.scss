@@ -1,3 +1,5 @@
+@import '../../utils/base.scss';
+
 :host {
   button{
     position: relative;
@@ -5,8 +7,8 @@
     min-height: 30px;
     width: calc(80% - 42px);
     max-width: 250px;
-    border: #5a7985 solid 1px;
-    background-color: #fcfbf9;
+    border: v(btnColor) solid 1px;
+    background-color: v(btnColor-bg);
     border-radius: 5px;
     font-size: .8rem;
     letter-spacing: .0rem;
@@ -15,11 +17,14 @@
     text-decoration: none;
     justify-content: center;
     align-items: center;
-    color: #5a7985;
+    color: v(btnColor);
     padding: 3px 18px;
     margin: 5px 0px;
     transition-duration: 400ms;
     cursor: pointer;
+    ::slotted(clr-icon){
+      transition-duration: 400ms;
+    }
     slot {
       &:first-child {
         position: absolute;
@@ -27,14 +32,16 @@
         left: 3px;
         width: 15px;
         height: 15px;
-        fill: #5a7985;
       }
     }
   }
 }
 :host(:hover) {
   button{
-    color: #fff;
-    background-color: #072f3f;
+    color: v(btnColor-inverse);
+    background-color: v(btnColor-highlight);
+    ::slotted(clr-icon) {
+      fill: v(iconColor-inverse) !important;
+    }
   }
 }

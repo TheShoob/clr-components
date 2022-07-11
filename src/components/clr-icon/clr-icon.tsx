@@ -5,7 +5,7 @@ import doc from './assets/doc.svg';
 @Component({
   tag: 'clr-icon',
   styleUrl: 'clr-icon.scss',
-  shadow: true,
+  scoped: true,
 })
 
 export class ClrIcon {

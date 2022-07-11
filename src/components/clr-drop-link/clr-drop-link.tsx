@@ -36,13 +36,14 @@ export class ClrDropLink {
 
   @Listen('mobileState' , { target: 'body' }) // * the listener for mobile state
   mobileState(event:CustomEvent<boolean>) { // * Assigns mobile state
-    if ((event.detail == true) || ("ontouchstart" in document.documentElement == true)){
+    if ((event.detail == true) /*|| ("ontouchstart" in document.documentElement == true)*/){
       this.mobile = true;
     } else {
       this.mobile = false;
     }
   }
-
+  
+  // ! ADD CHECK FOR MOUSE / POINTER EVENTS
   desktopStyles() { // * applies styles for desktop
 
     let sub = this.host.querySelector<HTMLElement>('clr-drop-link clr-drop-link')

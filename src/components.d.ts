@@ -10,6 +10,8 @@ export namespace Components {
         "kind": "info" | "success" | "error";
         "text": string;
     }
+    interface ClrAlertCenter {
+    }
     interface ClrCard {
         "href": string;
         "maintitle": string;
@@ -23,6 +25,7 @@ export namespace Components {
         "size": string;
         "slideNext": () => Promise<void>;
         "slidePrev": () => Promise<void>;
+        "slideStart": () => Promise<void>;
     }
     interface ClrDropExpand {
         "href": string;
@@ -94,6 +97,12 @@ declare global {
     var HTMLClrAlertElement: {
         prototype: HTMLClrAlertElement;
         new (): HTMLClrAlertElement;
+    };
+    interface HTMLClrAlertCenterElement extends Components.ClrAlertCenter, HTMLStencilElement {
+    }
+    var HTMLClrAlertCenterElement: {
+        prototype: HTMLClrAlertCenterElement;
+        new (): HTMLClrAlertCenterElement;
     };
     interface HTMLClrCardElement extends Components.ClrCard, HTMLStencilElement {
     }
@@ -199,6 +208,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "clr-alert": HTMLClrAlertElement;
+        "clr-alert-center": HTMLClrAlertCenterElement;
         "clr-card": HTMLClrCardElement;
         "clr-carousel": HTMLClrCarouselElement;
         "clr-drop-expand": HTMLClrDropExpandElement;
@@ -222,6 +232,8 @@ declare namespace LocalJSX {
     interface ClrAlert {
         "kind"?: "info" | "success" | "error";
         "text"?: string;
+    }
+    interface ClrAlertCenter {
     }
     interface ClrCard {
         "href"?: string;
@@ -287,6 +299,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "clr-alert": ClrAlert;
+        "clr-alert-center": ClrAlertCenter;
         "clr-card": ClrCard;
         "clr-carousel": ClrCarousel;
         "clr-drop-expand": ClrDropExpand;
@@ -311,6 +324,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "clr-alert": LocalJSX.ClrAlert & JSXBase.HTMLAttributes<HTMLClrAlertElement>;
+            "clr-alert-center": LocalJSX.ClrAlertCenter & JSXBase.HTMLAttributes<HTMLClrAlertCenterElement>;
             "clr-card": LocalJSX.ClrCard & JSXBase.HTMLAttributes<HTMLClrCardElement>;
             "clr-carousel": LocalJSX.ClrCarousel & JSXBase.HTMLAttributes<HTMLClrCarouselElement>;
             "clr-drop-expand": LocalJSX.ClrDropExpand & JSXBase.HTMLAttributes<HTMLClrDropExpandElement>;

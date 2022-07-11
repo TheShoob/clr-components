@@ -14,27 +14,27 @@
   *{
     width: auto;
   }
-
-  ::slotted(nav){
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
+  ::slotted(:nth-child(3)) {
+    margin-left: auto;
   }
+
+  /*::slotted(clr-nav),::slotted(nav) {
+
+  }*/
 
   ::slotted(img), ::slotted(svg),::slotted(a){
     @include box-size;
     margin: 5px;
     width: auto;
     display: inline-flex;
+
   }
 
   ::slotted(clr-nav-btn){
     display: flex; 
     position: relative;
     top: 10px;
-    margin-left: auto;
+    margin-left: 25px;
     width: 45px;
   }
 

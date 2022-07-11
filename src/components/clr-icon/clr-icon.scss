@@ -1,8 +1,11 @@
 @import '../../utils/base.scss';
 
 :host {
+  fill: v(iconColor);
   display: flex;
+  align-items: center;
   div {
+
     &.tiny {
       width: v(tiny);
     }
@@ -18,9 +21,10 @@
     &.full {
       width: v(full);
     }
-    svg{
-      fill: v(primary);
-    }
+
+    /*svg:hover{
+      fill: v(iconColor-highlight);
+    }*/
   }
 }
 

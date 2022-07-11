@@ -11,13 +11,39 @@
       min-height: 100vh;
     }
     * {
+
+      --bg: rgb(196, 196, 196);
       --primary: rgb(85, 85, 85);
       --secondary: rgb(117, 117, 117);
       --tertiary: rgb(173, 173, 173);
       --highlight:rgb(240, 240, 240);
-      --navColor: rgb(55, 33, 33);
       --fontColor: rgb(78, 78, 78);
-      --bg: rgb(196, 196, 196);
+
+      --navColor: rgb(55, 33, 33);
+      --navColor-highlight: rgb(91, 53, 53);
+      --navColor-bg: rgb(165, 165, 165);
+
+      --btnColor: rgb(55, 33, 33);
+      --btnColor-inverse: white;
+      --btnColor-bg: white;
+      --btnColor-highlight: rgb(87, 52, 52);
+
+      --iconColor: rgb(55, 33, 33);
+      --iconColor-highlight: rgb(87, 52, 52);
+      --iconColor-inverse: white; 
+
+      --errorColor: #af2a23;
+      --errorColor-bg: #fff1f0;
+
+      --successColor: #468b12;
+      --successColor-bg: #f6ffed;
+
+      --warningColor: inherit;
+      --warningColor-bg: inherit;
+
+      --infoColor: #2176aa;
+      --infoColor-bg: #e6f7ff;
+
     }
     .row {
       display: flex;
@@ -39,7 +65,6 @@
     <img slot="logo" height='45px' src="http://clearedgestudio.com/svg/mark.svg" />
 
     <clr-nav slot="nav">
-      <!--<nav slot="links">-->
         <clr-drop-link slot="link" text="Drop Link Text test" href="#main1" target="_blank"></clr-drop-link>
         <clr-drop-link slot="link" text="Drop Link Text" href="#main2">
           <a slot="link" href="#one">One</a>
@@ -58,7 +83,6 @@
         </clr-drop-link>
         <clr-drop-link slot="link" text="Drop Link Text test" href="#main1"></clr-drop-link>
         <a slot="link" href="#six">six</a>
-      <!--</nav>-->
     </clr-nav> 
     <a href="#" slot="icon"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></a>
     <a href="#" slot="icon"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></a>

@@ -8,18 +8,14 @@ export const config: Config = {
   namespace: 'clear-components',
   commonjs: {
     namedExports: {
-        'node_modules/hammerjs': ['hammer.min.js']
+        'node_modules/hammerjs': ['hammer.min.js'],
     }
   },
   outputTargets: [
     {
-      type: 'dist-custom-elements',
-      generateTypeDeclarations: true,
-    },
-    /*{
       type: 'dist',
       esmLoaderPath: '../loader',
-    },*/
+    },
     {
       type: 'docs-readme'
     },
