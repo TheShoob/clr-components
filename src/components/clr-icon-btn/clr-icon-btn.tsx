@@ -1,5 +1,7 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 
+
+
 @Component({
   tag: 'clr-icon-btn',
   styleUrl: 'clr-icon-btn.scss',
@@ -12,12 +14,23 @@ export class ClrIconBtn {
   @Prop() url: string = "";
   @Prop() target: string = "";
 
+  componentDidLoad() {
+    let longestWordLength = () => this.text.split(" ").sort(
+      function(a, b) {
+        return b.length - a.length;
+      }
+    );
+
+    console.log(longestWordLength()[0].length);
+
+  }
+
   render() {
     if (this.href !== "") {       //* button with href 
 
       return (
         <Host>
-          <a href={this.href} target={this.target}>
+          <a href={this.href} target={this.target} aria-label={this.ariaLabel}>
             <slot name="icon"/>
             {this.text}
           </a>
@@ -29,7 +42,7 @@ export class ClrIconBtn {
       return (
         <Host>
           <stencil-route-link url={this.url} >
-            <div>
+            <div aria-label={this.ariaLabel}>
                 <slot name="icon"/>
                 {this.text}
             </div>
