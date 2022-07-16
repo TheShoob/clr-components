@@ -1,4 +1,4 @@
-import { Component, Host, h, State, Listen, Method, Element, Event, EventEmitter  } from '@stencil/core';
+import { Component, Host, h, State, Listen, Method, Element, Event, EventEmitter,  } from '@stencil/core';
 import Hammer from 'hammerjs';
 import anime from 'animejs';
 
@@ -65,12 +65,14 @@ export class ClrNav {
     //console.log(navBreakPoint);
   }
 
+
+
   @Method() async drawerCheck() { // * checks if the drawer should be nav bar or drawer
-    if ((gww() <= navBreakPoint) /*|| ("ontouchstart" in document.documentElement == true)*/) {
+    if ((gww() <= navBreakPoint) || ("ontouchstart" in document.documentElement == true)) {
       drawerSetMobile();
       this.mobile = true;
       this.mobileStateHandler(this.mobile);
-    } else if ((gww() > navBreakPoint) /*|| ("ontouchstart" in document.documentElement == false)*/) {
+    } else if ((gww() > navBreakPoint) || ("ontouchstart" in document.documentElement == false)) {
       drawerSetDesktop();
       this.mobile = false;
       this.mobileStateHandler(this.mobile);

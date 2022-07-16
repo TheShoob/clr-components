@@ -7,10 +7,11 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ClrAlert {
-        "kind": "info" | "success" | "error";
+        "kind": "info" | "success" | "warning" | "error";
         "text": string;
     }
     interface ClrAlertCenter {
+        "location": "top" | "bottom";
     }
     interface ClrCard {
         "href": string;
@@ -49,7 +50,10 @@ export namespace Components {
     }
     interface ClrIconBtn {
         "ariaLabel": string;
+        "href": string;
+        "target": string;
         "text": string;
+        "url": string;
     }
     interface ClrLeftDrawer {
         "drawerClose": () => Promise<void>;
@@ -230,10 +234,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ClrAlert {
-        "kind"?: "info" | "success" | "error";
+        "kind"?: "info" | "success" | "warning" | "error";
         "text"?: string;
     }
     interface ClrAlertCenter {
+        "location"?: "top" | "bottom";
     }
     interface ClrCard {
         "href"?: string;
@@ -269,7 +274,10 @@ declare namespace LocalJSX {
     }
     interface ClrIconBtn {
         "ariaLabel"?: string;
+        "href"?: string;
+        "target"?: string;
         "text"?: string;
+        "url"?: string;
     }
     interface ClrLeftDrawer {
     }

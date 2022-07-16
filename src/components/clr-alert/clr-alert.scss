@@ -1,40 +1,93 @@
 @import '../../utils/base.scss';
+:host{
+  margin: 0px 10px;
 
-p { 
-  line-height: 1.5;
-  padding: 4px 15px;
-  display: block;
-  margin-block-start: .5em;
-  margin-block-end: .5em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  p { 
+    line-height: 1.5;
+    padding: 4px 15px;
+    display: flex;
+    align-items: center;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: v(secondaryFontFam);
+  }
 
-  font-family: v(secondaryFontFam);
-}
+  p.info {
+    background-color: v(infoColor-bg);
+    border: 1px solid v(infoColor);
+    color: v(infoColor);
+  }
+  p.success {
+    background-color: v(successColor-bg);
+    border: 1px solid v(successColor);
+    color:  v(successColor);
+  }
+  p.warning {
+    background-color: v(warningColor-bg);
+    border: 1px solid v(warningColor);
+    color: v(warningColor);
+  }
+  p.error {
+    background-color: v(errorColor-bg);
+    border: 1px solid v(errorColor);
+    color: v(errorColor);
+  }
+  p.acknowledged {
+    display: none;
+  }
+  button {
+    margin-left: auto;
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: bold;
+    opacity: 0.5;
+    width: 25px;
+    height: 25px;
+  }
+  .error {
+    button {
+      border-color: v(errorColor);
+      color: v(errorColor);
+      &:hover {
+        background-color: v(errorColor);
+        color: v(errorColor-bg);
+      }
+    }
+  }
+  .success {
+    button {
+      border-color: v(successColor);
+      color: v(successColor);
+      &:hover {
+        background-color: v(successColor);
+        color: v(successColor-bg);
+      }
+    }
+  }
+  .warning {
+    button {
+      border-color: v(warningColor);
+      color: v(warningColor);
+      &:hover {
+        background-color: v(warningColor);
+        color: v(warningColor-bg);
+      }
+    }
+  }
+  .info {
+    button {
+      border-color: v(infoColor);
+      color: v(infoColor);
+      &:hover {
+        background-color: v(infoColor);
+        color: v(infoColor-bg);
+      }
+    }
 
-p.info {
-  background-color: v(infoColor-bg);
-  border: 1px solid v(infoColor);
-  color: v(infoColor);
-}
-p.success {
-  background-color: v(successColor-bg);
-  border: 1px solid v(successColor);
-  color:  v(successColor);
-}
-p.error {
-  background-color: v(errorColor-bg);
-  border: 1px solid v(errorColor);
-  color: v(errorColor);
-}
-p.acknowledged {
-  display: none;
-}
-button {
-  margin-left: 10px;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: .9em;
-  opacity: 0.5;
+  }
 }

@@ -38,8 +38,8 @@
       --successColor: #468b12;
       --successColor-bg: #f6ffed;
 
-      --warningColor: inherit;
-      --warningColor-bg: inherit;
+      --warningColor: #b58900;
+      --warningColor-bg: #fff8e0;
 
       --infoColor: #2176aa;
       --infoColor-bg: #e6f7ff;
@@ -110,18 +110,28 @@
   
   <clr-pn-btn></clr-pn-btn>
 
-  <clr-alert kind="info" text="here is some usful info"></clr-alert>
-  <clr-alert kind="success" text="Success!"></clr-alert>
-  <clr-alert kind="error" text="Error!"></clr-alert>
-
   <clr-wheel-ui></clr-wheel-ui>
 
   <clr-popup-btn kind="info"></clr-popup-btn>
 
   <section>
     <a name="two"></a>
+
+
+
     <clr-icon-btn text="here is some usful info"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></clr-icon-btn>
+    <clr-icon-btn url="#" text="here is some usful info"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></clr-icon-btn>
+    <clr-icon-btn href="#" text="here is some usful info"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></clr-icon-btn>
+
+    <br><br>
     <clr-icon size="large" kind="doc"></clr-icon>
+    <br><br>
+
+
+
+
+
+
 
     <div class='row'>
       <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
@@ -201,6 +211,15 @@
   <section>
     <a name="six"></a>
   </section>
+
+  <!--<clr-alert-center location="bottom">
+
+    <clr-alert slot="alert" kind="info" text="here is some usful info"></clr-alert>
+    <clr-alert slot="alert" kind="success" text="Success!"></clr-alert>
+    <clr-alert slot="alert" kind="warning" text="Warning!"></clr-alert>
+    <clr-alert slot="alert" kind="error" text="Error!"></clr-alert>
+
+  </clr-alert-center>-->
 
   <clr-footer></clr-footer>
 

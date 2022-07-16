@@ -1,16 +1,19 @@
 @import '../../utils/base.scss';
 
 :host {
-  button{
+  button,a,div{
+    box-sizing: border-box;
+    padding: 5px 18px 4px 18px;
+    margin: 0;
     position: relative;
     display: inline-flex;
-    min-height: 30px;
     width: calc(80% - 42px);
     max-width: 250px;
     border: v(btnColor) solid 1px;
     background-color: v(btnColor-bg);
     border-radius: 5px;
     font-size: .8rem;
+    font-family: v(primaryFontFam);
     letter-spacing: .0rem;
     text-transform: uppercase;
     text-align: center;
@@ -18,8 +21,6 @@
     justify-content: center;
     align-items: center;
     color: v(btnColor);
-    padding: 3px 18px;
-    margin: 5px 0px;
     transition-duration: 400ms;
     cursor: pointer;
     ::slotted(clr-icon){
@@ -35,9 +36,15 @@
       }
     }
   }
+  /*button {
+    min-height: 30px;
+  }
+  a,div {
+    min-height: 28px;
+  }*/
 }
 :host(:hover) {
-  button{
+  button,a,div{
     color: v(btnColor-inverse);
     background-color: v(btnColor-highlight);
     ::slotted(clr-icon) {

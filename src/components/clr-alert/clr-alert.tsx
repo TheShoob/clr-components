@@ -7,7 +7,7 @@ import { Component, h, Prop, State } from '@stencil/core';
 })
 export class ClrAlert  {
   @Prop() text: string = "default text if no text in component";
-  @Prop() kind: "info" | "success" | "error" = "info";
+  @Prop() kind: "info" | "success" | "warning" | "error" = "info";
   @State() acknowledged: boolean = false;
   handleAcknowledge = () => {
     this.acknowledged = true;

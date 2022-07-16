@@ -1,0 +1,27 @@
+@import '../../utils/base.scss';
+
+:host {
+  .top {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgb(0, 0, 0, .0));
+  }
+  .bottom {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .0), rgb(0, 0, 0, .8));
+  }
+}
+
