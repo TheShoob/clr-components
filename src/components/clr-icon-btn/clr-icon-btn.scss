@@ -1,14 +1,23 @@
 @import '../../utils/base.scss';
 
 :host {
+  width: 100%;
+  //max-width: max-content;
+  display: block;
+
+  //box-sizing: border-box;
+
   button,a,div{
     box-sizing: border-box;
-    padding: 5px 18px 4px 18px;
+    padding: 5px 5px 5px 20px;
     margin: 0;
     position: relative;
     display: inline-flex;
-    width: calc(80% - 42px);
-    max-width: 250px;
+    flex-direction: row;
+    width: 100%;
+    min-width: 20px;
+    min-height: 30px;
+    //max-width: 250px;
     border: v(btnColor) solid 1px;
     background-color: v(btnColor-bg);
     border-radius: 5px;
@@ -33,6 +42,7 @@
         left: 3px;
         width: 15px;
         height: 15px;
+        //margin: 15px;
       }
     }
   }

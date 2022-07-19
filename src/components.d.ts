@@ -54,6 +54,7 @@ export namespace Components {
         "target": string;
         "text": string;
         "url": string;
+        "widthCheck": () => Promise<void>;
     }
     interface ClrLeftDrawer {
         "drawerClose": () => Promise<void>;
