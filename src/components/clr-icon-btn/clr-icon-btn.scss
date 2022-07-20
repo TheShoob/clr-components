@@ -1,37 +1,43 @@
 @import '../../utils/base.scss';
 
 :host {
+  display: flex;
   width: 100%;
-  //max-width: max-content;
-  display: block;
-
-  //box-sizing: border-box;
+  max-width: max-content;
 
   button,a,div{
     box-sizing: border-box;
     padding: 5px 5px 5px 20px;
     margin: 0;
     position: relative;
-    display: inline-flex;
+    display: flex;
+    justify-content: flex-start;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: left;
+    font-size: v(fontSize);
+    font-family: v(primaryFontFam);
+    //text-transform: uppercase;
+    text-align: left;
+    text-decoration: none;
+    color: v(btnColor);
+    min-width: 0px;
     width: 100%;
-    min-width: 20px;
+    max-width: max-content;
     min-height: 30px;
-    //max-width: 250px;
     border: v(btnColor) solid 1px;
     background-color: v(btnColor-bg);
     border-radius: 5px;
-    font-size: .8rem;
-    font-family: v(primaryFontFam);
-    letter-spacing: .0rem;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    color: v(btnColor);
     transition-duration: 400ms;
     cursor: pointer;
+
+    span.hidden{
+      visibility: hidden;
+    }
+    span.shown {
+      visibility: visible;
+    }
+
     ::slotted(clr-icon){
       transition-duration: 400ms;
     }
