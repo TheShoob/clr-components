@@ -10,7 +10,12 @@ export class ClrSideMenu {
   render() {
     return (
       <Host>
-        <slot></slot>
+        <nav>
+          <div>
+            <slot name="btn"></slot>
+          </div>
+          <button></button>
+        </nav>
       </Host>
     );
   }

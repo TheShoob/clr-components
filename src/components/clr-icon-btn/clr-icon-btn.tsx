@@ -1,7 +1,7 @@
-import { Component, Host, h, Prop, State, Listen, Method, Element } from '@stencil/core';
+import { Component, Host, h, Prop, Listen, Method, Element } from '@stencil/core';
 
 let canvas = document.createElement("canvas");  
-let context = canvas.getContext("2d"); 
+let context = canvas.getContext("2d");
 @Component({
   tag: 'clr-icon-btn',
   styleUrl: 'clr-icon-btn.scss',
@@ -9,20 +9,18 @@ let context = canvas.getContext("2d");
 })
 
 export class ClrIconBtn {
-  @Element() el: HTMLElement;
+  @Element() host: HTMLElement;
+  //@Element() el: HTMLElement;
   @Prop() text: string = "default text if no text in component";
   @Prop() ariaLabel: string = "a button";
   @Prop() href: string = "";
   @Prop() url: string = "";
   @Prop() target: string = "";
-  //@State() textHidden: boolean = false;
+  //@State() childrenData: any = {};
 
 
   componentDidLoad() {
     this.widthCheck();
-    //console.log(getComputedStyle(this.el.shadowRoot.querySelector(".wrap")).fontSize);
-
-
   }
 
   @Method() async widthCheck() {
@@ -32,59 +30,65 @@ export class ClrIconBtn {
       },
     );
 
+    //let slotted = this.host.children;
+    //this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length };  
     //let fontSizeCalc:any = Number(getComputedStyle(this.el.shadowRoot.querySelector(".text")).fontSize.slice(0, -2));
-    let fontSizeCalc:any = getComputedStyle(this.el.shadowRoot.querySelector(".text")).font;
 
+    let iconWidth = this.host.shadowRoot.querySelector("slot").clientWidth;
+    let text = this.host.shadowRoot.querySelector(".text");
+    let fontSizeCalc:any = getComputedStyle(text).font;
+
+    //console.log(iconWidth);
     context.font = fontSizeCalc;  
     let { width } = context.measureText(longestWordLength()[0]);  
     //console.log(width)
     width = Math.ceil(width)
 
-   console.log(longestWordLength()[0] + " | " + longestWordLength()[0].length + " | " + width + " | " + fontSizeCalc);
+   //console.log(longestWordLength()[0] + " | " + longestWordLength()[0].length + " | " + width + " | " + fontSizeCalc);
 
     
-    if (this.el.shadowRoot.querySelector("a") != null) { //* check for A tag
+    if (this.host.shadowRoot.querySelector("a") != null) { //* check for A tag
       //console.log(Number(fontSizeCalc));
-      if (this.el.shadowRoot.querySelector("a").clientWidth - 24 < Number(width)) {
+      if (this.host.shadowRoot.querySelector("a").clientWidth - iconWidth < Number(width)) {
 
-        this.el.shadowRoot.querySelector(".text").classList.remove("shown");
-        this.el.shadowRoot.querySelector(".text").classList.add("hidden");
+        text.classList.remove("shown");
+        text.classList.add("hidden");
 
       } else {
 
-        this.el.shadowRoot.querySelector(".text").classList.add("shown");
-        this.el.shadowRoot.querySelector(".text").classList.remove("hidden");
+        text.classList.add("shown");
+        text.classList.remove("hidden");
 
       }
 
     }
 
-    if (this.el.shadowRoot.querySelector("div") != null) { //* check for DIV tag
+    if (this.host.shadowRoot.querySelector("div") != null) { //* check for DIV tag
 
-      if (this.el.shadowRoot.querySelector("div").clientWidth - 24 < Number(width)) {
+      if (this.host.shadowRoot.querySelector("div").clientWidth - 24 < Number(width)) {
 
-        this.el.shadowRoot.querySelector(".text").classList.remove("shown");
-        this.el.shadowRoot.querySelector(".text").classList.add("hidden");
+        text.classList.remove("shown");
+        text.classList.add("hidden");
 
       } else {
 
-        this.el.shadowRoot.querySelector(".text").classList.add("shown");
-        this.el.shadowRoot.querySelector(".text").classList.remove("hidden");
+        text.classList.add("shown");
+        text.classList.remove("hidden");
 
       }
 
     }
-    if (this.el.shadowRoot.querySelector("button") != null) { //* check for BUTTON tag
+    if (this.host.shadowRoot.querySelector("button") != null) { //* check for BUTTON tag
 
-      if (this.el.shadowRoot.querySelector("button").clientWidth - 24 < Number(width)) {
+      if (this.host.shadowRoot.querySelector("button").clientWidth - 24 < Number(width)) {
 
-        this.el.shadowRoot.querySelector(".text").classList.remove("shown");
-        this.el.shadowRoot.querySelector(".text").classList.add("hidden");
+        text.classList.remove("shown");
+        text.classList.add("hidden");
 
       } else {
 
-        this.el.shadowRoot.querySelector(".text").classList.add("shown");
-        this.el.shadowRoot.querySelector(".text").classList.remove("hidden");
+        text.classList.add("shown");
+        text.classList.remove("hidden");
 
       }
 

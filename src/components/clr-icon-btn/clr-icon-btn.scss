@@ -7,17 +7,16 @@
 
   button,a,div{
     box-sizing: border-box;
-    padding: 5px 5px 5px 20px;
+    padding: 5px;
     margin: 0;
     position: relative;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: left;
+    align-items: center;
     font-size: v(fontSize);
     font-family: v(primaryFontFam);
-    //text-transform: uppercase;
     text-align: left;
     text-decoration: none;
     color: v(btnColor);
@@ -41,14 +40,12 @@
     ::slotted(clr-icon){
       transition-duration: 400ms;
     }
-    slot {
+   slot {
       &:first-child {
-        position: absolute;
+        align-self: left;
+        justify-self: flex-start;
         display: block;
-        left: 3px;
-        width: 15px;
-        height: 15px;
-        //margin: 15px;
+        margin: 0 auto;
       }
     }
   }
