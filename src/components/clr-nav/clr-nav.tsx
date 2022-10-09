@@ -56,16 +56,14 @@ export class ClrNav {
     }));
   }
 
+  componentWillLoad() { // * the listener for the hammer event
+    this.open = false;
+    this.drawerCheck();
+  }
   componentDidLoad() { // * runs the above function on the element and sets the position
     this.dragSet();
-    this.drawerCheck();
-    this.open = false;
     drawer.shadowRoot.querySelectorAll('nav')[0].classList.add("closed");
-
-    //console.log(navBreakPoint);
   }
-
-
 
   @Method() async drawerCheck() { // * checks if the drawer should be nav bar or drawer
     if ((gww() <= navBreakPoint) || ("ontouchstart" in document.documentElement == true)) {

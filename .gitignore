@@ -1,6 +1,7 @@
 dist/
 www/
 loader/
+test_assets/
 
 *~
 *.sw[mnpcod]

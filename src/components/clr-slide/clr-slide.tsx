@@ -6,19 +6,19 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class ClrSlide {
-  @Prop() bgURL: string = "background URL";
-  @Prop() title: string = "Main Title";
-  @Prop() content: string = "Main Content";
-  @Prop() imgURL: string = "Image URL";
+  @Prop() bgURL:string = '/test_assets/bg-slide-1.png';
+  @Prop() mainTitle:string = 'Main Title';
+  @Prop() mainContent:string = 'Main Content';
+  @Prop() imgURL:string = '';
 
   render() {
     return (
       <Host>
         <slot>
           <div class="slide" style={{'background-image': 'url(' + this.bgURL + ')' }}>
-            <h2>{this.title}</h2>
-            <p>{this.content}</p>
-            <img src={'"' + this.imgURL + '"'}></img>
+            <h2>{this.mainTitle}</h2>
+            <p>{this.mainContent}</p>
+            <img src={ this.imgURL }></img>
           </div>
         </slot>
       </Host>

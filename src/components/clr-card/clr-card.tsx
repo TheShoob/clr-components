@@ -25,37 +25,37 @@ export class ClrCard {
   }
 
 
-    //*ARROW AND EXPAND AREA OPEN/CLOSE
-    toggleSub = () => {
-      let arrow = this.host.shadowRoot.querySelectorAll('.arrow');
-      let expand = this.host.shadowRoot.querySelector<HTMLElement>('.expand');
-      let expandInnerHeight = this.host.shadowRoot.querySelectorAll('.expandInner')[0].clientHeight + 'px';
-      this.toggle = !this.toggle;
-      if (this.toggle == true){
-        setTimeout(function(){
-          expand.style.height = 'auto';
-        }.bind(this), 350);
-      } else if (this.toggle == false){
-        expand.style.height = expandInnerHeight;
-      }
-  
-      anime({
-        targets: expand,
-        height: this.toggle ? expandInnerHeight : '0px',
-        duration: 300,
-        easing: 'easeInOutQuad',
-      });
-      anime({
-        targets: arrow,
-        rotate: {
-            value: this.toggle ? -180 : 0,
-            duration: 300,
-            easing: 'easeInOutQuad'
-        },
-      });
-  
+  //*ARROW AND EXPAND AREA OPEN/CLOSE
+  toggleSub = () => {
+    let arrow = this.host.shadowRoot.querySelectorAll('.arrow');
+    let expand = this.host.shadowRoot.querySelector<HTMLElement>('.expand');
+    let expandInnerHeight = this.host.shadowRoot.querySelectorAll('.expandInner')[0].clientHeight + 'px';
+    this.toggle = !this.toggle;
+    if (this.toggle == true){
+      setTimeout(function(){
+        expand.style.height = 'auto';
+      }.bind(this), 350);
+    } else if (this.toggle == false){
+      expand.style.height = expandInnerHeight;
     }
-    //*
+
+    anime({
+      targets: expand,
+      height: this.toggle ? expandInnerHeight : '0px',
+      duration: 300,
+      easing: 'easeInOutQuad',
+    });
+    anime({
+      targets: arrow,
+      rotate: {
+          value: this.toggle ? -180 : 0,
+          duration: 300,
+          easing: 'easeInOutQuad'
+      },
+    });
+
+  }
+  //*
   
 
   render() {

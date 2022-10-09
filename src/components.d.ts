@@ -22,11 +22,7 @@ export namespace Components {
         "url": string;
     }
     interface ClrCarousel {
-        "dotCheck": () => Promise<void>;
         "size": string;
-        "slideNext": () => Promise<void>;
-        "slidePrev": () => Promise<void>;
-        "slideStart": () => Promise<void>;
     }
     interface ClrDropExpand {
         "href": string;
@@ -81,9 +77,9 @@ export namespace Components {
     }
     interface ClrSlide {
         "bgURL": string;
-        "content": string;
         "imgURL": string;
-        "title": string;
+        "mainContent": string;
+        "mainTitle": string;
     }
     interface ClrWheelUi {
     }
@@ -300,9 +296,9 @@ declare namespace LocalJSX {
     }
     interface ClrSlide {
         "bgURL"?: string;
-        "content"?: string;
         "imgURL"?: string;
-        "title"?: string;
+        "mainContent"?: string;
+        "mainTitle"?: string;
     }
     interface ClrWheelUi {
     }

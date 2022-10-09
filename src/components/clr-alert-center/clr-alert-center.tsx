@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, State,Element, Listen } from '@stencil/core';
+import { Component, Host, h, Prop, State,Element } from '@stencil/core';
 
 @Component({
   tag: 'clr-alert-center',
