@@ -123,6 +123,13 @@
     <clr-icon-btn class="marg-10" href="#" text="this is a regular thing"><clr-icon slot="btn" size="large" kind="doc"></clr-icon></clr-icon-btn>
     <clr-icon-btn class="marg-10" href="#" text="this is a regular thing"><clr-icon slot="btn" size="large" kind="doc"></clr-icon></clr-icon-btn>
   </clr-side-menu>
+
+  <clr-drop-expand text="hi" href="#">
+    <a slot="link" href="#one">One</a>
+    <clr-drop-expand slot="link" text="hi" href="#">
+      <a slot="link" href="#one">One</a>
+    </clr-drop-expand>
+  </clr-drop-expand>
   
   <clr-pn-btn></clr-pn-btn>
 
@@ -132,8 +139,6 @@
 
   <section>
     <a name="two"></a>
-
-
     <div class="row">
       <clr-icon-btn class="marg-10" href="#" text="|"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></clr-icon-btn>
       <clr-icon-btn class="marg-10" href="#" text="|||||"><clr-icon slot="icon" size="small" kind="doc"></clr-icon></clr-icon-btn>
@@ -148,12 +153,6 @@
     <br><br>
     <clr-icon size="large" kind="doc"></clr-icon>
     <br><br>
-
-
-
-
-
-
 
     <div class='row'>
       <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">

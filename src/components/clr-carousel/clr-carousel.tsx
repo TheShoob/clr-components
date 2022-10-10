@@ -68,40 +68,41 @@ export class ClrCarousel {
       return slideLength() * gcw() - gcw()
     }
     let negSlideCalc = () => { return Number("-" + slideCalc())} //* negitive slide width
-
-    if (slidePosition() > (negSlideCalc())) {
+    let dotOnID = () => { return Number( this.host.shadowRoot.querySelectorAll('.dot.on')[0].id ) } //* get the id of the dot that is on
+    if (dotOnID() < slideLength()) {
       anime({
         targets:  carousel,
-        translateX: (slidePosition() - gcw()),
-        easing: 'easeOutQuad',
+        translateX: ('-' + (dotOnID() ) * gcw()),
+        easing: 'easeInQuad',
         duration: slideTime,
-    });
+      });
     } else if (slidePosition() <= (negSlideCalc())) {
       anime({
         targets:  carousel,
-        translateX: '0px',
+        translateX: (dotOnID() * 0) + "px",
         easing: 'easeOutQuad',
         duration: slideTime,
-    });
+      });
     }
     this.dotCheck();
   }
 
   slidePrev = () => { // * previous slide action
     let carousel = this.host.shadowRoot.querySelectorAll('main')[0] //* the carousel slide wrap
-    let slidePosition = () => { //* get the position of current slide
+    /*let slidePosition = () => { //* get the position of current slide
       var style = window.getComputedStyle(carousel);
       var matrix = new WebKitCSSMatrix(style.transform);
       return matrix.m41;
-    }
+    }*/
     let gcw = () => { return carousel.offsetWidth;} // * get carousel width 
-    if (slidePosition() < 0 ) {
+    let dotOnID = () => { return Number( this.host.shadowRoot.querySelectorAll('.dot.on')[0].id ) } //* get the id of the dot that is on
+    if (dotOnID() > 1 ) {
       anime({
         targets:  carousel,
-        translateX: (slidePosition() + gcw()),
+        translateX: ('-' + (dotOnID() - 2) * gcw()),
         easing: 'easeInQuad',
         duration: slideTime,
-    });
+      }); 
     };
     this.dotCheck();
   }
@@ -138,7 +139,7 @@ export class ClrCarousel {
     let carousel = this.host.shadowRoot.querySelectorAll('main')[0] //* the carousel slide wrap
     let gcw = () => { return carousel.offsetWidth;} // * get carousel width 
     let slideLength = () => { return this.host.children.length } //* the number of slides
-
+    let dotOnID = () => { return Number( this.host.shadowRoot.querySelectorAll('.dot.on')[0].id ) } //* get the id of the dot that is on
     let slideCalc = () => { //* get the width of each slide
       return slideLength() * gcw() - gcw()
     }
@@ -158,29 +159,29 @@ export class ClrCarousel {
     mc.on('panright pan panleft', function(ev) {
       //wrap().style.transform = "translateX(" + ev.deltaX + "px)";
       if (ev.isFinal && slidePosition() < 0 && ev.type == 'panright') {
-        if (slidePosition() < 0 ) {
+        if (dotOnID() > 1 ) {
           anime({
             targets:  carousel,
-            translateX: (slidePosition() + gcw()),
+            translateX: ('-' + (dotOnID() - 2) * gcw()),
             easing: 'easeInQuad',
             duration: slideTime,
-        });
+          }); 
         };
       } else if ((ev.isFinal && slidePosition() > (negSlideCalc()) && ev.type == 'panleft')) {
-        if (slidePosition() > (negSlideCalc())) {
+        if (dotOnID() < slideLength()) {
           anime({
             targets:  carousel,
-            translateX: (slidePosition() - gcw()),
-            easing: 'easeOutQuad',
+            translateX: ('-' + (dotOnID() ) * gcw()),
+            easing: 'easeInQuad',
             duration: slideTime,
-        });
+          });
         } else if (slidePosition() <= (negSlideCalc())) {
           anime({
             targets:  carousel,
-            translateX: '0px',
+            translateX: (dotOnID() * 0) + "px",
             easing: 'easeOutQuad',
             duration: slideTime,
-        });
+          });
         }
       }      
     });
