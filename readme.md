@@ -1,5 +1,5 @@
 
-<h1>Clrear Components</h1>
+<h1>Clear Components</h1>
 
 
 
