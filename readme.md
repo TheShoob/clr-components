@@ -2,13 +2,6 @@
 <h1>Clear Components</h1>
 <br><br>
 
-<h2>clr-alert</h2>
-<blockquote><pre><code>
-&lt;clr-alert slot="alert" kind="info" text="content goes here"></clr-alert>
-<br>
-</code></pre></blockquote>
-<br><br>
-
 <h2>clr-alert-center</h2>
 <blockquote><pre><code>
 &lt;clr-alert-center location="bottom">
@@ -19,9 +12,25 @@
 &lt;/clr-alert-center>
 <br>
 </code></pre></blockquote>
+<p>This component is ment to house the clr-alerts</p>
+<br><br>
+
+<h2>clr-alert</h2>
+<blockquote><pre><code>
+&lt;clr-alert slot="alert" kind="info" text="content goes here"></clr-alert>
+<br>
+</code></pre></blockquote>
 <br><br>
 
 <h2clr-card></h2>
+  <blockquote><pre><code>
+      &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+        &lt;img slot="img" height="130px" src=" "/>
+        &lt;div slot="card-body">content in this area will be shown</div>
+        &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.</div>
+      &lt;/clr-card
+      <br>
+  </code></pre></blockquote>
 <br><br>
 
 <h2>clr-carousel</h2>
