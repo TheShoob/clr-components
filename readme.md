@@ -24,7 +24,7 @@
 
 <h2>clr-card</h2>
 <blockquote><pre><code>
-    &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+    &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#" size="third">
       &lt;img slot="img" height="130px" src=" "/>
       &lt;div slot="card-body">content in this area will be shown</div>
       &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.</div>
@@ -36,8 +36,8 @@
 <h2>clr-carousel</h2>
 <blockquote><pre><code>
   &lt;clr-carousel size="third">
-    &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes"></clr-slide>
-    &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes"></clr-slide>
+    &lt;clr-slide slot="slide" bgURL="slide-bg-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="slide-img-1.png" bgRepeat="yes"></clr-slide>-img
+    &lt;clr-slide slot="slide" bgURL="slide-bg-2.png" mainTitle="Second Title" mainContent="this is the content of the Second slide" imgURL="slide-img-2.png" bgRepeat="yes"></clr-slide>
   &lt;/clr-carousel>
   <br>
 </code></pre></blockquote>
