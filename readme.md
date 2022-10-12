@@ -113,6 +113,12 @@
 <!----------------------------------------------------------------------------------------clr-left-drawer-->
 <h2>clr-left-drawer</h2>
 <blockquote><pre><code>
+  &lt;clr-left-drawer>
+    &lt;img slot="logo" height='45px' src=" " />
+    &lt;nav slot="nav">
+    
+    &lt;/nav>
+  &lt;/clr-left-drawer>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -120,6 +126,10 @@
 <!----------------------------------------------------------------------------------------clr-nav-->  
 <h2>clr-nav</h2>
 <blockquote><pre><code>
+    &lt;clr-nav slot="nav">
+        &lt;clr-drop-link slot="link" text="Drop Link Text" href="#" target="_blank">&lt;/clr-drop-link>
+        &lt;a slot="link" href="#">text</a>
+    &lt;/clr-nav> 
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -127,6 +137,7 @@
 <!----------------------------------------------------------------------------------------clr-nav-btn-->    
 <h2>clr-nav-btn</h2>
 <blockquote><pre><code>
+  &lt;clr-nav-btn slot="btn">&lt;/clr-nav-btn>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -134,6 +145,7 @@
 <!----------------------------------------------------------------------------------------clr-pill-->  
 <h2>clr-pill</h2>
 <blockquote><pre><code>
+  &lt;clr-pill>&lt;/clr-pill>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -141,6 +153,7 @@
 <!----------------------------------------------------------------------------------------clr-pn-btn-->  
 <h2>clr-pn-btn</h2>
 <blockquote><pre><code>
+  &lt;clr-pn-btn>&lt;/clr-pn-btn>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -148,6 +161,7 @@
 <!----------------------------------------------------------------------------------------clr-popup-btn-->  
 <h2>clr-popup-btn</h2>
 <blockquote><pre><code>
+  &lt;clr-popup-btn kind="info">&lt;/clr-popup-btn>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -155,6 +169,11 @@
 <!----------------------------------------------------------------------------------------clr-side-menu-->  
 <h2>clr-side-menu</h2>
 <blockquote><pre><code>
+  &lt;clr-side-menu side="right" hidden="no">
+    &lt;clr-icon-btn class="marg-10" href="#" text="this is a regular thing">&lt;clr-icon slot="btn" size="large" kind="doc">&lt;/clr-icon>&lt;/clr-icon-btn>
+    &lt;clr-icon-btn class="marg-10" href="#" text="this is a regular thing">&lt;clr-icon slot="btn" size="large" kind="doc">&lt;/clr-icon>&lt;/clr-icon-btn>
+    &lt;clr-icon-btn class="marg-10" href="#" text="this is a regular thing">&lt;clr-icon slot="btn" size="large" kind="doc">&lt;/clr-icon>&lt;/clr-icon-btn>
+  &lt;/clr-side-menu>
   <br>
 </code></pre></blockquote>
 <br><br>
