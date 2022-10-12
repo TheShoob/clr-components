@@ -4,7 +4,7 @@
 
 <h2>clr-alert</h2>
 <blockquote><pre><code>
-&lt;clr-alert slot="alert" kind="info" text="here is some usful info"></clr-alert>
+&lt;clr-alert slot="alert" kind="info" text="content goes here"></clr-alert>
 <br>
 </code></pre></blockquote>
 <br><br>
