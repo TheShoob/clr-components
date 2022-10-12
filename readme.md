@@ -23,62 +23,120 @@
 <br><br>
 
 <h2clr-card></h2>
-  <blockquote><pre><code>
-      &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#main1" size="third">
-        &lt;img slot="img" height="130px" src=" "/>
-        &lt;div slot="card-body">content in this area will be shown</div>
-        &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.</div>
-      &lt;/clr-card
-      <br>
-  </code></pre></blockquote>
+<blockquote><pre><code>
+    &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+      &lt;img slot="img" height="130px" src=" "/>
+      &lt;div slot="card-body">content in this area will be shown</div>
+      &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.</div>
+    &lt;/clr-card
+    <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-carousel</h2>
+<blockquote><pre><code>
+  &lt;clr-carousel size="third">
+    &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes"></clr-slide>
+    &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes"></clr-slide>
+  &lt;/clr-carousel>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-drop-expand</h2>
+<blockquote><pre><code>
+  &lt;clr-drop-expand text="visible content of first expand" href="#">
+    &lt;a slot="link" href="#one">One</a>
+    &lt;clr-drop-expand slot="link" text="visible content of second expand" href="#">
+      &lt;a slot="link" href="#two">One</a>
+    &lt;/clr-drop-expand>
+  &lt;/clr-drop-expand>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-drop-link</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-footer</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-header</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-icon</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-icon-btn</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-left-drawer</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-nav</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-nav-btn</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-pill</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-pn-btn</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-popup-btn</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-side-menu</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-slide</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <h2>clr-wheel-ui</h2>
+<blockquote><pre><code>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 
