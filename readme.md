@@ -3,7 +3,7 @@
 <br><br>
 
 <h2>clr-alert</h2>
-<xmp><clr-alert slot="alert" kind="info" text="here is some usful info"></clr-alert></xmp>
+<clr-alert slot="alert" kind="info" text="here is some usful info"></clr-alert>
 <br><br>
 
 <h2>clr-alert-center</h2>
