@@ -1,7 +1,9 @@
 
 <h1>Clear Components</h1>
+<br><br>
 
 <h2>clr-alert</h2>
+<xmp><clr-alert slot="alert" kind="info" text="here is some usful info"></clr-alert><xmp>
 <br><br>
 
 <h2>clr-alert-center</h2>
