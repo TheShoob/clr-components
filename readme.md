@@ -5,10 +5,10 @@
 <h2>clr-alert-center</h2>
 <blockquote><pre><code>
   &lt;clr-alert-center location="bottom">
-    &lt;clr-alert slot="alert" kind="info" text="content goes here"></clr-alert>
-    &lt;clr-alert slot="alert" kind="success" text="Success!"></clr-alert>
-    &lt;clr-alert slot="alert" kind="warning" text="Warning!"></clr-alert>
-    &lt;clr-alert slot="alert" kind="error" text="Error!"></clr-alert>
+    &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
+    &lt;clr-alert slot="alert" kind="success" text="Success!">&lt;/clr-alert>
+    &lt;clr-alert slot="alert" kind="warning" text="Warning!">&lt;/clr-alert>
+    &lt;clr-alert slot="alert" kind="error" text="Error!">&lt;/clr-alert>
   &lt;/clr-alert-center>
   <br>
   </code></pre></blockquote>
@@ -17,7 +17,7 @@
 
 <h2>clr-alert</h2>
 <blockquote><pre><code>
-  &lt;clr-alert slot="alert" kind="info" text="content goes here"></clr-alert>
+  &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -36,8 +36,8 @@
 <h2>clr-carousel</h2>
 <blockquote><pre><code>
   &lt;clr-carousel size="third">
-    &lt;clr-slide slot="slide" bgURL="slide-bg-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="slide-img-1.png" bgRepeat="yes"></clr-slide>-img
-    &lt;clr-slide slot="slide" bgURL="slide-bg-2.png" mainTitle="Second Title" mainContent="this is the content of the Second slide" imgURL="slide-img-2.png" bgRepeat="yes"></clr-slide>
+    &lt;clr-slide slot="slide" bgURL="slide-bg-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="slide-img-1.png" bgRepeat="yes">&lt;/clr-slide>-img
+    &lt;clr-slide slot="slide" bgURL="slide-bg-2.png" mainTitle="Second Title" mainContent="this is the content of the Second slide" imgURL="slide-img-2.png" bgRepeat="yes">&lt;/clr-slide>
   &lt;/clr-carousel>
   <br>
 </code></pre></blockquote>
@@ -58,12 +58,12 @@
 <h2>clr-drop-link</h2>
 <blockquote><pre><code>
   &lt;clr-drop-link slot="link" text="text for the link" href="#1" target="_blank">
-    &lt;a slot="link" href="#one">One</a>
-    &lt;a slot="link" href="#two">Two</a>
-    &lt;a slot="link" href="#three">Three</a>
+    &lt;a slot="link" href="#one">One&lt;/a>
+    &lt;a slot="link" href="#two">Two&lt;/a>
+    &lt;a slot="link" href="#three">Three&lt;/a>
     &lt;clr-drop-link slot="link" text="text for the link" href="#2">
-      &lt;a slot="link" href="#one">One</a>
-      &lt;a slot="link" href="#two">Two</a>
+      &lt;a slot="link" href="#one">One<&lt;a>
+      &lt;a slot="link" href="#two">Two&lt;/a>
     &lt;/clr-drop-link>
   &lt;/clr-drop-link>
   <br>
