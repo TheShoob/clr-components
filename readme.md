@@ -27,8 +27,8 @@
 <blockquote><pre><code>
     &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#" size="third">
       &lt;img slot="img" height="130px" src=" "/>
-      &lt;div slot="card-body">content in this area will be shown</div>
-      &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.</div>
+      &lt;div slot="card-body">content in this area will be shown&lt;/div>
+      &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.&lt;/div>
     &lt;/clr-card>
     <br>
 </code></pre></blockquote>
@@ -49,9 +49,9 @@
 <h2>clr-drop-expand</h2>
 <blockquote><pre><code>
   &lt;clr-drop-expand text="visible content of first expand" href="#">
-    &lt;a slot="link" href="#one">One</a>
+    &lt;a slot="link" href="#one">One&lt;/a>
     &lt;clr-drop-expand slot="link" text="visible content of second expand" href="#">
-      &lt;a slot="link" href="#two">One</a>
+      &lt;a slot="link" href="#two">One&lt;/a>
     &lt;/clr-drop-expand>
   &lt;/clr-drop-expand>
   <br>
