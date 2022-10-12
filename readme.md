@@ -3,9 +3,9 @@
 <br><br>
 
 <h2>clr-alert</h2>
-<code>
+<pre><code>
 <clr-alert slot="alert" kind="info" text="here is some usful info"></clr-alert>
-</code>
+</code></pre>
 <br><br>
 
 <h2>clr-alert-center</h2>
