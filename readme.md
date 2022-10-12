@@ -17,6 +17,7 @@
   &lt;clr-alert slot="alert" kind="warning" text="Warning!"></clr-alert>
   &lt;clr-alert slot="alert" kind="error" text="Error!"></clr-alert>
 &lt;/clr-alert-center>
+<br>
 </code></pre></blockquote>
 <br><br>
 
