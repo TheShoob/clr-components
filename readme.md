@@ -1,7 +1,7 @@
 
 <h1>Clear Components</h1>
 <br><br>
-
+<!----------------------------------------------------------------------------------------clr-alert-center-->
 <h2>clr-alert-center</h2>
 <blockquote><pre><code>
   &lt;clr-alert-center location="bottom">
@@ -14,6 +14,7 @@
 <p>This component is meant to house the clr-alerts</p>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-alert-->
 <h2>clr-alert</h2>
 <blockquote><pre><code>
   &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
@@ -21,6 +22,7 @@
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-card-->
 <h2>clr-card</h2>
 <blockquote><pre><code>
     &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#" size="third">
@@ -32,6 +34,7 @@
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-carousel-->
 <h2>clr-carousel</h2>
 <blockquote><pre><code>
   &lt;clr-carousel size="third">
@@ -42,6 +45,7 @@
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-drop-expand-->
 <h2>clr-drop-expand</h2>
 <blockquote><pre><code>
   &lt;clr-drop-expand text="visible content of first expand" href="#">
@@ -54,6 +58,7 @@
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-drop-link-->
 <h2>clr-drop-link</h2>
 <blockquote><pre><code>
   &lt;clr-drop-link slot="link" text="text for the link" href="#1" target="_blank">
@@ -69,78 +74,91 @@
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-footer-->
 <h2>clr-footer</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+ <!----------------------------------------------------------------------------------------clr-header-->
 <h2>clr-header</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-icon-->
 <h2>clr-icon</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-icon-btn-->
 <h2>clr-icon-btn</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-left-drawer-->
 <h2>clr-left-drawer</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-nav-->  
 <h2>clr-nav</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-nav-btn-->    
 <h2>clr-nav-btn</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-pill-->  
 <h2>clr-pill</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-pn-btn-->  
 <h2>clr-pn-btn</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-popup-btn-->  
 <h2>clr-popup-btn</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-side-menu-->  
 <h2>clr-side-menu</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-slide-->  
 <h2>clr-slide</h2>
 <blockquote><pre><code>
   <br>
 </code></pre></blockquote>
 <br><br>
 
+<!----------------------------------------------------------------------------------------clr-wheel-ui-->  
 <h2>clr-wheel-ui</h2>
 <blockquote><pre><code>
   <br>
