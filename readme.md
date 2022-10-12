@@ -10,6 +10,14 @@
 <br><br>
 
 <h2>clr-alert-center</h2>
+<blockquote><pre><code>
+&lt;clr-alert-center location="bottom">
+  &lt;clr-alert slot="alert" kind="info" text="content goes here"></clr-alert>
+  &lt;clr-alert slot="alert" kind="success" text="Success!"></clr-alert>
+  &lt;clr-alert slot="alert" kind="warning" text="Warning!"></clr-alert>
+  &lt;clr-alert slot="alert" kind="error" text="Error!"></clr-alert>
+&lt;/clr-alert-center>
+</code></pre></blockquote>
 <br><br>
 
 <h2clr-card></h2>
