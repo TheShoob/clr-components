@@ -114,9 +114,8 @@
 <h2>clr-left-drawer</h2>
 <blockquote><pre><code>
   &lt;clr-left-drawer>
-    &lt;img slot="logo" height='45px' src=" " />
+    &lt;img slot="logo" height="45px" src=" " />
     &lt;nav slot="nav">
-    
     &lt;/nav>
   &lt;/clr-left-drawer>
   <br>
