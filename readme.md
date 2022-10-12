@@ -77,6 +77,7 @@
 <!----------------------------------------------------------------------------------------clr-footer-->
 <h2>clr-footer</h2>
 <blockquote><pre><code>
+  &lt;clr-footer>&lt;/clr-footer>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -84,6 +85,11 @@
  <!----------------------------------------------------------------------------------------clr-header-->
 <h2>clr-header</h2>
 <blockquote><pre><code>
+  &lt;clr-header height="60px">
+    &lt;clr-drop-link slot="link" text="Drop Link Text test" href="#main1" target="_blank">&lt;/clr-drop-link>
+    &lt;a href="#" slot="icon">&lt;clr-icon slot="icon" size="small" kind="doc">&lt;/clr-icon>&lt;/a>
+    &lt;clr-nav-btn slot="btn">&lt;/clr-nav-btn>
+  &lt;/clr-header>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -98,6 +104,7 @@
 <!----------------------------------------------------------------------------------------clr-icon-btn-->
 <h2>clr-icon-btn</h2>
 <blockquote><pre><code>
+  &lt;clr-icon slot="icon" size="small" kind="doc">&lt;/clr-icon>
   <br>
 </code></pre></blockquote>
 <br><br>
