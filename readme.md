@@ -57,6 +57,15 @@
 
 <h2>clr-drop-link</h2>
 <blockquote><pre><code>
+  &lt;clr-drop-link slot="link" text="text for the link" href="#1" target="_blank">
+    &lt;a slot="link" href="#one">One</a>
+    &lt;a slot="link" href="#two">Two</a>
+    &lt;a slot="link" href="#three">Three</a>
+    &lt;clr-drop-link slot="link" text="text for the link" href="#2">
+      &lt;a slot="link" href="#one">One</a>
+      &lt;a slot="link" href="#two">Two</a>
+    &lt;/clr-drop-link>
+  &lt;/clr-drop-link>
   <br>
 </code></pre></blockquote>
 <br><br>
