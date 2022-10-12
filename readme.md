@@ -181,6 +181,7 @@
 <!----------------------------------------------------------------------------------------clr-slide-->  
 <h2>clr-slide</h2>
 <blockquote><pre><code>
+   &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -188,6 +189,7 @@
 <!----------------------------------------------------------------------------------------clr-wheel-ui-->  
 <h2>clr-wheel-ui</h2>
 <blockquote><pre><code>
+  &lt;clr-wheel-ui>&lt;/clr-wheel-ui>
   <br>
 </code></pre></blockquote>
 <br><br>
