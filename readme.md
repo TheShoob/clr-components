@@ -97,6 +97,7 @@
 <!----------------------------------------------------------------------------------------clr-icon-->
 <h2>clr-icon</h2>
 <blockquote><pre><code>
+  &lt;clr-icon slot="icon" size="small" kind="doc">&lt;/clr-icon>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -104,7 +105,7 @@
 <!----------------------------------------------------------------------------------------clr-icon-btn-->
 <h2>clr-icon-btn</h2>
 <blockquote><pre><code>
-  &lt;clr-icon slot="icon" size="small" kind="doc">&lt;/clr-icon>
+  &lt;clr-icon-btn class="marg-10" href="#" text="this is a regular thing">&lt;clr-icon slot="btn" size="large" kind="doc">&lt;/clr-icon>&lt;/clr-icon-btn>
   <br>
 </code></pre></blockquote>
 <br><br>
