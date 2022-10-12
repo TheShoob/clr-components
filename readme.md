@@ -22,7 +22,7 @@
 </code></pre></blockquote>
 <br><br>
 
-<h2clr-card></h2>
+<h2>clr-card</h2>
 <blockquote><pre><code>
     &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#main1" size="third">
       &lt;img slot="img" height="130px" src=" "/>
