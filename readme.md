@@ -28,7 +28,7 @@
       &lt;img slot="img" height="130px" src=" "/>
       &lt;div slot="card-body">content in this area will be shown</div>
       &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.</div>
-    &lt;/clr-card
+    &lt;/clr-card>
     <br>
 </code></pre></blockquote>
 <br><br>
