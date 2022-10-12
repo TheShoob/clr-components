@@ -12,7 +12,7 @@
 &lt;/clr-alert-center>
 <br>
 </code></pre></blockquote>
-<p>This component is ment to house the clr-alerts</p>
+<p>This component is meant to house the clr-alerts</p>
 <br><br>
 
 <h2>clr-alert</h2>
