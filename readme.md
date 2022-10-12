@@ -10,7 +10,6 @@
     &lt;clr-alert slot="alert" kind="warning" text="Warning!">&lt;/clr-alert>
     &lt;clr-alert slot="alert" kind="error" text="Error!">&lt;/clr-alert>
   &lt;/clr-alert-center>
-  <br>
   </code></pre></blockquote>
 <p>This component is meant to house the clr-alerts</p>
 <br><br>
