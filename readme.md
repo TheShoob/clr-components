@@ -28,6 +28,7 @@
   <br>
 </code></pre></blockquote>
 <h3>properties:<h3>
+<h4>slot="alert"</h4>
 <h4>kind=" Info | Success | Warning | Error "<h4>
 <h4>text="content of the alert"<h4>
 <br><br>
@@ -43,7 +44,9 @@
     <br>
 </code></pre></blockquote>
 <h3>properties:<h3>
-<h4>text="content of the alert"<h4>
+<h4>title="card title text"</h4>
+<h4>text="card content text"<h4>
+<h4>size=" quarter | third | half | full "</h4>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-carousel-->
