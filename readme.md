@@ -16,11 +16,9 @@
     &lt;clr-alert slot="alert" kind="error" text="Error!">&lt;/clr-alert>
   &lt;/clr-alert-center>
   </code></pre></blockquote>
-<h3>slot(s):<h3>
-<h4>alert<h4>
-<br>
 <h3>properties:<h3>
-<h4>location=" Bottom | Top "<h4>
+<h4>slot="alert"</h4>
+<h4>location=" Bottom | Top "</h4>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-alert-->
