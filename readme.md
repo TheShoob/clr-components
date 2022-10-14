@@ -3,7 +3,12 @@
 <br><br>
 <!----------------------------------------------------------------------------------------clr-alert-center-->
 <h2>clr-alert-center</h2>
+<p>This component is meant to house the clr-alert component</p>
 <blockquote><pre><code>
+  &lt;clr-alert-center location="top"> &lt;/clr-alert-center>
+  <br>
+  --------
+  <br>
   &lt;clr-alert-center location="bottom">
     &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
     &lt;clr-alert slot="alert" kind="success" text="Success!">&lt;/clr-alert>
@@ -11,7 +16,11 @@
     &lt;clr-alert slot="alert" kind="error" text="Error!">&lt;/clr-alert>
   &lt;/clr-alert-center>
   </code></pre></blockquote>
-<p>This component is meant to house the clr-alerts</p>
+<h3>slot(s):<h3>
+<h4>alert<h4>
+<br>
+<h3>properties:<h3>
+<h4>location=" Bottom | Top "<h4>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-alert-->
@@ -20,6 +29,9 @@
   &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
   <br>
 </code></pre></blockquote>
+<h3>properties:<h3>
+<h4>kind=" Info | Success | Warning | Error "<h4>
+<h4>text="content of the alert"<h4>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-card-->
@@ -32,6 +44,8 @@
     &lt;/clr-card>
     <br>
 </code></pre></blockquote>
+<h3>properties:<h3>
+<h4>text="content of the alert"<h4>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-carousel-->
@@ -43,6 +57,7 @@
   &lt;/clr-carousel>
   <br>
 </code></pre></blockquote>
+<h3>properties:<h3>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-drop-expand-->
