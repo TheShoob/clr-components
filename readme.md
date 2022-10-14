@@ -42,9 +42,17 @@
     &lt;/clr-card>
     <br>
 </code></pre></blockquote>
+<h4>slot="img"</h4>
+<h4>slot="card-body"</h4>
+<h4>slot="card-expand-body"</h4>
 <h3>properties:<h3>
-<h4>title="card title text"</h4>
+<h4>maintitle="card title text"</h4>
+<h4>subtitle="card title text"</h4>
 <h4>text="card content text"<h4>
+<h4>href="#"</h4>
+<h4>url="#"</h4>
+<h4>src="#"</h4>
+
 <h4>size=" quarter | third | half | full "</h4>
 <br><br>
 
