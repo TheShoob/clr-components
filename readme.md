@@ -33,6 +33,55 @@
 <h4>text="content of the alert"<h4>
 <br><br>
 
+
+<!----------------------------------------------------------------------------------------clr-carousel-->
+<h2>clr-carousel</h2>
+<blockquote><pre><code>
+  &lt;clr-carousel size="third">
+    &lt;clr-slide slot="slide" bgURL="slide-bg-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="slide-img-1.png" bgRepeat="yes">&lt;/clr-slide>
+    &lt;clr-slide slot="slide" bgURL="slide-bg-2.png" mainTitle="Second Title" mainContent="this is the content of the Second slide" imgURL="slide-img-2.png" bgRepeat="yes">&lt;/clr-slide>
+  &lt;/clr-carousel>
+  <br>
+</code></pre></blockquote>
+<h3>slots:</h3>
+<h4>slide<h4>
+<h3>properties:<h3>
+<h4>size</h4>
+<br><br>
+
+<!----------------------------------------------------------------------------------------clr-slide-->  
+<h2>clr-slide</h2>
+<blockquote><pre><code>
+   &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
+  <br>
+</code></pre></blockquote>
+<br><br>
+  
+<!----------------------------------------------------------------------------------------clr-block-expand-->
+<h2>clr-card</h2>
+<blockquote><pre><code>
+<clr-block-expand imgbg="/" colorbg="#fff">
+  <div slot="info">
+  </div>
+  <div slot="body">
+    <img slot="img" height="100px" src="/"/>
+  </div>
+</clr-block-expand>
+<br>
+</code></pre></blockquote>
+<h3>slots:<h3>
+<h4>slot="info"</h4>
+<h4>slot="body"</h4>
+<h4>slot="img"</h4>
+<h3>properties:<h3>
+<h4>maintitle="card title text"</h4>
+<h4>imgbg="/"</h4>
+<h4>colorbg="(hex) | (rgb) | (var)"</h4>
+
+
+<h4>size=" quarter | third | half | full "</h4>
+<br><br>
+  
 <!----------------------------------------------------------------------------------------clr-card-->
 <h2>clr-card</h2>
 <blockquote><pre><code>
@@ -56,29 +105,6 @@
 <h4>src="#"</h4>
 
 <h4>size=" quarter | third | half | full "</h4>
-<br><br>
-
-<!----------------------------------------------------------------------------------------clr-carousel-->
-<h2>clr-carousel</h2>
-<blockquote><pre><code>
-  &lt;clr-carousel size="third">
-    &lt;clr-slide slot="slide" bgURL="slide-bg-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="slide-img-1.png" bgRepeat="yes">&lt;/clr-slide>
-    &lt;clr-slide slot="slide" bgURL="slide-bg-2.png" mainTitle="Second Title" mainContent="this is the content of the Second slide" imgURL="slide-img-2.png" bgRepeat="yes">&lt;/clr-slide>
-  &lt;/clr-carousel>
-  <br>
-</code></pre></blockquote>
-<h3>slots:</h3>
-<h4>slide<h4>
-<h3>properties:<h3>
-<h4>size</h4>
-<br><br>
-
-<!----------------------------------------------------------------------------------------clr-slide-->  
-<h2>clr-slide</h2>
-<blockquote><pre><code>
-   &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
-  <br>
-</code></pre></blockquote>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-drop-expand-->
