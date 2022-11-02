@@ -73,7 +73,6 @@
 <h3>slots:<h3>
 <h4>slot="info"</h4>
 <h4>slot="body"</h4>
-<h4>slot="img"</h4>
 <h3>properties:<h3>
 <h4>imgbg="/"</h4>
 <h4>colorbg="(hex) | (rgb) | (var)"</h4>
