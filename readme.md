@@ -3,7 +3,7 @@
 <br><br>
 <!----------------------------------------------------------------------------------------clr-alert-center-->
 <h2>clr-alert-center</h2>
-<h5>The 'clr-alrert-center' is ment to house the alert pop ups.</h5>
+<h5>The 'clr-alrert-center' is meant to house the alert pop ups.</h5>
 <blockquote><pre><code>
   &lt;clr-alert-center location="top"> &lt;/clr-alert-center>
   <br>
@@ -24,7 +24,7 @@
 
 <!----------------------------------------------------------------------------------------clr-alert-->
 <h2>clr-alert</h2>
-<h5>'clr-alrert' is a banner that shows up either on top or bottom of the page ment for error, success, warning or news announcements</h5>
+<h5>'clr-alrert' is a banner that shows up either on top or bottom of the page meant for error, success, warning or news announcements</h5>
 <blockquote><pre><code>
   &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
   <br>
@@ -37,6 +37,7 @@
 
 <!----------------------------------------------------------------------------------------clr-carousel-->
 <h2>clr-carousel</h2>
+<h5>'clr-carousel' houses the 'clr-slide' or any other HTML element meant to act as a slide. When only one slide is present 'clr-carousel' will act as a hero header element</h5>
 <blockquote><pre><code>
   &lt;clr-carousel size="third">
     &lt;clr-slide slot="slide" bgURL="slide-bg-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="slide-img-1.png" bgRepeat="yes">&lt;/clr-slide>
@@ -52,6 +53,7 @@
 
 <!----------------------------------------------------------------------------------------clr-slide-->  
 <h2>clr-slide</h2>
+<h5>'clr-slide' is a pre-syled slide for quick layout</h5>
 <blockquote><pre><code>
    &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
   <br>
@@ -60,6 +62,7 @@
   
 <!----------------------------------------------------------------------------------------clr-block-expand-->
 <h2>clr-block-expand</h2>
+<h5>'clr-block-expand' is an expanding element with an image header and the ability to preset the amount of expandable content being shown</h5>
 <blockquote><pre><code>
 &lt;clr-block-expand imgbg="/" colorbg="#fff">
   &lt;div slot="info">
