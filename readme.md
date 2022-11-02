@@ -62,9 +62,10 @@
 <blockquote><pre><code>
 &lt;clr-block-expand imgbg="/" colorbg="#fff">
   &lt;div slot="info">
+    (content of header here)
   &lt;/div>
   &lt;div slot="body">
-    &lt;img slot="img" height="100px" src="/"/>
+    (content of body here)
   &lt;/div>
 &lt;/clr-block-expand>
 <br>
