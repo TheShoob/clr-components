@@ -58,7 +58,7 @@
 <br><br>
   
 <!----------------------------------------------------------------------------------------clr-block-expand-->
-<h2>clr-card</h2>
+<h2>clr-block-expand</h2>
 <blockquote><pre><code>
 &lt;clr-block-expand imgbg="/" colorbg="#fff">
   &lt;div slot="info">
