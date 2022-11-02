@@ -24,7 +24,7 @@
 
 <!----------------------------------------------------------------------------------------clr-alert-->
 <h2>clr-alert</h2>
-<h5>'clr-alrert' is a banner that shows up either on top or bottom of the page meant for error, success, warning or news announcements</h5>
+<h5>'clr-alert' is a banner that shows up either on top or bottom of the page meant for error, success, warning or news announcements</h5>
 <blockquote><pre><code>
   &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
   <br>
