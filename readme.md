@@ -3,15 +3,23 @@
 <br><br>
 <!----------------------------------------------------------------------------------------clr-alert-center-->
 <h2>clr-alert-center</h2>
+<p>This component is meant to house the clr-alert component</p>
 <blockquote><pre><code>
+  &lt;clr-alert-center location="top"> &lt;/clr-alert-center>
+  <br>
+  --------
+  <br>
   &lt;clr-alert-center location="bottom">
     &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
     &lt;clr-alert slot="alert" kind="success" text="Success!">&lt;/clr-alert>
     &lt;clr-alert slot="alert" kind="warning" text="Warning!">&lt;/clr-alert>
     &lt;clr-alert slot="alert" kind="error" text="Error!">&lt;/clr-alert>
   &lt;/clr-alert-center>
-  </code></pre></blockquote>
-<p>This component is meant to house the clr-alerts</p>
+</code></pre></blockquote>
+<h3>slots:<h3>
+<h4>slot="alert"</h4>
+<h3>properties:<h3>
+<h4>location=" Bottom | Top "</h4>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-alert-->
@@ -20,19 +28,11 @@
   &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
   <br>
 </code></pre></blockquote>
+<h3>properties:<h3>
+<h4>kind=" Info | Success | Warning | Error "<h4>
+<h4>text="content of the alert"<h4>
 <br><br>
 
-<!----------------------------------------------------------------------------------------clr-card-->
-<h2>clr-card</h2>
-<blockquote><pre><code>
-    &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#" size="third">
-      &lt;img slot="img" height="130px" src=" "/>
-      &lt;div slot="card-body">content in this area will be shown&lt;/div>
-      &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.&lt;/div>
-    &lt;/clr-card>
-    <br>
-</code></pre></blockquote>
-<br><br>
 
 <!----------------------------------------------------------------------------------------clr-carousel-->
 <h2>clr-carousel</h2>
@@ -43,6 +43,66 @@
   &lt;/clr-carousel>
   <br>
 </code></pre></blockquote>
+<h3>slots:</h3>
+<h4>slide<h4>
+<h3>properties:<h3>
+<h4>size</h4>
+<br><br>
+
+<!----------------------------------------------------------------------------------------clr-slide-->  
+<h2>clr-slide</h2>
+<blockquote><pre><code>
+   &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
+  <br>
+</code></pre></blockquote>
+<br><br>
+  
+<!----------------------------------------------------------------------------------------clr-block-expand-->
+<h2>clr-block-expand</h2>
+<blockquote><pre><code>
+&lt;clr-block-expand imgbg="/" colorbg="#fff">
+  &lt;div slot="info">
+    (content of header here)
+  &lt;/div>
+  &lt;div slot="body">
+    (content of body here)
+  &lt;/div>
+&lt;/clr-block-expand>
+<br>
+</code></pre></blockquote>
+<h3>slots:<h3>
+<h4>slot="info"</h4>
+<h4>slot="body"</h4>
+<h3>properties:<h3>
+<h4>imgbg="/"</h4>
+<h4>colorbg="(hex) | (rgb) | (var)"</h4>
+
+
+<h4>size=" quarter | third | half | full "</h4>
+<br><br>
+  
+<!----------------------------------------------------------------------------------------clr-card-->
+<h2>clr-card</h2>
+<blockquote><pre><code>
+    &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#" size="third">
+      &lt;img slot="img" height="130px" src=" "/>
+      &lt;div slot="card-body">content in this area will be shown&lt;/div>
+      &lt;div slot="card-expand-body">Any content in this area is hidden until expanded.&lt;/div>
+    &lt;/clr-card>
+    <br>
+</code></pre></blockquote>
+<h3>slots:<h3>
+<h4>slot="img"</h4>
+<h4>slot="card-body"</h4>
+<h4>slot="card-expand-body"</h4>
+<h3>properties:<h3>
+<h4>maintitle="card title text"</h4>
+<h4>subtitle="card title text"</h4>
+<h4>text="card content text"<h4>
+<h4>href="#"</h4>
+<h4>url="#"</h4>
+<h4>src="#"</h4>
+<h4>size=" quarter | third | half | full "</h4>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-drop-expand-->
@@ -177,14 +237,6 @@
 </code></pre></blockquote>
 <br><br>
 
-<!----------------------------------------------------------------------------------------clr-slide-->  
-<h2>clr-slide</h2>
-<blockquote><pre><code>
-   &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
-  <br>
-</code></pre></blockquote>
-<br><br>
-
 <!----------------------------------------------------------------------------------------clr-wheel-ui-->  
 <h2>clr-wheel-ui</h2>
 <blockquote><pre><code>
@@ -193,7 +245,13 @@
 </code></pre></blockquote>
 <br><br>
 
-
+<!----------------------------------------------------------------------------------------clr-block-expand-->  
+<h2>clr-block-expand</h2>
+<blockquote><pre><code>
+  &lt;clr-block-expand>&lt;/clr-block-expand>
+  <br>
+</code></pre></blockquote>
+<br><br>
 
 
 
