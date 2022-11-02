@@ -60,13 +60,13 @@
 <!----------------------------------------------------------------------------------------clr-block-expand-->
 <h2>clr-card</h2>
 <blockquote><pre><code>
-<clr-block-expand imgbg="/" colorbg="#fff">
-  <div slot="info">
-  </div>
-  <div slot="body">
-    <img slot="img" height="100px" src="/"/>
-  </div>
-</clr-block-expand>
+&lt;clr-block-expand imgbg="/" colorbg="#fff">
+  &lt;div slot="info">
+  &lt;/div>
+  &lt;div slot="body">
+    &lt;img slot="img" height="100px" src="/"/>
+  &lt;/div>
+&lt;/clr-block-expand>
 <br>
 </code></pre></blockquote>
 <h3>slots:<h3>
@@ -103,7 +103,6 @@
 <h4>href="#"</h4>
 <h4>url="#"</h4>
 <h4>src="#"</h4>
-
 <h4>size=" quarter | third | half | full "</h4>
 <br><br>
 
