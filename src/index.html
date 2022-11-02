@@ -104,6 +104,7 @@
     <clr-slide slot="slide" bgURL="/test_assets/bg-slide-3.png" mainTitle="forth Title" mainContent="this is the content of the forth slide" imgURL="/test1.png" bgRepeat="no"></clr-slide>
     <clr-slide slot="slide" bgURL="/test_assets/bg-slide-3.png" mainTitle="fith Title" mainContent="this is the content of the fith slide" imgURL="/test1.png" bgRepeat="no"></clr-slide>
     <clr-slide slot="slide" bgURL="/test_assets/bg-slide-3.png" mainTitle="sixth Title" mainContent="this is the content of the sixth slide" imgURL="/test1.png" bgRepeat="no"></clr-slide>
+    <div slot="slide"><p>some stuff goes here this is not a clr-slide</p></div>
   </clr-carousel>
   <br><br>
   <clr-carousel size="third">
@@ -127,12 +128,26 @@
     <clr-icon-btn class="marg-10" href="#" text="this is a regular thing"><clr-icon slot="btn" size="large" kind="doc"></clr-icon></clr-icon-btn>
   </clr-side-menu>
 
-  <clr-drop-expand text="hi" href="#">
+  <clr-expand-link text="hi" href="#">
     <a slot="link" href="#one">One</a>
-    <clr-drop-expand slot="link" text="hi" href="#">
+    <clr-expand-link slot="link" text="hi" href="#">
       <a slot="link" href="#one">One</a>
-    </clr-drop-expand>
-  </clr-drop-expand>
+    </clr-expand-link>
+  </clr-expand-link>
+
+  <clr-expand-link text="hi" href="#">
+    <a slot="link" href="#one">One</a>
+    <clr-expand-link slot="link" text="hi" href="#">
+      <a slot="link" href="#one">One</a>
+    </clr-expand-link>
+  </clr-expand-link>
+
+  <clr-expand-link text="hi" href="#">
+    <a slot="link" href="#one">One</a>
+    <clr-expand-link slot="link" text="hi" href="#">
+      <a slot="link" href="#one">One</a>
+    </clr-expand-link>
+  </clr-expand-link>
   
   <clr-pn-btn></clr-pn-btn>
 

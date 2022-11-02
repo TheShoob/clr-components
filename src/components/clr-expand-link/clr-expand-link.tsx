@@ -1,12 +1,12 @@
 import { Component, Host, h, Prop, Element, State } from '@stencil/core';
 import anime from 'animejs';
 @Component({
-  tag: 'clr-drop-expand',
-  styleUrl: 'clr-drop-expand.scss',
+  tag: 'clr-expand-link',
+  styleUrl: 'clr-expand-link.scss',
   shadow: true,
 })
 
-export class ClrDropExpand {
+export class ClrExpandLink {
   @Prop() text: string = "Text for the link";
   @Prop() href: string = "";
   @Prop() url: string = "";

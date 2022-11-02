@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { ClrDropExpand } from './clr-drop-expand';
+import { ClrExpandLink } from '../clr-expand-link';
 
-describe('clr-drop-expand', () => {
+describe('clr-expand-link', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [ClrDropExpand],
-      html: `<clr-drop-expand></clr-drop-expand>`,
+      components: [ClrExpandLink],
+      html: `<clr-expand-link></clr-expand-link>`,
     });
     expect(page.root).toEqualHtml(`
-      <clr-drop-expand>
+      <clr-expand-link>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </clr-drop-expand>
+      </clr-expand-link>
     `);
   });
 });

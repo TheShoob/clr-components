@@ -28,14 +28,14 @@ export namespace Components {
     interface ClrCarousel {
         "size": string;
     }
-    interface ClrDropExpand {
-        "href": string;
-        "text": string;
-        "url": string;
-    }
     interface ClrDropLink {
         "href": string;
         "target": string;
+        "text": string;
+        "url": string;
+    }
+    interface ClrExpandLink {
+        "href": string;
         "text": string;
         "url": string;
     }
@@ -127,17 +127,17 @@ declare global {
         prototype: HTMLClrCarouselElement;
         new (): HTMLClrCarouselElement;
     };
-    interface HTMLClrDropExpandElement extends Components.ClrDropExpand, HTMLStencilElement {
-    }
-    var HTMLClrDropExpandElement: {
-        prototype: HTMLClrDropExpandElement;
-        new (): HTMLClrDropExpandElement;
-    };
     interface HTMLClrDropLinkElement extends Components.ClrDropLink, HTMLStencilElement {
     }
     var HTMLClrDropLinkElement: {
         prototype: HTMLClrDropLinkElement;
         new (): HTMLClrDropLinkElement;
+    };
+    interface HTMLClrExpandLinkElement extends Components.ClrExpandLink, HTMLStencilElement {
+    }
+    var HTMLClrExpandLinkElement: {
+        prototype: HTMLClrExpandLinkElement;
+        new (): HTMLClrExpandLinkElement;
     };
     interface HTMLClrFooterElement extends Components.ClrFooter, HTMLStencilElement {
     }
@@ -223,8 +223,8 @@ declare global {
         "clr-block-expand": HTMLClrBlockExpandElement;
         "clr-card": HTMLClrCardElement;
         "clr-carousel": HTMLClrCarouselElement;
-        "clr-drop-expand": HTMLClrDropExpandElement;
         "clr-drop-link": HTMLClrDropLinkElement;
+        "clr-expand-link": HTMLClrExpandLinkElement;
         "clr-footer": HTMLClrFooterElement;
         "clr-header": HTMLClrHeaderElement;
         "clr-icon": HTMLClrIconElement;
@@ -263,14 +263,14 @@ declare namespace LocalJSX {
     interface ClrCarousel {
         "size"?: string;
     }
-    interface ClrDropExpand {
-        "href"?: string;
-        "text"?: string;
-        "url"?: string;
-    }
     interface ClrDropLink {
         "href"?: string;
         "target"?: string;
+        "text"?: string;
+        "url"?: string;
+    }
+    interface ClrExpandLink {
+        "href"?: string;
         "text"?: string;
         "url"?: string;
     }
@@ -323,8 +323,8 @@ declare namespace LocalJSX {
         "clr-block-expand": ClrBlockExpand;
         "clr-card": ClrCard;
         "clr-carousel": ClrCarousel;
-        "clr-drop-expand": ClrDropExpand;
         "clr-drop-link": ClrDropLink;
+        "clr-expand-link": ClrExpandLink;
         "clr-footer": ClrFooter;
         "clr-header": ClrHeader;
         "clr-icon": ClrIcon;
@@ -349,8 +349,8 @@ declare module "@stencil/core" {
             "clr-block-expand": LocalJSX.ClrBlockExpand & JSXBase.HTMLAttributes<HTMLClrBlockExpandElement>;
             "clr-card": LocalJSX.ClrCard & JSXBase.HTMLAttributes<HTMLClrCardElement>;
             "clr-carousel": LocalJSX.ClrCarousel & JSXBase.HTMLAttributes<HTMLClrCarouselElement>;
-            "clr-drop-expand": LocalJSX.ClrDropExpand & JSXBase.HTMLAttributes<HTMLClrDropExpandElement>;
             "clr-drop-link": LocalJSX.ClrDropLink & JSXBase.HTMLAttributes<HTMLClrDropLinkElement>;
+            "clr-expand-link": LocalJSX.ClrExpandLink & JSXBase.HTMLAttributes<HTMLClrExpandLinkElement>;
             "clr-footer": LocalJSX.ClrFooter & JSXBase.HTMLAttributes<HTMLClrFooterElement>;
             "clr-header": LocalJSX.ClrHeader & JSXBase.HTMLAttributes<HTMLClrHeaderElement>;
             "clr-icon": LocalJSX.ClrIcon & JSXBase.HTMLAttributes<HTMLClrIconElement>;
