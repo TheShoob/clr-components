@@ -16,6 +16,7 @@
     &lt;clr-alert slot="alert" kind="error" text="Error!">&lt;/clr-alert>
   &lt;/clr-alert-center>
 </code></pre></blockquote>
+<h3>slots:<h3>
 <h4>slot="alert"</h4>
 <h3>properties:<h3>
 <h4>location=" Bottom | Top "</h4>
@@ -42,6 +43,7 @@
     &lt;/clr-card>
     <br>
 </code></pre></blockquote>
+<h3>slots:<h3>
 <h4>slot="img"</h4>
 <h4>slot="card-body"</h4>
 <h4>slot="card-expand-body"</h4>
@@ -65,7 +67,18 @@
   &lt;/clr-carousel>
   <br>
 </code></pre></blockquote>
+<h3>slots:</h3>
+<h4>slide<h4>
 <h3>properties:<h3>
+<h4>size</h4>
+<br><br>
+
+<!----------------------------------------------------------------------------------------clr-slide-->  
+<h2>clr-slide</h2>
+<blockquote><pre><code>
+   &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
+  <br>
+</code></pre></blockquote>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-drop-expand-->
@@ -196,14 +209,6 @@
     &lt;clr-icon-btn class="marg-10" href="#" text="this is a regular thing">&lt;clr-icon slot="btn" size="large" kind="doc">&lt;/clr-icon>&lt;/clr-icon-btn>
     &lt;clr-icon-btn class="marg-10" href="#" text="this is a regular thing">&lt;clr-icon slot="btn" size="large" kind="doc">&lt;/clr-icon>&lt;/clr-icon-btn>
   &lt;/clr-side-menu>
-  <br>
-</code></pre></blockquote>
-<br><br>
-
-<!----------------------------------------------------------------------------------------clr-slide-->  
-<h2>clr-slide</h2>
-<blockquote><pre><code>
-   &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
   <br>
 </code></pre></blockquote>
 <br><br>
