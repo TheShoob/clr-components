@@ -3,7 +3,7 @@
 <br><br>
 <!----------------------------------------------------------------------------------------clr-alert-center-->
 <h2>clr-alert-center</h2>
-<p>This component is meant to house the clr-alert component</p>
+<h5>The 'clr-alrert-center' is ment to house the alert pop ups.</h5>
 <blockquote><pre><code>
   &lt;clr-alert-center location="top"> &lt;/clr-alert-center>
   <br>
@@ -24,6 +24,7 @@
 
 <!----------------------------------------------------------------------------------------clr-alert-->
 <h2>clr-alert</h2>
+<h5>'clr-alrert' is a banner that shows up either on top or bottom of the page ment for error, success, warning or news announcements</h5>
 <blockquote><pre><code>
   &lt;clr-alert slot="alert" kind="info" text="content goes here">&lt;/clr-alert>
   <br>
