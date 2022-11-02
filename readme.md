@@ -3,7 +3,7 @@
 <br><br>
 <!----------------------------------------------------------------------------------------clr-alert-center-->
 <h2>clr-alert-center</h2>
-<h5>The 'clr-alert-center' is meant to house the alert pop ups.</h5>
+<h5>The 'clr-alert-center' is meant to house the alert pop ups and dictates whether the alerts will show on top or the bottom of the page</h5>
 <blockquote><pre><code>
   &lt;clr-alert-center location="top"> &lt;/clr-alert-center>
   <br>
