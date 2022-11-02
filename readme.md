@@ -79,7 +79,7 @@
 <h4>slot="body"</h4>
 <h3>properties:<h3>
 <h4>imgbg="/"</h4>
-<h4>colorbg="(hex) | (rgb) | (var)"</h4>
+<h4>colorbg="(all regular color values work here)"</h4>
 
 
 <h4>size=" quarter | third | half | full "</h4>
