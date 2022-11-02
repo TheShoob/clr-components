@@ -14,9 +14,12 @@
 
       --bg: rgb(196, 196, 196);
       --primary: rgb(85, 85, 85);
+      --primary-fade: 85, 85, 85;
       --secondary: rgb(117, 117, 117);
       --tertiary: rgb(173, 173, 173);
       --highlight:rgb(240, 240, 240);
+      --highlight-fade: 240, 240, 240;
+
       --fontColor: rgb(78, 78, 78);
 
       --navColor: rgb(55, 33, 33);
@@ -155,57 +158,57 @@
     <br><br>
 
     <div class='row'>
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
         <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
         <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
         <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
         <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
       </clr-card>
     </div>
     <br><br>
     <div class='row'>
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
         <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
         <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
         <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
       </clr-card>
     </div>
     <br><br>
     <div class='row'>
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
         <img slot="img" height="180px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
         <img slot="img" height="180px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
@@ -213,7 +216,7 @@
     </div>
     <br><br>
     <div class='row'>
-      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="full">
+      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="full">
         <img slot="img" height="230px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
@@ -222,6 +225,42 @@
   </section>
   <section>
     <a name="three"></a>
+
+    <clr-block-expand imgbg="http://clearedgestudio.com/svg/mark.svg" colorbg="red">
+        <div slot="info">
+          <h1>block title</h1>
+          <h2>sub title</h2>
+          smaller test<br>
+          something else<br>
+          another thing
+          <p>
+            <img height="100px" src="/"/>
+          </p>
+        </div>
+        <div slot="body">
+          <p>
+            <img height="100px" src="/"/>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor leo ut libero hendrerit feugiat. Phasellus sit amet sapien augue. Proin et pellentesque risus, non auctor libero. Nulla sit amet tortor tempor metus sodales suscipit. Proin egestas, metus id dignissim pharetra, odio massa tristique odio, vel placerat tortor arcu nec velit. Morbi sit amet mattis metus, eget feugiat eros. Aliquam molestie sem lacinia mi fermentum iaculis. Nullam leo tortor, lobortis fringilla neque in, ornare consectetur neque. Mauris vulputate elit vitae eros porta, pulvinar malesuada ex fringilla. Maecenas vehicula lorem imperdiet, semper tellus eget, gravida mauris. Praesent volutpat tincidunt orci, a molestie lacus suscipit eget. Proin convallis odio et purus fringilla, sit amet mattis eros accumsan.
+            <br>
+            Quisque dignissim condimentum suscipit. Vivamus fringilla lorem non augue gravida tincidunt. Aenean porta, massa a ultricies mollis, felis justo lacinia ante, in rhoncus augue magna quis turpis. Morbi ut dignissim elit, tempor fermentum dolor. Duis sed dolor aliquet massa tincidunt feugiat. Vivamus sodales malesuada malesuada. Nunc cursus nisi in venenatis dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent blandit ex magna, id hendrerit sapien congue eu. Praesent et ante at mi molestie pellentesque. Pellentesque non ligula et ante porttitor ultrices.
+          </p>
+        </div>
+    </clr-block-expand>
+    <clr-block-expand imgbg="http://clearedgestudio.com/svg/mark.svg" colorbg="red" title="block Title Text" subtitle="this is sub title text">
+      <div slot="info">
+        <h1>block title</h1>
+        <h2>sub title</h2>
+        smaller test<br>
+        something else<br>
+        another thing
+      </div>
+      <div slot="body">
+        <img slot="img" height="100px" src="/"/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor leo ut libero hendrerit feugiat. Phasellus sit amet sapien augue. Proin et pellentesque risus, non auctor libero. Nulla sit amet tortor tempor metus sodales suscipit. Proin egestas, metus id dignissim pharetra, odio massa tristique odio, vel placerat tortor arcu nec velit. Morbi sit amet mattis metus, eget feugiat eros. Aliquam molestie sem lacinia mi fermentum iaculis. Nullam leo tortor, lobortis fringilla neque in, ornare consectetur neque. Mauris vulputate elit vitae eros porta, pulvinar malesuada ex fringilla. Maecenas vehicula lorem imperdiet, semper tellus eget, gravida mauris. Praesent volutpat tincidunt orci, a molestie lacus suscipit eget. Proin convallis odio et purus fringilla, sit amet mattis eros accumsan.
+        <br>
+        Quisque dignissim condimentum suscipit. Vivamus fringilla lorem non augue gravida tincidunt. Aenean porta, massa a ultricies mollis, felis justo lacinia ante, in rhoncus augue magna quis turpis. Morbi ut dignissim elit, tempor fermentum dolor. Duis sed dolor aliquet massa tincidunt feugiat. Vivamus sodales malesuada malesuada. Nunc cursus nisi in venenatis dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent blandit ex magna, id hendrerit sapien congue eu. Praesent et ante at mi molestie pellentesque. Pellentesque non ligula et ante porttitor ultrices.
+      </div>
+  </clr-block-expand>
   </section>
   <section>
     <a name="four"></a>
