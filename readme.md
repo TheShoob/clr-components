@@ -87,6 +87,7 @@
   
 <!----------------------------------------------------------------------------------------clr-card-->
 <h2>clr-card</h2>
+<h5>'clr-card' is a pre styled card that has an image header a title and info text spot and an expandable area</h5>
 <blockquote><pre><code>
     &lt;clr-card title="Card Title Text" subtitle="this is sub title text" href="#" size="third">
       &lt;img slot="img" height="130px" src=" "/>
