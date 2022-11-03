@@ -110,15 +110,15 @@
 <h4>size=" quarter | third | half | full "</h4>
 <br><br>
 
-<!----------------------------------------------------------------------------------------clr-drop-expand-->
-<h2>clr-drop-expand</h2>
+<!----------------------------------------------------------------------------------------clr-expand-link-->
+<h2>clr-expand-link</h2>
 <blockquote><pre><code>
-  &lt;clr-drop-expand text="visible content of first expand" href="#">
+  &lt;clr-expand-link text="visible content of first expand" href="#">
     &lt;a slot="link" href="#one">One&lt;/a>
-    &lt;clr-drop-expand slot="link" text="visible content of second expand" href="#">
+    &lt;clr-expand-link slot="link" text="visible content of second expand" href="#">
       &lt;a slot="link" href="#two">One&lt;/a>
-    &lt;/clr-drop-expand>
-  &lt;/clr-drop-expand>
+    &lt;/clr-expand-link>
+  &lt;/clr-expand-link>
   <br>
 </code></pre></blockquote>
 <br><br>
@@ -250,13 +250,7 @@
 </code></pre></blockquote>
 <br><br>
 
-<!----------------------------------------------------------------------------------------clr-block-expand-->  
-<h2>clr-block-expand</h2>
-<blockquote><pre><code>
-  &lt;clr-block-expand>&lt;/clr-block-expand>
-  <br>
-</code></pre></blockquote>
-<br><br>
+
 
 
 
