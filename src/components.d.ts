@@ -16,6 +16,7 @@ export namespace Components {
     interface ClrBlockExpand {
         "colorbg": string;
         "imgbg": string;
+        "show": string;
     }
     interface ClrCard {
         "href": string;
@@ -251,6 +252,7 @@ declare namespace LocalJSX {
     interface ClrBlockExpand {
         "colorbg"?: string;
         "imgbg"?: string;
+        "show"?: string;
     }
     interface ClrCard {
         "href"?: string;

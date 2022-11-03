@@ -20,8 +20,6 @@
       position: relative;
       bottom: 0;
       width: 100%;
-      height: 100px;
-      margin-top: -100px;
     } 
 
     .header {
@@ -36,7 +34,7 @@
     }
 
     .block-body{
-      padding: 0px 10px;
+      padding: 0px 0px;
       font-size: v(fs-s);
       font-family: v(secondaryFontFam);
     }

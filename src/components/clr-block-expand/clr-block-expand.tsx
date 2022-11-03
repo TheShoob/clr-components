@@ -11,6 +11,7 @@ export class ClrBlockExpand {
   @State() childrenData: any = {};
   @Prop() imgbg: string = "";
   @Prop() colorbg: string = "";
+  @Prop() show: string = "";
   @Element() host: HTMLElement;
 
 
@@ -36,7 +37,7 @@ export class ClrBlockExpand {
 
     anime({
       targets: expand,
-      height: this.toggle ? expandInnerHeight : '100px',
+      height: this.toggle ? expandInnerHeight : this.show,
       duration: 300,
       easing: 'easeInOutQuad',
     });
@@ -64,12 +65,12 @@ export class ClrBlockExpand {
           </div>
           <br/>
           <div class="block-body">
-            <div class="expand">
+            <div class="expand" style={{ 'height': this.show }}>
               <div class="expandInner">
                 <slot name="body"/>
               </div>
             </div>
-            <div class="fade"></div>
+            <div class="fade" style={{ 'height': this.show, 'margin-top': '-' + this.show }}></div>
             <div class="arrowWrap" onClick={this.toggleSub}>
               <div class="arrow"></div>
             </div>
