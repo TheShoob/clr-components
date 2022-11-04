@@ -98,22 +98,41 @@
   </clr-header>
   
   <clr-carousel size="quater">
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes"></clr-slide>
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-2.png" mainTitle="Second Title" mainContent="this is the content of the second slide" imgURL="/test1.png" bgRepeat="yes"></clr-slide>
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-3.png" mainTitle="Third Title" mainContent="this is the content of the third slide" imgURL="/test1.png" bgRepeat="no"></clr-slide>
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-3.png" mainTitle="forth Title" mainContent="this is the content of the forth slide" imgURL="/test1.png" bgRepeat="no"></clr-slide>
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-3.png" mainTitle="fith Title" mainContent="this is the content of the fith slide" imgURL="/test1.png" bgRepeat="no"></clr-slide>
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-3.png" mainTitle="sixth Title" mainContent="this is the content of the sixth slide" imgURL="/test1.png" bgRepeat="no"></clr-slide>
+    <clr-slide bgcolor="red" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+      <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
+      <div slot="info">This is some content</div>
+    </clr-slide>
+    <clr-slide bgcolor="blue" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+      <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
+      <div slot="info">This is some content</div>
+    </clr-slide>
+    <clr-slide bgcolor="green" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+      <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
+      <div slot="info">This is some content</div>
+    </clr-slide>
+    <clr-slide bgcolor="purple" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+      <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
+      <div slot="info">This is some content</div>
+    </clr-slide>
     <div slot="slide"><p>some stuff goes here this is not a clr-slide</p></div>
   </clr-carousel>
   <br><br>
   <clr-carousel size="third">
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes"></clr-slide>
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes"></clr-slide>
+    <clr-slide bgcolor="grey" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+      <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
+      <div slot="info">This is some content</div>
+    </clr-slide>
+    <clr-slide bgcolor="grey" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+      <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
+      <div slot="info">This is some content</div>
+    </clr-slide>
   </clr-carousel>
   <br><br>
   <clr-carousel size="third">
-    <clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes"></clr-slide>
+    <clr-slide bgcolor="darkblue" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+      <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
+      <div slot="info">This is some content</div>
+    </clr-slide>
   </clr-carousel>
   
   <!--<clr-left-drawer>
@@ -242,7 +261,7 @@
   <section>
     <a name="three"></a>
 
-    <clr-block-expand imgbg="http://clearedgestudio.com/svg/mark.svg" colorbg="red" show="200px">
+    <clr-block-expand bgimg="http://clearedgestudio.com/svg/mark.svg" bgcolor="red" show="200px">
         <div slot="info">
           <h1>block title</h1>
           <h2>sub title</h2>
@@ -262,7 +281,7 @@
           </p>
         </div>
     </clr-block-expand>
-    <clr-block-expand imgbg="http://clearedgestudio.com/svg/mark.svg" colorbg="red" show="100px">
+    <clr-block-expand bgimg="http://clearedgestudio.com/svg/mark.svg" bgcolor="red" show="100px">
       <div slot="info">
         <h1>block title</h1>
         <h2>sub title</h2>

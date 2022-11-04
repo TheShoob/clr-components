@@ -14,8 +14,8 @@ export namespace Components {
         "location": "top" | "bottom";
     }
     interface ClrBlockExpand {
-        "colorbg": string;
-        "imgbg": string;
+        "bgcolor": string;
+        "bgimg": string;
         "show": string;
     }
     interface ClrCard {
@@ -81,10 +81,9 @@ export namespace Components {
     interface ClrSideMenu {
     }
     interface ClrSlide {
-        "bgURL": string;
-        "imgURL": string;
-        "mainContent": string;
-        "mainTitle": string;
+        "bgcolor": string;
+        "bgimg": string;
+        "title": string;
     }
     interface ClrWheelUi {
     }
@@ -250,8 +249,8 @@ declare namespace LocalJSX {
         "location"?: "top" | "bottom";
     }
     interface ClrBlockExpand {
-        "colorbg"?: string;
-        "imgbg"?: string;
+        "bgcolor"?: string;
+        "bgimg"?: string;
         "show"?: string;
     }
     interface ClrCard {
@@ -312,10 +311,9 @@ declare namespace LocalJSX {
     interface ClrSideMenu {
     }
     interface ClrSlide {
-        "bgURL"?: string;
-        "imgURL"?: string;
-        "mainContent"?: string;
-        "mainTitle"?: string;
+        "bgcolor"?: string;
+        "bgimg"?: string;
+        "title"?: string;
     }
     interface ClrWheelUi {
     }

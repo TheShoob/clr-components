@@ -9,8 +9,8 @@ import anime from 'animejs';
 export class ClrBlockExpand {
   @State() toggle: boolean = false;
   @State() childrenData: any = {};
-  @Prop() imgbg: string = "";
-  @Prop() colorbg: string = "";
+  @Prop() bgimg: string = "";
+  @Prop() bgcolor: string = "";
   @Prop() show: string = "";
   @Element() host: HTMLElement;
 
@@ -58,7 +58,7 @@ export class ClrBlockExpand {
     return (
       <Host>
         <div class="block">
-          <div class="header" style={{ 'background': 'var(' + this.colorbg + ')', 'background-color': this.colorbg, 'background-image': 'url(' + this.imgbg + ')', }}>
+          <div class="header" style={{ 'background': 'var(' + this.bgcolor + ')', 'background-color': this.bgcolor, 'background-image': 'url(' + this.bgimg + ')', }}>
             <div class="info">
               <slot name="info"/>
             </div>
