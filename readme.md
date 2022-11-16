@@ -46,9 +46,9 @@
   <br>
 </code></pre></blockquote>
 <h3>slots:</h3>
-<h4>slide<h4>
+<h4>slot="slide"slide<h4>
 <h3>properties:<h3>
-<h4>size</h4>
+<h4>size=" quater | third | half | full "</h4>
 <br><br>
 
 <!----------------------------------------------------------------------------------------clr-slide-->  
@@ -58,6 +58,14 @@
    &lt;clr-slide slot="slide" bgURL="/test_assets/bg-slide-1.png" mainTitle="First Title" mainContent="this is the content of the first slide" imgURL="/test_assets/bg-slide-1.png" bgRepeat="yes">&lt;/clr-slide>
   <br>
 </code></pre></blockquote>
+<h3>slots:</h3>
+<h4>slot=" img | Info "slide<h4>
+<h3>properties:<h3>
+<h4>title="(title of the slide)"</h4>
+<h4>bgimg=" / "</h4>
+<h4>bgcolor="(all regular color values work here)"</h4>
+<h4>bgrepeat=" yes | no "</h4>
+
 <br><br>
   
 <!----------------------------------------------------------------------------------------clr-block-expand-->
