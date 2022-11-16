@@ -30,7 +30,7 @@
         .arrow {
           border-top: 7px solid transparent;
           border-bottom: 7px solid transparent;
-          border-right: 7px solid v(btnColor);
+          border-right: 7px solid v(primary);
         }
         .right {
           transform: rotate(-180deg);
@@ -52,7 +52,7 @@
         align-self: center;
 
         .dot{
-            border: 2px solid v(btnColor);
+            border: 2px solid v(primary);
             border-radius: 100%;
             position: relative;
             width: 20px;
@@ -71,13 +71,13 @@
             border-radius: 100%;
         }
         .dot.on:hover::before {
-          background: v(btnColor);
+          background: v(primary);
         }
         .dot.on::before {
-          background: v(btnColor);
+          background: v(primary);
         }
         .dot:hover::before {
-          background: v(btnColor-highlight);
+          background: v(highlight);
         }
       }
 

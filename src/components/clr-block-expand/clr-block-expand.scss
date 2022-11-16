@@ -6,7 +6,7 @@
 
   .block {
     box-sizing: border-box;
-    background-color: v(highlight);
+    background-color: v(bg);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
@@ -16,7 +16,7 @@
     transition: filter 0.2s ease;
 
     div.fade {
-      background-image: linear-gradient(to bottom, rgba(v(highlight-fade), 0), rgba(v(highlight-fade), 1));
+      background-image: linear-gradient(to bottom, rgba(v(bg-fade), 0), rgba(v(bg-fade), 1));
       position: relative;
       bottom: 0;
       width: 100%;
@@ -74,7 +74,7 @@
       .arrow {
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-top: 10px solid v(btnColor);
+        border-top: 10px solid v(primary);
       }
     }
 

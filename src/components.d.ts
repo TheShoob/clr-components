@@ -16,14 +16,16 @@ export namespace Components {
     interface ClrBlockExpand {
         "bgcolor": string;
         "bgimg": string;
-        "show": string;
+        "show": any;
     }
     interface ClrCard {
+        "bgcolor": string;
+        "bgimg": string;
         "href": string;
-        "maintitle": string;
         "size": "quater" | "third" | "half" | "full" | "";
         "src": string;
         "subtitle": string;
+        "title": string;
         "url": string;
     }
     interface ClrCarousel {
@@ -251,14 +253,16 @@ declare namespace LocalJSX {
     interface ClrBlockExpand {
         "bgcolor"?: string;
         "bgimg"?: string;
-        "show"?: string;
+        "show"?: any;
     }
     interface ClrCard {
+        "bgcolor"?: string;
+        "bgimg"?: string;
         "href"?: string;
-        "maintitle"?: string;
         "size"?: "quater" | "third" | "half" | "full" | "";
         "src"?: string;
         "subtitle"?: string;
+        "title"?: string;
         "url"?: string;
     }
     interface ClrCarousel {

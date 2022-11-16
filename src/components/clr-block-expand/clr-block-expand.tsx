@@ -11,7 +11,7 @@ export class ClrBlockExpand {
   @State() childrenData: any = {};
   @Prop() bgimg: string = "";
   @Prop() bgcolor: string = "";
-  @Prop() show: string = "";
+  @Prop() show: any = "";
   @Element() host: HTMLElement;
 
 
@@ -25,11 +25,11 @@ export class ClrBlockExpand {
   toggleSub = () => {
     let arrow = this.host.shadowRoot.querySelectorAll('.arrow');
     let expand = this.host.shadowRoot.querySelector<HTMLElement>('.expand');
-    let expandInnerHeight = this.host.shadowRoot.querySelectorAll('.expandInner')[0].clientHeight + 'px';
+    let expandInnerHeight = this.host.shadowRoot.querySelectorAll('.expandInner')[0].clientHeight + 20 + 'px';
     this.toggle = !this.toggle;
     if (this.toggle == true){
       setTimeout(function(){
-        expand.style.height = 'auto';
+        expand.style.height = expandInnerHeight;
       }.bind(this), 350);
     } else if (this.toggle == false){
       expand.style.height = expandInnerHeight;
@@ -37,7 +37,7 @@ export class ClrBlockExpand {
 
     anime({
       targets: expand,
-      height: this.toggle ? expandInnerHeight : this.show,
+      height: this.toggle ? expandInnerHeight : this.show + 'px',
       duration: 300,
       easing: 'easeInOutQuad',
     });
@@ -49,6 +49,12 @@ export class ClrBlockExpand {
           easing: 'easeInOutQuad'
       },
     });
+    anime({
+      targets: this.host.shadowRoot.querySelectorAll('.fade'),
+      opacity: this.toggle ? 0 : 1,
+      duration: 300,
+      easing: 'easeInOutQuad',
+    })
 
   }
   //*
@@ -65,12 +71,12 @@ export class ClrBlockExpand {
           </div>
           <br/>
           <div class="block-body">
-            <div class="expand" style={{ 'height': this.show }}>
+            <div class="expand" style={{ 'height': this.show + 'px' }}>
               <div class="expandInner">
                 <slot name="body"/>
               </div>
             </div>
-            <div class="fade" style={{ 'height': this.show, 'margin-top': '-' + this.show }}></div>
+            <div class="fade" style={{ 'height': this.show + 'px', 'margin-top': '-' + this.show + 'px' }}></div>
             <div class="arrowWrap" onClick={this.toggleSub}>
               <div class="arrow"></div>
             </div>

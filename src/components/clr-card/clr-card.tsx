@@ -7,12 +7,14 @@ import anime from 'animejs';
   shadow: true,
 })
 export class ClrCard {
-  @Prop() maintitle: string = "";
+  @Prop() title: string = "";
   @Prop() subtitle: string = "";
   @Prop() href: string = "";
   @Prop() url: string = "";
   @Prop() src: string = "";
   @Prop() size: "quater" | "third" | "half" | "full" | "" = "quater";
+  @Prop() bgimg: string = "";
+  @Prop() bgcolor: string = "";
   @State() toggle: boolean = false;
   @State() childrenData: any = {};
   @Element() host: HTMLElement;
@@ -63,12 +65,12 @@ export class ClrCard {
       return (
         <Host>
           <div class={this.getSize() + " card"}>
-            <div class="img">
+            <div class="img" style={{ 'background': 'var(' + this.bgcolor + ')', 'background-color': this.bgcolor, 'background-image': 'url(' + this.bgimg + ')', }}>
               <slot name="img"/>
             </div>
             <br/>
             <div class="card-body">
-              <div class="card-title">{this.maintitle}</div>
+              <div class="card-title">{this.title}</div>
               <div class="sub-title">{this.subtitle}</div>
               <slot name="card-body"/>
 
@@ -94,7 +96,7 @@ export class ClrCard {
             </div>
             <br/>
             <div class="card-body">
-              <div class="card-title">{this.maintitle}</div>
+              <div class="card-title">{this.title}</div>
               <div class="sub-title">{this.subtitle}</div>
               <slot name="card-body"/>
               <div class="pad25"></div>

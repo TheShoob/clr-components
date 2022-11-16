@@ -6,7 +6,8 @@
 
   .card {
     box-sizing: border-box;
-    background-color: v(highlight);
+    background-color: v(bg);
+    color: v(fontColor);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
@@ -116,7 +117,7 @@
       .arrow {
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-top: 10px solid v(btnColor);
+        border-top: 10px solid v(primary);
       }
     }
 

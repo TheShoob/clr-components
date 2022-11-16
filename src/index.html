@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
@@ -10,30 +10,40 @@
     section{
       min-height: 100vh;
     }
-    * {
+    html {
+      background-color:rgb(51, 56, 77) ;
+      
+      --bg: rgb(51, 56, 77);
+      --bg-fade: 51, 56, 77;
 
-      --bg: rgb(196, 196, 196);
-      --primary: rgb(85, 85, 85);
-      --primary-fade: 85, 85, 85;
-      --secondary: rgb(117, 117, 117);
-      --tertiary: rgb(173, 173, 173);
-      --highlight:rgb(48, 50, 55);
-      --highlight-fade: 48, 50, 55;
+      --primary: rgb(184, 90, 90);      
+      /*--secondary: rgb(117, 117, 117);
+      --tertiary: rgb(173, 173, 173);*/
+      
+      --highlight:rgb(237, 162, 162);
+      --highlight-fade: 202, 97, 97;
 
-      --fontColor: rgb(78, 78, 78);
+      --fontColor: rgb(215, 174, 174);
+      --iconColor: rgb(202, 97, 97);
 
-      --navColor: rgb(55, 33, 33);
-      --navColor-highlight: rgb(91, 53, 53);
-      --navColor-bg: rgb(165, 165, 165);
+      /*--navColor: rgb(187, 199, 216);
+      --navColor-highlight: rgb(184, 90, 90);
+      --navColor-bg: rgb(166, 118, 45);
 
       --btnColor: rgb(55, 33, 33);
       --btnColor-inverse: white;
       --btnColor-bg: white;
       --btnColor-highlight: rgb(87, 52, 52);
 
-      --iconColor: rgb(55, 33, 33);
+      --iconColor: rgb(184, 90, 90);
       --iconColor-highlight: rgb(87, 52, 52);
-      --iconColor-inverse: white; 
+      --iconColor-inverse: white; */
+
+      --primaryFontFamily: 'Roboto', sans-serif;
+      --fontSize: 16px;
+      --fs-s: .8rem;
+      --fs-m: 1rem;
+      --fs-l: 1.2rem;
 
       --errorColor: #af2a23;
       --errorColor-bg: #fff1f0;
@@ -48,6 +58,58 @@
       --infoColor-bg: #e6f7ff;
 
     }
+    html[data-theme='dark'] {
+      --bg: rgb(55, 55, 55);
+      
+      --primary: rgb(255, 255, 255);
+      --primary-fade: 255, 255, 255;
+      
+      /*--secondary: rgb(173, 173, 173);
+      
+      --tertiary: rgb(117, 117, 117);*/
+      
+      --highlight:rgb(48, 50, 55);
+      --highlight-fade: 48, 50, 55;
+
+      --fontColor: rgb(202, 97, 97);
+      --iconColor: rgb(202, 97, 97);
+
+      /*--navColor: rgb(165, 165, 165);
+      --navColor-highlight: rgb(91, 53, 53);
+      --navColor-bg: rgb(55, 33, 33);
+
+      --btnColor: rgb(165, 165, 165);
+      --btnColor-inverse: white;
+      --btnColor-bg: white;
+      --btnColor-highlight: rgb(87, 52, 52);
+
+      --iconColor: rgb(165, 165, 165);
+      --iconColor-highlight: rgb(87, 52, 52);
+      --iconColor-inverse: white;*/ 
+
+      --errorColor: #af2a23;
+      --errorColor-bg: #fff1f0;
+
+      --successColor: #468b12;
+      --successColor-bg: #f6ffed;
+
+      --warningColor: #b58900;
+      --warningColor-bg: #fff8e0;
+
+      --infoColor: #2176aa;
+      --infoColor-bg: #e6f7ff;
+    }
+    body {
+      margin: 0px;
+    }
+    clr-header {
+       --iconColor: rgb(187, 199, 216);
+       --fontColor: rgb(187, 199, 216);
+    }
+
+
+
+
     .row {
       display: flex;
       flex-direction: row;
@@ -65,7 +127,6 @@
 </head>
 <body>
   <a style="position:absolute; top:0px;" name="one"></a>
-
 
   <clr-header height="60px">
     <img slot="logo" height='45px' src="http://clearedgestudio.com/svg/mark.svg" />
@@ -96,40 +157,40 @@
 
     <clr-nav-btn slot="btn"></clr-nav-btn><!-- * Nessesary for the nav to be accessable-->
   </clr-header>
-  
+  <br><br>
   <clr-carousel size="quater">
-    <clr-slide bgcolor="red" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+    <clr-slide bgcolor="rgb(39, 44, 61)" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgrepeat="yes">
       <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
       <div slot="info">This is some content</div>
     </clr-slide>
-    <clr-slide bgcolor="blue" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+    <clr-slide bgcolor="rgb(39, 44, 61)" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgrepeat="yes">
       <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
       <div slot="info">This is some content</div>
     </clr-slide>
-    <clr-slide bgcolor="green" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+    <clr-slide bgcolor="rgb(39, 44, 61)" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgrepeat="yes">
       <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
       <div slot="info">This is some content</div>
     </clr-slide>
-    <clr-slide bgcolor="purple" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+    <clr-slide bgcolor="rgb(39, 44, 61)" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgrepeat="yes">
       <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
       <div slot="info">This is some content</div>
     </clr-slide>
     <div slot="slide"><p>some stuff goes here this is not a clr-slide</p></div>
   </clr-carousel>
-  <br><br>
+  <br>
   <clr-carousel size="third">
-    <clr-slide bgcolor="grey" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+    <clr-slide bgcolor="rgb(39, 44, 61)" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgrepeat="yes">
       <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
       <div slot="info">This is some content</div>
     </clr-slide>
-    <clr-slide bgcolor="grey" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+    <clr-slide bgcolor="rgb(39, 44, 61)" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgrepeat="yes">
       <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
       <div slot="info">This is some content</div>
     </clr-slide>
   </clr-carousel>
-  <br><br>
+  <br>
   <clr-carousel size="third">
-    <clr-slide bgcolor="darkblue" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgRepeat="yes">
+    <clr-slide bgcolor="rgb(39, 44, 61)" slot="slide" bgimg="/test_assets/bg-slide-1.png" title="First Title" bgrepeat="yes">
       <img slot="img" src="http://clearedgestudio.com/svg/mark.svg" />
       <div slot="info">This is some content</div>
     </clr-slide>
@@ -193,57 +254,57 @@
     <br><br>
 
     <div class='row'>
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
+      <clr-card bgcolor="rgb(39, 44, 61)" title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
         <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
         <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
         <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="quater">
         <img slot="img" height="100px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
       </clr-card>
     </div>
     <br><br>
     <div class='row'>
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
         <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
         <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="third">
         <img slot="img" height="130px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
       </clr-card>
     </div>
     <br><br>
     <div class='row'>
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
         <img slot="img" height="180px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
       </clr-card>
 
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="half">
         <img slot="img" height="180px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
@@ -251,7 +312,7 @@
     </div>
     <br><br>
     <div class='row'>
-      <clr-card maintitle="card Title Text" subtitle="this is sub title text" href="#main1" size="full">
+      <clr-card title="card Title Text" subtitle="this is sub title text" href="#main1" size="full">
         <img slot="img" height="230px" src="http://clearedgestudio.com/svg/mark.svg"/>
         <div slot="card-body">this is the stuff for the card body.. you can put whatever in here.</div>
         <div slot="card-expand-body">THIS IS WHERE THE EXPAND STUFF GOES!</div>
@@ -261,7 +322,7 @@
   <section>
     <a name="three"></a>
 
-    <clr-block-expand bgimg="http://clearedgestudio.com/svg/mark.svg" bgcolor="red" show="200px">
+    <clr-block-expand bgimg="http://clearedgestudio.com/svg/mark.svg" bgcolor="rgb(70, 77, 101)" show="200">
         <div slot="info">
           <h1>block title</h1>
           <h2>sub title</h2>
@@ -281,7 +342,7 @@
           </p>
         </div>
     </clr-block-expand>
-    <clr-block-expand bgimg="http://clearedgestudio.com/svg/mark.svg" bgcolor="red" show="100px">
+    <clr-block-expand bgimg="http://clearedgestudio.com/svg/mark.svg" bgcolor="rgb(70, 77, 101)" show="100">
       <div slot="info">
         <h1>block title</h1>
         <h2>sub title</h2>

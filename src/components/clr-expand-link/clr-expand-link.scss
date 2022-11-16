@@ -10,7 +10,7 @@
   min-height: 20px;
   font-family: v(primaryFontFam);
   font-size: v(fontSize);
-  color: v(navColor);
+  color: v(primary);
 
   @include respond(tablet) {
     //pointer-events: none;
@@ -47,7 +47,7 @@
       .arrow {
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        border-right: 10px solid v(highlight);
+        border-right: 10px solid v(primary);
       }
     }
 
