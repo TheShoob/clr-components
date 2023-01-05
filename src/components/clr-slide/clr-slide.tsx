@@ -23,9 +23,11 @@ export class ClrSlide {
     return (
       <Host>
         <div class="slide" style={{ 'background': 'var(' + this.bgcolor + ')', 'background-color': this.bgcolor, 'background-image': 'url(' + this.bgimg + ')', }}>
-          <h2>{this.title}</h2>
           <slot name="img"/>
-          <slot name="info"/>
+          <section>
+            <h2>{this.title}</h2>
+            <slot name="info"/>
+          </section>
         </div>
       </Host>
     );

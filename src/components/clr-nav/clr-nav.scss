@@ -15,7 +15,7 @@
   @include box-size;
 
   ::slotted(a) {
-    color: v(navColor);
+    color: v(bg);
     font-family: v(primaryFontFam);
     font-size: v(fontSize);
   }
@@ -26,7 +26,7 @@
     height: 100%;
     position: relative;
     white-space: nowrap;
-    background-color: var(--bg);
+    background-color: v(bg);
     padding: 0 15px;
   }
   nav {

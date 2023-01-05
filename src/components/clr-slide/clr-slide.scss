@@ -10,20 +10,27 @@
     width: 100%;
     height: 100%;
 
-    img {
+    ::slotted(img) {
+      max-width: min-content;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
-    h2 {
-      display: block;
-      font-size: 1.5em;
-      margin-block-start: 0em;
-      margin-block-end: 0.83em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      font-weight: bold;
-  }
+    section {
+      display: flex;
+      flex-direction: column;
+      
+      h2 {
+          display: block;
+          font-size: 1.5em;
+          margin-block-start: 0em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          font-weight: bold;
+      }
+      ::slotted(div) {
+
+      }
+    }
   }
 }
