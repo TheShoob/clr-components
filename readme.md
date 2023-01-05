@@ -46,7 +46,7 @@
   <br>
 </code></pre></blockquote>
 <h3>slots:</h3>
-<h4>slot="slide"slide<h4>
+<h4>slot="slide"<h4>
 <h3>properties:<h3>
 <h4>size=" quater | third | half | full "</h4>
 <br><br>
@@ -59,7 +59,7 @@
   <br>
 </code></pre></blockquote>
 <h3>slots:</h3>
-<h4>slot=" img | Info "slide<h4>
+<h4>slot=" img | Info "<h4>
 <h3>properties:<h3>
 <h4>title="(title of the slide)"</h4>
 <h4>bgimg=" / "</h4>
