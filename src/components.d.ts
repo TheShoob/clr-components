@@ -85,6 +85,8 @@ export namespace Components {
     interface ClrSlide {
         "bgcolor": string;
         "bgimg": string;
+        "breakpoint": string;
+        "justify": string;
         "title": string;
     }
     interface ClrWheelUi {
@@ -317,6 +319,8 @@ declare namespace LocalJSX {
     interface ClrSlide {
         "bgcolor"?: string;
         "bgimg"?: string;
+        "breakpoint"?: string;
+        "justify"?: string;
         "title"?: string;
     }
     interface ClrWheelUi {
