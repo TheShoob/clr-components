@@ -65,6 +65,8 @@
 <h4>bgimg=" / "</h4>
 <h4>bgcolor="(all regular color values work here)"</h4>
 <h4>bgrepeat=" yes | no "</h4>
+<h4>justify=" left | center | right "</h4>
+<h4>breakpoint=" any number value only, no 'px' "</h4>
 
 <br><br>
   
