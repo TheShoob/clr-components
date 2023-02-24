@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Element, State } from '@stencil/core';
+import { Component, Host, h, Prop, Element, State, Listen } from '@stencil/core';
 import Hammer from 'hammerjs';
 import anime from 'animejs';
 
@@ -10,6 +10,9 @@ let slideTime = 400; //* the time it takes to slide
   styleUrl: 'clr-carousel.scss',
   shadow: true,
 })
+
+
+
 
 export class ClrCarousel {
   @State() childrenData: any = {};
@@ -37,7 +40,13 @@ export class ClrCarousel {
       let slideNum = () => { return String(i + 1) }
       let dotID = (e) => {
         let carousel = this.host.shadowRoot.querySelectorAll('main')[0] //* the carousel slide wrap
+        
+        
+        
         let gcw = () => { return carousel.offsetWidth;} // * get carousel width   
+        
+        
+        
         e.target.id;
         anime({
           targets:  carousel,
@@ -62,7 +71,9 @@ export class ClrCarousel {
       var matrix = new WebKitCSSMatrix(style.transform);
       return matrix.m41;
     }
+
     let gcw = () => { return carousel.offsetWidth;} // * get carousel width 
+
     let slideLength = () => { return this.host.children.length } //* the number of slides
     let slideCalc = () => { //* get the width of each slide
       return slideLength() * gcw() - gcw()
@@ -130,6 +141,11 @@ export class ClrCarousel {
         }
       }
     }, slideTime + 20);
+  }
+
+  @Listen('resize', { target: 'window'})
+  windowWidth() {     // * the listener for window resize (needed to reset the carousel position)
+    this.slidePrev();
   }
 
   dragSet = () => { // * setting the hammer listener

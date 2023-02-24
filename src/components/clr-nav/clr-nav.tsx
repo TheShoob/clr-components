@@ -67,7 +67,7 @@ export class ClrNav {
 
   @Method() async drawerCheck() { // * checks if the drawer should be nav bar or drawer
     
-    console.log("from nav " + gww());
+    //console.log("from nav " + gww());
 
     if ((gww() <= navBreakPoint) || ("ontouchstart" in document.documentElement == true)) {
       drawerSetMobile();
