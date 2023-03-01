@@ -53,11 +53,12 @@ export namespace Components {
     }
     interface ClrIconBtn {
         "ariaLabel": string;
+        "charCount": () => Promise<void>;
         "href": string;
         "target": string;
         "text": string;
         "url": string;
-        "widthCheck": () => Promise<void>;
+        "width": any;
     }
     interface ClrLeftDrawer {
         "drawerClose": () => Promise<void>;
@@ -81,6 +82,12 @@ export namespace Components {
         "text": string;
     }
     interface ClrSideMenu {
+        "expanded": boolean;
+        "hidden": boolean;
+        "hideMove": boolean;
+        "linkWidthValue": any;
+        "side": string;
+        "size": string;
     }
     interface ClrSlide {
         "bgcolor": string;
@@ -95,6 +102,10 @@ export namespace Components {
 export interface ClrHeaderCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLClrHeaderElement;
+}
+export interface ClrIconBtnCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLClrIconBtnElement;
 }
 export interface ClrNavCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -294,9 +305,11 @@ declare namespace LocalJSX {
     interface ClrIconBtn {
         "ariaLabel"?: string;
         "href"?: string;
+        "onLinkWidth"?: (event: ClrIconBtnCustomEvent<any>) => void;
         "target"?: string;
         "text"?: string;
         "url"?: string;
+        "width"?: any;
     }
     interface ClrLeftDrawer {
     }
@@ -315,6 +328,12 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface ClrSideMenu {
+        "expanded"?: boolean;
+        "hidden"?: boolean;
+        "hideMove"?: boolean;
+        "linkWidthValue"?: any;
+        "side"?: string;
+        "size"?: string;
     }
     interface ClrSlide {
         "bgcolor"?: string;

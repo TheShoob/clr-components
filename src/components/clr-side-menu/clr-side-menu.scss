@@ -1,5 +1,57 @@
 :host {
-  display: block;
-  position: fixed;
-  top: center;
+  display: flex;
+
+  nav {
+    position: fixed;
+    top: 50%;
+    width: auto;
+    height: auto;
+    background-color: v(bg);
+    z-index: 99;
+
+
+    button {
+      position: fixed;
+      bottom: 20px;
+      display: block;
+      block-size: border-box;
+      width: 50px;
+      height: 50px;
+      background-color: v(bg);
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: v(fontColor);
+      padding: 0 10px;
+      transition: all .3s ease;
+      &:hover {
+        background-color: v(highlight);
+        color: v(highlightFontColor);
+      }
+    }
+  
+  }
+
+  nav.left {
+    left: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    button {
+      left: 20px;
+    }
+  };
+  nav.right {
+    right: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    button {
+      right: 20px;
+    }
+  };
 }

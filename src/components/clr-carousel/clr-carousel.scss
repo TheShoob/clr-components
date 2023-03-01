@@ -4,12 +4,13 @@
   width: inherit;
   overflow-x: hidden;
 
+
   .carousel {
     overflow: hidden;
 
     .slide-wrap {
       display: flex;
-      height: inherit;
+      height: inherit;   
     }
 
     .controls {

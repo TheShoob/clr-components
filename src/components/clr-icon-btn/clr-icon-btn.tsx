@@ -1,7 +1,8 @@
-import { Component, Host, h, Prop, Listen, Method, Element } from '@stencil/core';
+import { Component, Host, h, Prop, Listen, Method, Element, Event, EventEmitter, State } from '@stencil/core';
 
 let canvas = document.createElement("canvas");  
 let context = canvas.getContext("2d");
+
 @Component({
   tag: 'clr-icon-btn',
   styleUrl: 'clr-icon-btn.scss',
@@ -16,19 +17,34 @@ export class ClrIconBtn {
   @Prop() href: string = "";
   @Prop() url: string = "";
   @Prop() target: string = "";
-  //@State() childrenData: any = {};
+  @State() childrenData: any = {};
 
+  @Prop({ mutable: true }) width: any = 0;
 
-  componentDidLoad() {
-    this.widthCheck();
+  @Event({bubbles:true, composed:true}) linkWidth: EventEmitter<any>
+  //mobileStateHandler(width) {
+    //width = this.host.offsetWidth;
+    //this.linkWidth.emit(width.detail);
+  //}
+
+  componentWillLoad() {
   }
 
-  @Method() async widthCheck() {
+  componentDidLoad() {
+    this.charCount();
+    this.width = this.host.offsetWidth;
+    this.linkWidth.emit(this.width);
+
+    //console.log((e) => console.log(e.detail.name))
+  }
+
+  @Method() async charCount() {
     let longestWordLength = () => this.text.split(" ").sort(
       function(a, b) {
         return b.length - a.length;
       },
     );
+
 
     //let slotted = this.host.children;
     //this.childrenData = { hasChildren: slotted && slotted.length > 0, numberOfChildren: slotted && slotted.length };  
@@ -97,7 +113,7 @@ export class ClrIconBtn {
 
   @Listen('resize', { target: 'window'})
   windowWidth() {
-    this.widthCheck();
+    this.charCount();
     //console.log(this.el.clientWidth);
   } // * the listener for window resize widthCheck()
 
@@ -111,6 +127,7 @@ export class ClrIconBtn {
           <a class="wrap" href={this.href} target={this.target} aria-label={this.ariaLabel}>
             <slot name="icon"/>
             <span class="text shown">{this.text}</span>
+            
           </a>
         </Host>
       );
