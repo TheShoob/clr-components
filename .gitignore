@@ -2,7 +2,7 @@ dist/
 www/
 loader/
 test_assets/
-
+node_modules/
 *~
 *.sw[mnpcod]
 *.log
