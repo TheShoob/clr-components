@@ -15,8 +15,8 @@ const tiny = '18';
 })
 export class ClrSideMenu {
   @Prop() side: string = 'left';
-  @Prop() expanded: boolean = true || false;
-  @Prop() hidden: boolean = true || false;
+  @Prop() expanded: boolean = false;
+  @Prop() hidden: boolean = false;
   @Prop() hideMove: boolean = true || false;
   @Prop () size: string = 'large' || 'medium' || 'small' || 'tiny';
   @Prop({ mutable: true }) linkWidthValue: any = 0;
