@@ -82,10 +82,12 @@ export namespace Components {
         "text": string;
     }
     interface ClrSideMenu {
+        "duration": number;
         "expanded": boolean;
         "hidden": boolean;
         "hideMove": boolean;
         "linkWidthValue": any;
+        "phase": string;
         "side": string;
         "size": string;
     }
@@ -160,7 +162,18 @@ declare global {
         prototype: HTMLClrFooterElement;
         new (): HTMLClrFooterElement;
     };
+    interface HTMLClrHeaderElementEventMap {
+        "elmWidth": any;
+    }
     interface HTMLClrHeaderElement extends Components.ClrHeader, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLClrHeaderElementEventMap>(type: K, listener: (this: HTMLClrHeaderElement, ev: ClrHeaderCustomEvent<HTMLClrHeaderElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLClrHeaderElementEventMap>(type: K, listener: (this: HTMLClrHeaderElement, ev: ClrHeaderCustomEvent<HTMLClrHeaderElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLClrHeaderElement: {
         prototype: HTMLClrHeaderElement;
@@ -172,7 +185,18 @@ declare global {
         prototype: HTMLClrIconElement;
         new (): HTMLClrIconElement;
     };
+    interface HTMLClrIconBtnElementEventMap {
+        "linkWidth": any;
+    }
     interface HTMLClrIconBtnElement extends Components.ClrIconBtn, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLClrIconBtnElementEventMap>(type: K, listener: (this: HTMLClrIconBtnElement, ev: ClrIconBtnCustomEvent<HTMLClrIconBtnElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLClrIconBtnElementEventMap>(type: K, listener: (this: HTMLClrIconBtnElement, ev: ClrIconBtnCustomEvent<HTMLClrIconBtnElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLClrIconBtnElement: {
         prototype: HTMLClrIconBtnElement;
@@ -184,7 +208,19 @@ declare global {
         prototype: HTMLClrLeftDrawerElement;
         new (): HTMLClrLeftDrawerElement;
     };
+    interface HTMLClrNavElementEventMap {
+        "openCheck": boolean;
+        "mobileState": boolean;
+    }
     interface HTMLClrNavElement extends Components.ClrNav, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLClrNavElementEventMap>(type: K, listener: (this: HTMLClrNavElement, ev: ClrNavCustomEvent<HTMLClrNavElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLClrNavElementEventMap>(type: K, listener: (this: HTMLClrNavElement, ev: ClrNavCustomEvent<HTMLClrNavElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLClrNavElement: {
         prototype: HTMLClrNavElement;
@@ -328,10 +364,12 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface ClrSideMenu {
+        "duration"?: number;
         "expanded"?: boolean;
         "hidden"?: boolean;
         "hideMove"?: boolean;
         "linkWidthValue"?: any;
+        "phase"?: string;
         "side"?: string;
         "size"?: string;
     }
